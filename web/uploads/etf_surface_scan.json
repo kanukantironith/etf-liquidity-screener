@@ -1,0 +1,6712 @@
+{
+  "generated_at": "2026-08-06T06:15:06.979162+00:00",
+  "universe_scanned": 700,
+  "universe_usable": 670,
+  "weights": {
+    "volume": 0.4,
+    "amihud": 0.35,
+    "spread": 0.25
+  },
+  "rows": [
+    {
+      "ticker": "MSR",
+      "dollar_adv": 4829,
+      "amihud": 17.5584,
+      "est_spread": 0.0235,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 1.0,
+      "illiq_spread": 0.2106,
+      "surface_risk": 80.2661
+    },
+    {
+      "ticker": "GOLI",
+      "dollar_adv": 275143,
+      "amihud": 0.0447,
+      "est_spread": 0.1109,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0025,
+      "illiq_spread": 1.0,
+      "surface_risk": 65.0838
+    },
+    {
+      "ticker": "FDRX",
+      "dollar_adv": 224694,
+      "amihud": 10.3234,
+      "est_spread": 0.016,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.5879,
+      "illiq_spread": 0.1429,
+      "surface_risk": 64.1458
+    },
+    {
+      "ticker": "MRA",
+      "dollar_adv": 3555,
+      "amihud": 9.2216,
+      "est_spread": 0.0226,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.5252,
+      "illiq_spread": 0.2026,
+      "surface_risk": 63.4464
+    },
+    {
+      "ticker": "FUTG",
+      "dollar_adv": 3643930,
+      "amihud": 0.0148,
+      "est_spread": 0.0948,
+      "illiq_vol": 0.9982,
+      "illiq_amihud": 0.0008,
+      "illiq_spread": 0.8549,
+      "surface_risk": 61.3313
+    },
+    {
+      "ticker": "BESO",
+      "dollar_adv": 7264,
+      "amihud": 7.7329,
+      "est_spread": 0.0147,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.4404,
+      "illiq_spread": 0.1305,
+      "surface_risk": 58.6769
+    },
+    {
+      "ticker": "KBDU",
+      "dollar_adv": 29347,
+      "amihud": 7.9463,
+      "est_spread": 0.0099,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.4526,
+      "illiq_spread": 0.0874,
+      "surface_risk": 58.0238
+    },
+    {
+      "ticker": "ATC",
+      "dollar_adv": 19338,
+      "amihud": 5.3809,
+      "est_spread": 0.0221,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.3065,
+      "illiq_spread": 0.1978,
+      "surface_risk": 55.6697
+    },
+    {
+      "ticker": "DVXY",
+      "dollar_adv": 2463,
+      "amihud": 5.533,
+      "est_spread": 0.0062,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.3151,
+      "illiq_spread": 0.0545,
+      "surface_risk": 52.3922
+    },
+    {
+      "ticker": "GLGG",
+      "dollar_adv": 495176,
+      "amihud": 0.3119,
+      "est_spread": 0.0498,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0178,
+      "illiq_spread": 0.4481,
+      "surface_risk": 51.8155
+    },
+    {
+      "ticker": "GEMG",
+      "dollar_adv": 200026,
+      "amihud": 0.9272,
+      "est_spread": 0.0434,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0528,
+      "illiq_spread": 0.3905,
+      "surface_risk": 51.6069
+    },
+    {
+      "ticker": "DVXB",
+      "dollar_adv": 4990,
+      "amihud": 5.0898,
+      "est_spread": 0.0067,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.2899,
+      "illiq_spread": 0.0584,
+      "surface_risk": 51.6062
+    },
+    {
+      "ticker": "DVUT",
+      "dollar_adv": 3838,
+      "amihud": 4.6864,
+      "est_spread": 0.01,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.2669,
+      "illiq_spread": 0.0888,
+      "surface_risk": 51.5624
+    },
+    {
+      "ticker": "BEG",
+      "dollar_adv": 19923797,
+      "amihud": 0.011,
+      "est_spread": 0.0484,
+      "illiq_vol": 0.9904,
+      "illiq_amihud": 0.0006,
+      "illiq_spread": 0.4358,
+      "surface_risk": 50.5329
+    },
+    {
+      "ticker": "ARMG",
+      "dollar_adv": 25211665,
+      "amihud": 0.0042,
+      "est_spread": 0.0481,
+      "illiq_vol": 0.9878,
+      "illiq_amihud": 0.0002,
+      "illiq_spread": 0.4331,
+      "surface_risk": 50.3488
+    },
+    {
+      "ticker": "CIFG",
+      "dollar_adv": 2155207,
+      "amihud": 0.1041,
+      "est_spread": 0.045,
+      "illiq_vol": 0.999,
+      "illiq_amihud": 0.0059,
+      "illiq_spread": 0.4046,
+      "surface_risk": 50.2809
+    },
+    {
+      "ticker": "GEW",
+      "dollar_adv": 11588,
+      "amihud": 0.6875,
+      "est_spread": 0.0353,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0392,
+      "illiq_spread": 0.3168,
+      "surface_risk": 49.2908
+    },
+    {
+      "ticker": "KIQQ",
+      "dollar_adv": 9593,
+      "amihud": 3.6577,
+      "est_spread": 0.0073,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.2083,
+      "illiq_spread": 0.0638,
+      "surface_risk": 48.8854
+    },
+    {
+      "ticker": "DVXP",
+      "dollar_adv": 31868,
+      "amihud": 3.2041,
+      "est_spread": 0.0112,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.1825,
+      "illiq_spread": 0.0991,
+      "surface_risk": 48.8636
+    },
+    {
+      "ticker": "KLAG",
+      "dollar_adv": 5528765,
+      "amihud": 0.0207,
+      "est_spread": 0.0396,
+      "illiq_vol": 0.9973,
+      "illiq_amihud": 0.0012,
+      "illiq_spread": 0.3563,
+      "surface_risk": 48.8414
+    },
+    {
+      "ticker": "MRVU",
+      "dollar_adv": 31091180,
+      "amihud": 0.0041,
+      "est_spread": 0.0417,
+      "illiq_vol": 0.985,
+      "illiq_amihud": 0.0002,
+      "illiq_spread": 0.3752,
+      "surface_risk": 48.7884
+    },
+    {
+      "ticker": "LMNX",
+      "dollar_adv": 1049854,
+      "amihud": 0.1291,
+      "est_spread": 0.0374,
+      "illiq_vol": 0.9995,
+      "illiq_amihud": 0.0074,
+      "illiq_spread": 0.3357,
+      "surface_risk": 48.6285
+    },
+    {
+      "ticker": "AIX",
+      "dollar_adv": 27883,
+      "amihud": 4.0803,
+      "est_spread": 0.0022,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.2324,
+      "illiq_spread": 0.0177,
+      "surface_risk": 48.5745
+    },
+    {
+      "ticker": "ECHX",
+      "dollar_adv": 2770583,
+      "amihud": 0.0283,
+      "est_spread": 0.038,
+      "illiq_vol": 0.9987,
+      "illiq_amihud": 0.0016,
+      "illiq_spread": 0.3414,
+      "surface_risk": 48.5377
+    },
+    {
+      "ticker": "AMA",
+      "dollar_adv": 12264932,
+      "amihud": 0.0122,
+      "est_spread": 0.0383,
+      "illiq_vol": 0.9941,
+      "illiq_amihud": 0.0007,
+      "illiq_spread": 0.3445,
+      "surface_risk": 48.4011
+    },
+    {
+      "ticker": "DKNX",
+      "dollar_adv": 225756,
+      "amihud": 0.337,
+      "est_spread": 0.0338,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0192,
+      "illiq_spread": 0.3038,
+      "surface_risk": 48.2612
+    },
+    {
+      "ticker": "HECO",
+      "dollar_adv": 50752,
+      "amihud": 1.7085,
+      "est_spread": 0.0215,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0973,
+      "illiq_spread": 0.1926,
+      "surface_risk": 48.2195
+    },
+    {
+      "ticker": "HUTG",
+      "dollar_adv": 1905295,
+      "amihud": 0.0747,
+      "est_spread": 0.0359,
+      "illiq_vol": 0.9991,
+      "illiq_amihud": 0.0043,
+      "illiq_spread": 0.3222,
+      "surface_risk": 48.1674
+    },
+    {
+      "ticker": "EEE",
+      "dollar_adv": 9812,
+      "amihud": 3.3751,
+      "est_spread": 0.0063,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.1922,
+      "illiq_spread": 0.0551,
+      "surface_risk": 48.106
+    },
+    {
+      "ticker": "IREG",
+      "dollar_adv": 7513183,
+      "amihud": 0.0188,
+      "est_spread": 0.0352,
+      "illiq_vol": 0.9964,
+      "illiq_amihud": 0.0011,
+      "illiq_spread": 0.3166,
+      "surface_risk": 47.807
+    },
+    {
+      "ticker": "ANEL",
+      "dollar_adv": 3121170,
+      "amihud": 0.0365,
+      "est_spread": 0.0344,
+      "illiq_vol": 0.9985,
+      "illiq_amihud": 0.0021,
+      "illiq_spread": 0.3093,
+      "surface_risk": 47.745
+    },
+    {
+      "ticker": "GLWG",
+      "dollar_adv": 47820661,
+      "amihud": 0.0028,
+      "est_spread": 0.0378,
+      "illiq_vol": 0.9769,
+      "illiq_amihud": 0.0002,
+      "illiq_spread": 0.3398,
+      "surface_risk": 47.5762
+    },
+    {
+      "ticker": "AVXX",
+      "dollar_adv": 4627596,
+      "amihud": 0.0319,
+      "est_spread": 0.0325,
+      "illiq_vol": 0.9978,
+      "illiq_amihud": 0.0018,
+      "illiq_spread": 0.2921,
+      "surface_risk": 47.2779
+    },
+    {
+      "ticker": "DVXK",
+      "dollar_adv": 70319,
+      "amihud": 2.5161,
+      "est_spread": 0.0098,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.1433,
+      "illiq_spread": 0.0865,
+      "surface_risk": 47.1761
+    },
+    {
+      "ticker": "IND",
+      "dollar_adv": 15726,
+      "amihud": 1.1359,
+      "est_spread": 0.0216,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0647,
+      "illiq_spread": 0.1931,
+      "surface_risk": 47.0923
+    },
+    {
+      "ticker": "DIME",
+      "dollar_adv": 10808,
+      "amihud": 2.7192,
+      "est_spread": 0.0064,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.1549,
+      "illiq_spread": 0.0563,
+      "surface_risk": 46.8275
+    },
+    {
+      "ticker": "AVL",
+      "dollar_adv": 17828812,
+      "amihud": 0.0029,
+      "est_spread": 0.0316,
+      "illiq_vol": 0.9914,
+      "illiq_amihud": 0.0002,
+      "illiq_spread": 0.2838,
+      "surface_risk": 46.7569
+    },
+    {
+      "ticker": "EKG",
+      "dollar_adv": 19384,
+      "amihud": 3.1515,
+      "est_spread": 0.0018,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.1795,
+      "illiq_spread": 0.0143,
+      "surface_risk": 46.6397
+    },
+    {
+      "ticker": "CRWG",
+      "dollar_adv": 32525013,
+      "amihud": 0.0034,
+      "est_spread": 0.032,
+      "illiq_vol": 0.9843,
+      "illiq_amihud": 0.0002,
+      "illiq_spread": 0.2874,
+      "surface_risk": 46.5638
+    },
+    {
+      "ticker": "LOGO",
+      "dollar_adv": 54432,
+      "amihud": 0.7699,
+      "est_spread": 0.0223,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0439,
+      "illiq_spread": 0.1992,
+      "surface_risk": 46.5148
+    },
+    {
+      "ticker": "CRMU",
+      "dollar_adv": 408490,
+      "amihud": 0.3517,
+      "est_spread": 0.0259,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.02,
+      "illiq_spread": 0.2317,
+      "surface_risk": 46.4866
+    },
+    {
+      "ticker": "CLOD",
+      "dollar_adv": 17190,
+      "amihud": 2.0771,
+      "est_spread": 0.0104,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.1183,
+      "illiq_spread": 0.0921,
+      "surface_risk": 46.4434
+    },
+    {
+      "ticker": "AVGX",
+      "dollar_adv": 28841015,
+      "amihud": 0.0017,
+      "est_spread": 0.0308,
+      "illiq_vol": 0.9861,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.2767,
+      "surface_risk": 46.3647
+    },
+    {
+      "ticker": "ISUL",
+      "dollar_adv": 1919318,
+      "amihud": 0.0319,
+      "est_spread": 0.0282,
+      "illiq_vol": 0.9991,
+      "illiq_amihud": 0.0018,
+      "illiq_spread": 0.2528,
+      "surface_risk": 46.3475
+    },
+    {
+      "ticker": "AFSC",
+      "dollar_adv": 16551,
+      "amihud": 1.1582,
+      "est_spread": 0.018,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.066,
+      "illiq_spread": 0.1608,
+      "surface_risk": 46.329
+    },
+    {
+      "ticker": "MRAL",
+      "dollar_adv": 5263688,
+      "amihud": 0.021,
+      "est_spread": 0.0285,
+      "illiq_vol": 0.9975,
+      "illiq_amihud": 0.0012,
+      "illiq_spread": 0.2552,
+      "surface_risk": 46.3206
+    },
+    {
+      "ticker": "ASMG",
+      "dollar_adv": 5294530,
+      "amihud": 0.0142,
+      "est_spread": 0.0285,
+      "illiq_vol": 0.9974,
+      "illiq_amihud": 0.0008,
+      "illiq_spread": 0.2557,
+      "surface_risk": 46.3176
+    },
+    {
+      "ticker": "AALG",
+      "dollar_adv": 469745,
+      "amihud": 0.151,
+      "est_spread": 0.0269,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0086,
+      "illiq_spread": 0.241,
+      "surface_risk": 46.3166
+    },
+    {
+      "ticker": "GEVG",
+      "dollar_adv": 1584146,
+      "amihud": 0.0437,
+      "est_spread": 0.0278,
+      "illiq_vol": 0.9992,
+      "illiq_amihud": 0.0025,
+      "illiq_spread": 0.2493,
+      "surface_risk": 46.2878
+    },
+    {
+      "ticker": "DVQQ",
+      "dollar_adv": 15421,
+      "amihud": 2.1656,
+      "est_spread": 0.0086,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.1233,
+      "illiq_spread": 0.0754,
+      "surface_risk": 46.2024
+    },
+    {
+      "ticker": "MVLL",
+      "dollar_adv": 119414307,
+      "amihud": 0.0011,
+      "est_spread": 0.037,
+      "illiq_vol": 0.9423,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.3328,
+      "surface_risk": 46.015
+    },
+    {
+      "ticker": "KJD",
+      "dollar_adv": 64497,
+      "amihud": 0.8017,
+      "est_spread": 0.0196,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0457,
+      "illiq_spread": 0.1755,
+      "surface_risk": 45.9831
+    },
+    {
+      "ticker": "AVGU",
+      "dollar_adv": 3443232,
+      "amihud": 0.0158,
+      "est_spread": 0.0268,
+      "illiq_vol": 0.9983,
+      "illiq_amihud": 0.0009,
+      "illiq_spread": 0.2401,
+      "surface_risk": 45.9685
+    },
+    {
+      "ticker": "MSTP",
+      "dollar_adv": 1034405,
+      "amihud": 0.0894,
+      "est_spread": 0.0257,
+      "illiq_vol": 0.9995,
+      "illiq_amihud": 0.0051,
+      "illiq_spread": 0.2302,
+      "surface_risk": 45.9138
+    },
+    {
+      "ticker": "AQLG",
+      "dollar_adv": 2585,
+      "amihud": 1.9425,
+      "est_spread": 0.0089,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.1106,
+      "illiq_spread": 0.0787,
+      "surface_risk": 45.8401
+    },
+    {
+      "ticker": "MEMA",
+      "dollar_adv": 417386,
+      "amihud": 1.8248,
+      "est_spread": 0.01,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.1039,
+      "illiq_spread": 0.0883,
+      "surface_risk": 45.8373
+    },
+    {
+      "ticker": "ISHP",
+      "dollar_adv": 5998,
+      "amihud": 2.1862,
+      "est_spread": 0.0067,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.1245,
+      "illiq_spread": 0.0589,
+      "surface_risk": 45.8304
+    },
+    {
+      "ticker": "FPXE",
+      "dollar_adv": 21390,
+      "amihud": 1.0317,
+      "est_spread": 0.0164,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0588,
+      "illiq_spread": 0.1465,
+      "surface_risk": 45.7197
+    },
+    {
+      "ticker": "ADBG",
+      "dollar_adv": 25110760,
+      "amihud": 0.0022,
+      "est_spread": 0.0276,
+      "illiq_vol": 0.9879,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.2476,
+      "surface_risk": 45.709
+    },
+    {
+      "ticker": "AVGG",
+      "dollar_adv": 5881598,
+      "amihud": 0.0088,
+      "est_spread": 0.0254,
+      "illiq_vol": 0.9972,
+      "illiq_amihud": 0.0005,
+      "illiq_spread": 0.2277,
+      "surface_risk": 45.597
+    },
+    {
+      "ticker": "HIMZ",
+      "dollar_adv": 17395513,
+      "amihud": 0.0051,
+      "est_spread": 0.0263,
+      "illiq_vol": 0.9916,
+      "illiq_amihud": 0.0003,
+      "illiq_spread": 0.2354,
+      "surface_risk": 45.5603
+    },
+    {
+      "ticker": "ASMU",
+      "dollar_adv": 6290255,
+      "amihud": 0.0108,
+      "est_spread": 0.0251,
+      "illiq_vol": 0.997,
+      "illiq_amihud": 0.0006,
+      "illiq_spread": 0.2253,
+      "surface_risk": 45.5322
+    },
+    {
+      "ticker": "DVXE",
+      "dollar_adv": 12504,
+      "amihud": 2.4639,
+      "est_spread": 0.0029,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.1403,
+      "illiq_spread": 0.024,
+      "surface_risk": 45.5119
+    },
+    {
+      "ticker": "MULL",
+      "dollar_adv": 265010033,
+      "amihud": 0.0004,
+      "est_spread": 0.0472,
+      "illiq_vol": 0.872,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.4248,
+      "surface_risk": 45.5026
+    },
+    {
+      "ticker": "KPDD",
+      "dollar_adv": 950837,
+      "amihud": 0.0393,
+      "est_spread": 0.0226,
+      "illiq_vol": 0.9995,
+      "illiq_amihud": 0.0022,
+      "illiq_spread": 0.2019,
+      "surface_risk": 45.1083
+    },
+    {
+      "ticker": "DVSP",
+      "dollar_adv": 17121,
+      "amihud": 1.431,
+      "est_spread": 0.0102,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0815,
+      "illiq_spread": 0.09,
+      "surface_risk": 45.1024
+    },
+    {
+      "ticker": "CTEC",
+      "dollar_adv": 185044,
+      "amihud": 0.2703,
+      "est_spread": 0.0204,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0154,
+      "illiq_spread": 0.1823,
+      "surface_risk": 45.0927
+    },
+    {
+      "ticker": "FBYY",
+      "dollar_adv": 14878,
+      "amihud": 2.1243,
+      "est_spread": 0.0038,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.121,
+      "illiq_spread": 0.0324,
+      "surface_risk": 45.044
+    },
+    {
+      "ticker": "BLSG",
+      "dollar_adv": 190566,
+      "amihud": 0.5508,
+      "est_spread": 0.0175,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0314,
+      "illiq_spread": 0.1562,
+      "surface_risk": 44.9998
+    },
+    {
+      "ticker": "GXDW",
+      "dollar_adv": 164545,
+      "amihud": 1.7339,
+      "est_spread": 0.0068,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0987,
+      "illiq_spread": 0.0599,
+      "surface_risk": 44.95
+    },
+    {
+      "ticker": "MST",
+      "dollar_adv": 811482,
+      "amihud": 0.096,
+      "est_spread": 0.0213,
+      "illiq_vol": 0.9996,
+      "illiq_amihud": 0.0055,
+      "illiq_spread": 0.1905,
+      "surface_risk": 44.9376
+    },
+    {
+      "ticker": "COIG",
+      "dollar_adv": 930677,
+      "amihud": 0.0906,
+      "est_spread": 0.0213,
+      "illiq_vol": 0.9996,
+      "illiq_amihud": 0.0052,
+      "illiq_spread": 0.1907,
+      "surface_risk": 44.9293
+    },
+    {
+      "ticker": "IDVY",
+      "dollar_adv": 8579,
+      "amihud": 1.7945,
+      "est_spread": 0.0061,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.1022,
+      "illiq_spread": 0.0535,
+      "surface_risk": 44.9149
+    },
+    {
+      "ticker": "FBL",
+      "dollar_adv": 35517792,
+      "amihud": 0.0015,
+      "est_spread": 0.0249,
+      "illiq_vol": 0.9829,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.2228,
+      "surface_risk": 44.8872
+    },
+    {
+      "ticker": "APPX",
+      "dollar_adv": 14438897,
+      "amihud": 0.0055,
+      "est_spread": 0.023,
+      "illiq_vol": 0.993,
+      "illiq_amihud": 0.0003,
+      "illiq_spread": 0.2057,
+      "surface_risk": 44.8743
+    },
+    {
+      "ticker": "EGGQ",
+      "dollar_adv": 340904,
+      "amihud": 0.1453,
+      "est_spread": 0.0205,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0083,
+      "illiq_spread": 0.1835,
+      "surface_risk": 44.8697
+    },
+    {
+      "ticker": "ETEC",
+      "dollar_adv": 23482,
+      "amihud": 1.7128,
+      "est_spread": 0.0064,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0975,
+      "illiq_spread": 0.0562,
+      "surface_risk": 44.8185
+    },
+    {
+      "ticker": "FGSI",
+      "dollar_adv": 7867,
+      "amihud": 2.1615,
+      "est_spread": 0.0021,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.1231,
+      "illiq_spread": 0.0171,
+      "surface_risk": 44.7356
+    },
+    {
+      "ticker": "BEEZ",
+      "dollar_adv": 9685,
+      "amihud": 1.8987,
+      "est_spread": 0.0044,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.1081,
+      "illiq_spread": 0.0376,
+      "surface_risk": 44.7249
+    },
+    {
+      "ticker": "INDQ",
+      "dollar_adv": 27785,
+      "amihud": 1.7117,
+      "est_spread": 0.006,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0975,
+      "illiq_spread": 0.0523,
+      "surface_risk": 44.7177
+    },
+    {
+      "ticker": "MTYY",
+      "dollar_adv": 47734,
+      "amihud": 0.4008,
+      "est_spread": 0.0171,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0228,
+      "illiq_spread": 0.1529,
+      "surface_risk": 44.621
+    },
+    {
+      "ticker": "GOU",
+      "dollar_adv": 2731635,
+      "amihud": 0.0173,
+      "est_spread": 0.0201,
+      "illiq_vol": 0.9987,
+      "illiq_amihud": 0.001,
+      "illiq_spread": 0.1798,
+      "surface_risk": 44.4771
+    },
+    {
+      "ticker": "GRAG",
+      "dollar_adv": 79458,
+      "amihud": 0.8805,
+      "est_spread": 0.0121,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0501,
+      "illiq_spread": 0.1076,
+      "surface_risk": 44.4427
+    },
+    {
+      "ticker": "BALQ",
+      "dollar_adv": 216027,
+      "amihud": 0.0847,
+      "est_spread": 0.019,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0048,
+      "illiq_spread": 0.1701,
+      "surface_risk": 44.4183
+    },
+    {
+      "ticker": "EHLS",
+      "dollar_adv": 69574,
+      "amihud": 1.4985,
+      "est_spread": 0.0065,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0853,
+      "illiq_spread": 0.0566,
+      "surface_risk": 44.4006
+    },
+    {
+      "ticker": "ARVR",
+      "dollar_adv": 17636,
+      "amihud": 1.7505,
+      "est_spread": 0.0042,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0997,
+      "illiq_spread": 0.0364,
+      "surface_risk": 44.3987
+    },
+    {
+      "ticker": "BGRO",
+      "dollar_adv": 22420,
+      "amihud": 1.5888,
+      "est_spread": 0.0055,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0905,
+      "illiq_spread": 0.0478,
+      "surface_risk": 44.3612
+    },
+    {
+      "ticker": "DWUS",
+      "dollar_adv": 62746,
+      "amihud": 1.7289,
+      "est_spread": 0.0041,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0985,
+      "illiq_spread": 0.0354,
+      "surface_risk": 44.3309
+    },
+    {
+      "ticker": "BCFN",
+      "dollar_adv": 43249,
+      "amihud": 1.553,
+      "est_spread": 0.0056,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0884,
+      "illiq_spread": 0.049,
+      "surface_risk": 44.3196
+    },
+    {
+      "ticker": "ENHU",
+      "dollar_adv": 7123,
+      "amihud": 1.8126,
+      "est_spread": 0.0033,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.1032,
+      "illiq_spread": 0.0279,
+      "surface_risk": 44.3109
+    },
+    {
+      "ticker": "CRWL",
+      "dollar_adv": 6771074,
+      "amihud": 0.0082,
+      "est_spread": 0.0198,
+      "illiq_vol": 0.9967,
+      "illiq_amihud": 0.0005,
+      "illiq_spread": 0.1769,
+      "surface_risk": 44.3093
+    },
+    {
+      "ticker": "FIGG",
+      "dollar_adv": 4065557,
+      "amihud": 0.0268,
+      "est_spread": 0.0194,
+      "illiq_vol": 0.998,
+      "illiq_amihud": 0.0015,
+      "illiq_spread": 0.1734,
+      "surface_risk": 44.309
+    },
+    {
+      "ticker": "FVC",
+      "dollar_adv": 109379,
+      "amihud": 0.2325,
+      "est_spread": 0.0169,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0132,
+      "illiq_spread": 0.1508,
+      "surface_risk": 44.2317
+    },
+    {
+      "ticker": "AMEI",
+      "dollar_adv": 176343,
+      "amihud": 0.0535,
+      "est_spread": 0.0183,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.003,
+      "illiq_spread": 0.1633,
+      "surface_risk": 44.1869
+    },
+    {
+      "ticker": "DGLO",
+      "dollar_adv": 8850,
+      "amihud": 1.8264,
+      "est_spread": 0.0026,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.104,
+      "illiq_spread": 0.0213,
+      "surface_risk": 44.1723
+    },
+    {
+      "ticker": "LINT",
+      "dollar_adv": 23351971,
+      "amihud": 0.0045,
+      "est_spread": 0.0206,
+      "illiq_vol": 0.9887,
+      "illiq_amihud": 0.0003,
+      "illiq_spread": 0.1845,
+      "surface_risk": 44.1709
+    },
+    {
+      "ticker": "FDNI",
+      "dollar_adv": 835515,
+      "amihud": 0.0948,
+      "est_spread": 0.0178,
+      "illiq_vol": 0.9996,
+      "illiq_amihud": 0.0054,
+      "illiq_spread": 0.159,
+      "surface_risk": 44.1477
+    },
+    {
+      "ticker": "BITS",
+      "dollar_adv": 94984,
+      "amihud": 0.6216,
+      "est_spread": 0.013,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0354,
+      "illiq_spread": 0.1153,
+      "surface_risk": 44.1196
+    },
+    {
+      "ticker": "AMZZ",
+      "dollar_adv": 6720615,
+      "amihud": 0.0056,
+      "est_spread": 0.019,
+      "illiq_vol": 0.9968,
+      "illiq_amihud": 0.0003,
+      "illiq_spread": 0.1694,
+      "surface_risk": 44.1161
+    },
+    {
+      "ticker": "AMDG",
+      "dollar_adv": 8273417,
+      "amihud": 0.0113,
+      "est_spread": 0.019,
+      "illiq_vol": 0.996,
+      "illiq_amihud": 0.0006,
+      "illiq_spread": 0.1696,
+      "surface_risk": 44.1029
+    },
+    {
+      "ticker": "HWSM",
+      "dollar_adv": 6041,
+      "amihud": 1.8113,
+      "est_spread": 0.0021,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.1032,
+      "illiq_spread": 0.0171,
+      "surface_risk": 44.0368
+    },
+    {
+      "ticker": "DAK",
+      "dollar_adv": 4745,
+      "amihud": 1.8203,
+      "est_spread": 0.002,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.1037,
+      "illiq_spread": 0.0163,
+      "surface_risk": 44.0351
+    },
+    {
+      "ticker": "LMTL",
+      "dollar_adv": 921363,
+      "amihud": 0.0462,
+      "est_spread": 0.0174,
+      "illiq_vol": 0.9996,
+      "illiq_amihud": 0.0026,
+      "illiq_spread": 0.1555,
+      "surface_risk": 43.9615
+    },
+    {
+      "ticker": "GIEQ",
+      "dollar_adv": 9531,
+      "amihud": 1.6953,
+      "est_spread": 0.0025,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0965,
+      "illiq_spread": 0.0207,
+      "surface_risk": 43.8953
+    },
+    {
+      "ticker": "DLLL",
+      "dollar_adv": 34777253,
+      "amihud": 0.003,
+      "est_spread": 0.0204,
+      "illiq_vol": 0.9832,
+      "illiq_amihud": 0.0002,
+      "illiq_spread": 0.1824,
+      "surface_risk": 43.894
+    },
+    {
+      "ticker": "CONI",
+      "dollar_adv": 7755687,
+      "amihud": 0.0092,
+      "est_spread": 0.0179,
+      "illiq_vol": 0.9963,
+      "illiq_amihud": 0.0005,
+      "illiq_spread": 0.1599,
+      "surface_risk": 43.8665
+    },
+    {
+      "ticker": "BGEG",
+      "dollar_adv": 233288,
+      "amihud": 0.9453,
+      "est_spread": 0.009,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0538,
+      "illiq_spread": 0.0793,
+      "surface_risk": 43.8619
+    },
+    {
+      "ticker": "IONX",
+      "dollar_adv": 33513740,
+      "amihud": 0.0028,
+      "est_spread": 0.0201,
+      "illiq_vol": 0.9838,
+      "illiq_amihud": 0.0002,
+      "illiq_spread": 0.18,
+      "surface_risk": 43.8581
+    },
+    {
+      "ticker": "GLCR",
+      "dollar_adv": 9849,
+      "amihud": 1.3628,
+      "est_spread": 0.0052,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0776,
+      "illiq_spread": 0.0451,
+      "surface_risk": 43.8444
+    },
+    {
+      "ticker": "INTW",
+      "dollar_adv": 157017688,
+      "amihud": 0.0006,
+      "est_spread": 0.0306,
+      "illiq_vol": 0.9242,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.2746,
+      "surface_risk": 43.8341
+    },
+    {
+      "ticker": "FCXG",
+      "dollar_adv": 286955,
+      "amihud": 0.2139,
+      "est_spread": 0.0153,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0122,
+      "illiq_spread": 0.1363,
+      "surface_risk": 43.8286
+    },
+    {
+      "ticker": "MSTX",
+      "dollar_adv": 70695478,
+      "amihud": 0.0012,
+      "est_spread": 0.0228,
+      "illiq_vol": 0.9659,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.2043,
+      "surface_risk": 43.7452
+    },
+    {
+      "ticker": "ALBG",
+      "dollar_adv": 214311,
+      "amihud": 0.2553,
+      "est_spread": 0.0143,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0145,
+      "illiq_spread": 0.1276,
+      "surface_risk": 43.6938
+    },
+    {
+      "ticker": "BULG",
+      "dollar_adv": 139309,
+      "amihud": 0.5929,
+      "est_spread": 0.0113,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0338,
+      "illiq_spread": 0.1001,
+      "surface_risk": 43.6818
+    },
+    {
+      "ticker": "MEMS",
+      "dollar_adv": 22226,
+      "amihud": 1.5979,
+      "est_spread": 0.0024,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.091,
+      "illiq_spread": 0.0196,
+      "surface_risk": 43.6739
+    },
+    {
+      "ticker": "ASD",
+      "dollar_adv": 17918,
+      "amihud": 1.583,
+      "est_spread": 0.0023,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0902,
+      "illiq_spread": 0.0192,
+      "surface_risk": 43.6362
+    },
+    {
+      "ticker": "MSFL",
+      "dollar_adv": 35548841,
+      "amihud": 0.0012,
+      "est_spread": 0.0193,
+      "illiq_vol": 0.9828,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.1722,
+      "surface_risk": 43.6217
+    },
+    {
+      "ticker": "EFRA",
+      "dollar_adv": 43329,
+      "amihud": 1.2141,
+      "est_spread": 0.0054,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0691,
+      "illiq_spread": 0.0473,
+      "surface_risk": 43.6014
+    },
+    {
+      "ticker": "CONX",
+      "dollar_adv": 635218,
+      "amihud": 0.104,
+      "est_spread": 0.0151,
+      "illiq_vol": 0.9997,
+      "illiq_amihud": 0.0059,
+      "illiq_spread": 0.1344,
+      "surface_risk": 43.5544
+    },
+    {
+      "ticker": "CRCG",
+      "dollar_adv": 35183489,
+      "amihud": 0.0031,
+      "est_spread": 0.0188,
+      "illiq_vol": 0.983,
+      "illiq_amihud": 0.0002,
+      "illiq_spread": 0.1681,
+      "surface_risk": 43.5282
+    },
+    {
+      "ticker": "BKCH",
+      "dollar_adv": 4927586,
+      "amihud": 0.0124,
+      "est_spread": 0.0161,
+      "illiq_vol": 0.9976,
+      "illiq_amihud": 0.0007,
+      "illiq_spread": 0.1435,
+      "surface_risk": 43.5162
+    },
+    {
+      "ticker": "KROP",
+      "dollar_adv": 65244,
+      "amihud": 0.2653,
+      "est_spread": 0.0134,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0151,
+      "illiq_spread": 0.1193,
+      "surface_risk": 43.5109
+    },
+    {
+      "ticker": "CSCL",
+      "dollar_adv": 985423,
+      "amihud": 0.0478,
+      "est_spread": 0.0154,
+      "illiq_vol": 0.9995,
+      "illiq_amihud": 0.0027,
+      "illiq_spread": 0.1371,
+      "surface_risk": 43.5028
+    },
+    {
+      "ticker": "CRMG",
+      "dollar_adv": 24342982,
+      "amihud": 0.0021,
+      "est_spread": 0.0177,
+      "illiq_vol": 0.9882,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.1583,
+      "surface_risk": 43.4923
+    },
+    {
+      "ticker": "GSIB",
+      "dollar_adv": 1309368,
+      "amihud": 0.021,
+      "est_spread": 0.0156,
+      "illiq_vol": 0.9994,
+      "illiq_amihud": 0.0012,
+      "illiq_spread": 0.1389,
+      "surface_risk": 43.4895
+    },
+    {
+      "ticker": "METD",
+      "dollar_adv": 11420936,
+      "amihud": 0.0025,
+      "est_spread": 0.0166,
+      "illiq_vol": 0.9945,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.1479,
+      "surface_risk": 43.481
+    },
+    {
+      "ticker": "KMLI",
+      "dollar_adv": 541583,
+      "amihud": 0.0539,
+      "est_spread": 0.015,
+      "illiq_vol": 0.9997,
+      "illiq_amihud": 0.0031,
+      "illiq_spread": 0.1333,
+      "surface_risk": 43.4286
+    },
+    {
+      "ticker": "IONZ",
+      "dollar_adv": 53351450,
+      "amihud": 0.0023,
+      "est_spread": 0.0198,
+      "illiq_vol": 0.9742,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.1766,
+      "surface_risk": 43.3903
+    },
+    {
+      "ticker": "MNVT",
+      "dollar_adv": 784452,
+      "amihud": 0.0363,
+      "est_spread": 0.0149,
+      "illiq_vol": 0.9996,
+      "illiq_amihud": 0.0021,
+      "illiq_spread": 0.1329,
+      "surface_risk": 43.3794
+    },
+    {
+      "ticker": "JHAI",
+      "dollar_adv": 190439,
+      "amihud": 0.3223,
+      "est_spread": 0.0122,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0184,
+      "illiq_spread": 0.1087,
+      "surface_risk": 43.3552
+    },
+    {
+      "ticker": "IONL",
+      "dollar_adv": 11465805,
+      "amihud": 0.0083,
+      "est_spread": 0.0158,
+      "illiq_vol": 0.9945,
+      "illiq_amihud": 0.0005,
+      "illiq_spread": 0.1405,
+      "surface_risk": 43.3087
+    },
+    {
+      "ticker": "LULG",
+      "dollar_adv": 671708,
+      "amihud": 0.0558,
+      "est_spread": 0.0143,
+      "illiq_vol": 0.9997,
+      "illiq_amihud": 0.0032,
+      "illiq_spread": 0.1273,
+      "surface_risk": 43.2806
+    },
+    {
+      "ticker": "FDIQ",
+      "dollar_adv": 168991,
+      "amihud": 0.1574,
+      "est_spread": 0.0133,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.009,
+      "illiq_spread": 0.118,
+      "surface_risk": 43.2599
+    },
+    {
+      "ticker": "ALIL",
+      "dollar_adv": 39585,
+      "amihud": 1.3758,
+      "est_spread": 0.0023,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0784,
+      "illiq_spread": 0.0193,
+      "surface_risk": 43.223
+    },
+    {
+      "ticker": "COTG",
+      "dollar_adv": 1302512,
+      "amihud": 0.0253,
+      "est_spread": 0.0143,
+      "illiq_vol": 0.9994,
+      "illiq_amihud": 0.0014,
+      "illiq_spread": 0.1278,
+      "surface_risk": 43.2193
+    },
+    {
+      "ticker": "DUOG",
+      "dollar_adv": 472070,
+      "amihud": 0.2045,
+      "est_spread": 0.0127,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0116,
+      "illiq_spread": 0.1126,
+      "surface_risk": 43.2124
+    },
+    {
+      "ticker": "BELT",
+      "dollar_adv": 43338,
+      "amihud": 0.7124,
+      "est_spread": 0.008,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0406,
+      "illiq_spread": 0.0704,
+      "surface_risk": 43.1805
+    },
+    {
+      "ticker": "LITP",
+      "dollar_adv": 358123,
+      "amihud": 0.0621,
+      "est_spread": 0.0136,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0035,
+      "illiq_spread": 0.1212,
+      "surface_risk": 43.1458
+    },
+    {
+      "ticker": "FPA",
+      "dollar_adv": 410998,
+      "amihud": 0.1284,
+      "est_spread": 0.013,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0073,
+      "illiq_spread": 0.1156,
+      "surface_risk": 43.1371
+    },
+    {
+      "ticker": "HQGO",
+      "dollar_adv": 103231,
+      "amihud": 0.8891,
+      "est_spread": 0.0062,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0506,
+      "illiq_spread": 0.0545,
+      "surface_risk": 43.1335
+    },
+    {
+      "ticker": "AADR",
+      "dollar_adv": 136747,
+      "amihud": 0.1548,
+      "est_spread": 0.0127,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0088,
+      "illiq_spread": 0.113,
+      "surface_risk": 43.1311
+    },
+    {
+      "ticker": "JPFP",
+      "dollar_adv": 656101,
+      "amihud": 0.3386,
+      "est_spread": 0.011,
+      "illiq_vol": 0.9997,
+      "illiq_amihud": 0.0193,
+      "illiq_spread": 0.0977,
+      "surface_risk": 43.1039
+    },
+    {
+      "ticker": "INDH",
+      "dollar_adv": 18321,
+      "amihud": 0.6581,
+      "est_spread": 0.0081,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0375,
+      "illiq_spread": 0.0714,
+      "surface_risk": 43.0966
+    },
+    {
+      "ticker": "DECO",
+      "dollar_adv": 100528,
+      "amihud": 0.4144,
+      "est_spread": 0.0101,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0236,
+      "illiq_spread": 0.0891,
+      "surface_risk": 43.0523
+    },
+    {
+      "ticker": "BBYY",
+      "dollar_adv": 19536,
+      "amihud": 0.7086,
+      "est_spread": 0.0074,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0404,
+      "illiq_spread": 0.0653,
+      "surface_risk": 43.0449
+    },
+    {
+      "ticker": "AAPB",
+      "dollar_adv": 3357910,
+      "amihud": 0.0144,
+      "est_spread": 0.0138,
+      "illiq_vol": 0.9984,
+      "illiq_amihud": 0.0008,
+      "illiq_spread": 0.1227,
+      "surface_risk": 43.0311
+    },
+    {
+      "ticker": "GFGF",
+      "dollar_adv": 185629,
+      "amihud": 1.2345,
+      "est_spread": 0.0027,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0703,
+      "illiq_spread": 0.0229,
+      "surface_risk": 43.0291
+    },
+    {
+      "ticker": "GAVA",
+      "dollar_adv": 42332,
+      "amihud": 0.9563,
+      "est_spread": 0.0052,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0545,
+      "illiq_spread": 0.0449,
+      "surface_risk": 43.027
+    },
+    {
+      "ticker": "ABIG",
+      "dollar_adv": 82827,
+      "amihud": 0.9372,
+      "est_spread": 0.0053,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0534,
+      "illiq_spread": 0.0458,
+      "surface_risk": 43.0105
+    },
+    {
+      "ticker": "COPP",
+      "dollar_adv": 4093130,
+      "amihud": 0.006,
+      "est_spread": 0.0136,
+      "illiq_vol": 0.998,
+      "illiq_amihud": 0.0003,
+      "illiq_spread": 0.1214,
+      "surface_risk": 42.9688
+    },
+    {
+      "ticker": "HOOG",
+      "dollar_adv": 13688184,
+      "amihud": 0.0056,
+      "est_spread": 0.0144,
+      "illiq_vol": 0.9934,
+      "illiq_amihud": 0.0003,
+      "illiq_spread": 0.1285,
+      "surface_risk": 42.9598
+    },
+    {
+      "ticker": "COPJ",
+      "dollar_adv": 2598586,
+      "amihud": 0.0105,
+      "est_spread": 0.0133,
+      "illiq_vol": 0.9987,
+      "illiq_amihud": 0.0006,
+      "illiq_spread": 0.1184,
+      "surface_risk": 42.931
+    },
+    {
+      "ticker": "ESMV",
+      "dollar_adv": 10395,
+      "amihud": 1.1297,
+      "est_spread": 0.0031,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0643,
+      "illiq_spread": 0.0263,
+      "surface_risk": 42.909
+    },
+    {
+      "ticker": "AOTG",
+      "dollar_adv": 235221,
+      "amihud": 0.1209,
+      "est_spread": 0.0119,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0069,
+      "illiq_spread": 0.1059,
+      "surface_risk": 42.8836
+    },
+    {
+      "ticker": "JDOC",
+      "dollar_adv": 25870,
+      "amihud": 1.1645,
+      "est_spread": 0.0026,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0663,
+      "illiq_spread": 0.0217,
+      "surface_risk": 42.8636
+    },
+    {
+      "ticker": "FDTS",
+      "dollar_adv": 61746,
+      "amihud": 0.5467,
+      "est_spread": 0.0079,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0311,
+      "illiq_spread": 0.0697,
+      "surface_risk": 42.832
+    },
+    {
+      "ticker": "MEDX",
+      "dollar_adv": 103537,
+      "amihud": 0.8903,
+      "est_spread": 0.0049,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0507,
+      "illiq_spread": 0.0421,
+      "surface_risk": 42.8246
+    },
+    {
+      "ticker": "GTPE",
+      "dollar_adv": 76574,
+      "amihud": 0.5263,
+      "est_spread": 0.0081,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.03,
+      "illiq_spread": 0.0711,
+      "surface_risk": 42.8245
+    },
+    {
+      "ticker": "LRND",
+      "dollar_adv": 1300223,
+      "amihud": 0.9798,
+      "est_spread": 0.0041,
+      "illiq_vol": 0.9994,
+      "illiq_amihud": 0.0558,
+      "illiq_spread": 0.0349,
+      "surface_risk": 42.8018
+    },
+    {
+      "ticker": "AGMI",
+      "dollar_adv": 86433,
+      "amihud": 0.4374,
+      "est_spread": 0.0086,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0249,
+      "illiq_spread": 0.0758,
+      "surface_risk": 42.7648
+    },
+    {
+      "ticker": "ERET",
+      "dollar_adv": 56257,
+      "amihud": 0.6585,
+      "est_spread": 0.0066,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0375,
+      "illiq_spread": 0.0576,
+      "surface_risk": 42.7515
+    },
+    {
+      "ticker": "METU",
+      "dollar_adv": 139499945,
+      "amihud": 0.0004,
+      "est_spread": 0.0242,
+      "illiq_vol": 0.9326,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.2171,
+      "surface_risk": 42.7344
+    },
+    {
+      "ticker": "BMNG",
+      "dollar_adv": 11766201,
+      "amihud": 0.0083,
+      "est_spread": 0.0132,
+      "illiq_vol": 0.9943,
+      "illiq_amihud": 0.0005,
+      "illiq_spread": 0.1176,
+      "surface_risk": 42.7305
+    },
+    {
+      "ticker": "GPT",
+      "dollar_adv": 38081,
+      "amihud": 0.3499,
+      "est_spread": 0.0092,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0199,
+      "illiq_spread": 0.0811,
+      "surface_risk": 42.7242
+    },
+    {
+      "ticker": "ELIL",
+      "dollar_adv": 3514123,
+      "amihud": 0.0107,
+      "est_spread": 0.0124,
+      "illiq_vol": 0.9983,
+      "illiq_amihud": 0.0006,
+      "illiq_spread": 0.1104,
+      "surface_risk": 42.7136
+    },
+    {
+      "ticker": "EMSC",
+      "dollar_adv": 351378,
+      "amihud": 0.1258,
+      "est_spread": 0.0111,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0072,
+      "illiq_spread": 0.0981,
+      "surface_risk": 42.6956
+    },
+    {
+      "ticker": "AGEM",
+      "dollar_adv": 375985,
+      "amihud": 0.0601,
+      "est_spread": 0.0116,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0034,
+      "illiq_spread": 0.1033,
+      "surface_risk": 42.6948
+    },
+    {
+      "ticker": "MCHS",
+      "dollar_adv": 791793,
+      "amihud": 0.1577,
+      "est_spread": 0.0107,
+      "illiq_vol": 0.9996,
+      "illiq_amihud": 0.009,
+      "illiq_spread": 0.0947,
+      "surface_risk": 42.6678
+    },
+    {
+      "ticker": "IBGL",
+      "dollar_adv": 14880,
+      "amihud": 1.0708,
+      "est_spread": 0.0026,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.061,
+      "illiq_spread": 0.0213,
+      "surface_risk": 42.6662
+    },
+    {
+      "ticker": "CWY",
+      "dollar_adv": 26861,
+      "amihud": 0.6794,
+      "est_spread": 0.0058,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0387,
+      "illiq_spread": 0.0509,
+      "surface_risk": 42.6274
+    },
+    {
+      "ticker": "FDIG",
+      "dollar_adv": 1357454,
+      "amihud": 0.0214,
+      "est_spread": 0.0118,
+      "illiq_vol": 0.9993,
+      "illiq_amihud": 0.0012,
+      "illiq_spread": 0.1044,
+      "surface_risk": 42.6257
+    },
+    {
+      "ticker": "ICOP",
+      "dollar_adv": 4008506,
+      "amihud": 0.0053,
+      "est_spread": 0.0121,
+      "illiq_vol": 0.9981,
+      "illiq_amihud": 0.0003,
+      "illiq_spread": 0.1074,
+      "surface_risk": 42.6174
+    },
+    {
+      "ticker": "HEQQ",
+      "dollar_adv": 113422,
+      "amihud": 0.7054,
+      "est_spread": 0.0054,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0402,
+      "illiq_spread": 0.0469,
+      "surface_risk": 42.5755
+    },
+    {
+      "ticker": "DWSH",
+      "dollar_adv": 487686,
+      "amihud": 0.2047,
+      "est_spread": 0.0098,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0117,
+      "illiq_spread": 0.0869,
+      "surface_risk": 42.5718
+    },
+    {
+      "ticker": "FDTX",
+      "dollar_adv": 3006063,
+      "amihud": 0.0084,
+      "est_spread": 0.0118,
+      "illiq_vol": 0.9985,
+      "illiq_amihud": 0.0005,
+      "illiq_spread": 0.1045,
+      "surface_risk": 42.5712
+    },
+    {
+      "ticker": "IBGK",
+      "dollar_adv": 18782,
+      "amihud": 1.0049,
+      "est_spread": 0.0026,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0572,
+      "illiq_spread": 0.022,
+      "surface_risk": 42.5522
+    },
+    {
+      "ticker": "FGM",
+      "dollar_adv": 144690,
+      "amihud": 0.2206,
+      "est_spread": 0.0096,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0126,
+      "illiq_spread": 0.0845,
+      "surface_risk": 42.5498
+    },
+    {
+      "ticker": "FCA",
+      "dollar_adv": 2824991,
+      "amihud": 0.0942,
+      "est_spread": 0.0108,
+      "illiq_vol": 0.9986,
+      "illiq_amihud": 0.0054,
+      "illiq_spread": 0.0959,
+      "surface_risk": 42.5296
+    },
+    {
+      "ticker": "CONL",
+      "dollar_adv": 90554116,
+      "amihud": 0.0007,
+      "est_spread": 0.0191,
+      "illiq_vol": 0.9563,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.171,
+      "surface_risk": 42.5289
+    },
+    {
+      "ticker": "BHDG",
+      "dollar_adv": 157738,
+      "amihud": 0.322,
+      "est_spread": 0.0086,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0183,
+      "illiq_spread": 0.0754,
+      "surface_risk": 42.525
+    },
+    {
+      "ticker": "DRNZ",
+      "dollar_adv": 3460600,
+      "amihud": 0.0084,
+      "est_spread": 0.0116,
+      "illiq_vol": 0.9983,
+      "illiq_amihud": 0.0005,
+      "illiq_spread": 0.103,
+      "surface_risk": 42.5248
+    },
+    {
+      "ticker": "CEFA",
+      "dollar_adv": 324095,
+      "amihud": 0.1433,
+      "est_spread": 0.0101,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0082,
+      "illiq_spread": 0.0894,
+      "surface_risk": 42.5141
+    },
+    {
+      "ticker": "EMEQ",
+      "dollar_adv": 9587208,
+      "amihud": 0.0032,
+      "est_spread": 0.0121,
+      "illiq_vol": 0.9954,
+      "illiq_amihud": 0.0002,
+      "illiq_spread": 0.1072,
+      "surface_risk": 42.5007
+    },
+    {
+      "ticker": "FSGS",
+      "dollar_adv": 29977,
+      "amihud": 0.6928,
+      "est_spread": 0.0051,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0395,
+      "illiq_spread": 0.0439,
+      "surface_risk": 42.4781
+    },
+    {
+      "ticker": "AVOS",
+      "dollar_adv": 62162,
+      "amihud": 0.9257,
+      "est_spread": 0.0029,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0527,
+      "illiq_spread": 0.0248,
+      "surface_risk": 42.4633
+    },
+    {
+      "ticker": "BIDG",
+      "dollar_adv": 591227,
+      "amihud": 0.1168,
+      "est_spread": 0.01,
+      "illiq_vol": 0.9997,
+      "illiq_amihud": 0.0067,
+      "illiq_spread": 0.0887,
+      "surface_risk": 42.4384
+    },
+    {
+      "ticker": "BTF",
+      "dollar_adv": 66548,
+      "amihud": 0.5297,
+      "est_spread": 0.0063,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0302,
+      "illiq_spread": 0.0547,
+      "surface_risk": 42.4226
+    },
+    {
+      "ticker": "FSZ",
+      "dollar_adv": 53183,
+      "amihud": 0.4981,
+      "est_spread": 0.0065,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0284,
+      "illiq_spread": 0.057,
+      "surface_risk": 42.4162
+    },
+    {
+      "ticker": "EZRO",
+      "dollar_adv": 267526,
+      "amihud": 0.5835,
+      "est_spread": 0.0056,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0332,
+      "illiq_spread": 0.0486,
+      "surface_risk": 42.374
+    },
+    {
+      "ticker": "DAPP",
+      "dollar_adv": 8607349,
+      "amihud": 0.0067,
+      "est_spread": 0.0114,
+      "illiq_vol": 0.9958,
+      "illiq_amihud": 0.0004,
+      "illiq_spread": 0.1009,
+      "surface_risk": 42.3701
+    },
+    {
+      "ticker": "CCSO",
+      "dollar_adv": 85191,
+      "amihud": 0.2683,
+      "est_spread": 0.0083,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0153,
+      "illiq_spread": 0.0727,
+      "surface_risk": 42.3511
+    },
+    {
+      "ticker": "MSFD",
+      "dollar_adv": 19934342,
+      "amihud": 0.0015,
+      "est_spread": 0.0123,
+      "illiq_vol": 0.9904,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.1092,
+      "surface_risk": 42.3491
+    },
+    {
+      "ticker": "FSCS",
+      "dollar_adv": 245538,
+      "amihud": 0.0761,
+      "est_spread": 0.0098,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0043,
+      "illiq_spread": 0.0867,
+      "surface_risk": 42.3148
+    },
+    {
+      "ticker": "EMEM",
+      "dollar_adv": 446388,
+      "amihud": 0.1781,
+      "est_spread": 0.0089,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0101,
+      "illiq_spread": 0.0787,
+      "surface_risk": 42.3131
+    },
+    {
+      "ticker": "MATE",
+      "dollar_adv": 188230,
+      "amihud": 0.1799,
+      "est_spread": 0.0088,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0102,
+      "illiq_spread": 0.0777,
+      "surface_risk": 42.2976
+    },
+    {
+      "ticker": "BEDY",
+      "dollar_adv": 1788813,
+      "amihud": 0.0046,
+      "est_spread": 0.0105,
+      "illiq_vol": 0.9991,
+      "illiq_amihud": 0.0003,
+      "illiq_spread": 0.0926,
+      "surface_risk": 42.2889
+    },
+    {
+      "ticker": "AMEM",
+      "dollar_adv": 132532,
+      "amihud": 0.2325,
+      "est_spread": 0.0083,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0132,
+      "illiq_spread": 0.0729,
+      "surface_risk": 42.2835
+    },
+    {
+      "ticker": "BIOY",
+      "dollar_adv": 46502,
+      "amihud": 0.3065,
+      "est_spread": 0.0075,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0175,
+      "illiq_spread": 0.0659,
+      "surface_risk": 42.2569
+    },
+    {
+      "ticker": "EART",
+      "dollar_adv": 556101,
+      "amihud": 0.0552,
+      "est_spread": 0.0097,
+      "illiq_vol": 0.9997,
+      "illiq_amihud": 0.0031,
+      "illiq_spread": 0.0862,
+      "surface_risk": 42.2538
+    },
+    {
+      "ticker": "DALI",
+      "dollar_adv": 238296,
+      "amihud": 0.3496,
+      "est_spread": 0.0071,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0199,
+      "illiq_spread": 0.0622,
+      "surface_risk": 42.2476
+    },
+    {
+      "ticker": "GPRF",
+      "dollar_adv": 1018249,
+      "amihud": 0.06,
+      "est_spread": 0.0097,
+      "illiq_vol": 0.9995,
+      "illiq_amihud": 0.0034,
+      "illiq_spread": 0.0856,
+      "surface_risk": 42.2393
+    },
+    {
+      "ticker": "BULD",
+      "dollar_adv": 402275,
+      "amihud": 0.224,
+      "est_spread": 0.0081,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0128,
+      "illiq_spread": 0.0713,
+      "surface_risk": 42.2209
+    },
+    {
+      "ticker": "MFMO",
+      "dollar_adv": 392050,
+      "amihud": 0.0929,
+      "est_spread": 0.0092,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0053,
+      "illiq_spread": 0.081,
+      "surface_risk": 42.2038
+    },
+    {
+      "ticker": "DUKX",
+      "dollar_adv": 13676,
+      "amihud": 0.9654,
+      "est_spread": 0.0014,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.055,
+      "illiq_spread": 0.0111,
+      "surface_risk": 42.2024
+    },
+    {
+      "ticker": "DWAW",
+      "dollar_adv": 81305,
+      "amihud": 0.6268,
+      "est_spread": 0.0043,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0357,
+      "illiq_spread": 0.0373,
+      "surface_risk": 42.1798
+    },
+    {
+      "ticker": "HYDR",
+      "dollar_adv": 2631875,
+      "amihud": 0.0181,
+      "est_spread": 0.0099,
+      "illiq_vol": 0.9987,
+      "illiq_amihud": 0.001,
+      "illiq_spread": 0.0877,
+      "surface_risk": 42.1767
+    },
+    {
+      "ticker": "GARY",
+      "dollar_adv": 294757,
+      "amihud": 0.0776,
+      "est_spread": 0.0092,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0044,
+      "illiq_spread": 0.0811,
+      "surface_risk": 42.1758
+    },
+    {
+      "ticker": "CHPS",
+      "dollar_adv": 3202125,
+      "amihud": 0.0127,
+      "est_spread": 0.01,
+      "illiq_vol": 0.9985,
+      "illiq_amihud": 0.0007,
+      "illiq_spread": 0.0884,
+      "surface_risk": 42.1733
+    },
+    {
+      "ticker": "FLN",
+      "dollar_adv": 294446,
+      "amihud": 0.067,
+      "est_spread": 0.0092,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0038,
+      "illiq_spread": 0.0812,
+      "surface_risk": 42.1587
+    },
+    {
+      "ticker": "GLDB",
+      "dollar_adv": 292502,
+      "amihud": 0.1942,
+      "est_spread": 0.008,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0111,
+      "illiq_spread": 0.0704,
+      "surface_risk": 42.141
+    },
+    {
+      "ticker": "EMIF",
+      "dollar_adv": 42235,
+      "amihud": 0.2542,
+      "est_spread": 0.0074,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0145,
+      "illiq_spread": 0.0652,
+      "surface_risk": 42.1347
+    },
+    {
+      "ticker": "FFUT",
+      "dollar_adv": 1137614,
+      "amihud": 0.0132,
+      "est_spread": 0.0096,
+      "illiq_vol": 0.9995,
+      "illiq_amihud": 0.0008,
+      "illiq_spread": 0.0851,
+      "surface_risk": 42.1323
+    },
+    {
+      "ticker": "GENZ",
+      "dollar_adv": 72714,
+      "amihud": 0.3176,
+      "est_spread": 0.0068,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0181,
+      "illiq_spread": 0.06,
+      "surface_risk": 42.1311
+    },
+    {
+      "ticker": "ASEC",
+      "dollar_adv": 6345,
+      "amihud": 0.1775,
+      "est_spread": 0.008,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0101,
+      "illiq_spread": 0.0702,
+      "surface_risk": 42.1097
+    },
+    {
+      "ticker": "FRWD",
+      "dollar_adv": 2418063,
+      "amihud": 0.0116,
+      "est_spread": 0.0096,
+      "illiq_vol": 0.9988,
+      "illiq_amihud": 0.0007,
+      "illiq_spread": 0.0852,
+      "surface_risk": 42.1064
+    },
+    {
+      "ticker": "IBGM",
+      "dollar_adv": 1266187,
+      "amihud": 0.7293,
+      "est_spread": 0.0031,
+      "illiq_vol": 0.9994,
+      "illiq_amihud": 0.0415,
+      "illiq_spread": 0.0262,
+      "surface_risk": 42.0839
+    },
+    {
+      "ticker": "LFSC",
+      "dollar_adv": 268412,
+      "amihud": 0.103,
+      "est_spread": 0.0084,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0059,
+      "illiq_spread": 0.0743,
+      "surface_risk": 42.0589
+    },
+    {
+      "ticker": "IFV",
+      "dollar_adv": 1559379,
+      "amihud": 0.0122,
+      "est_spread": 0.0093,
+      "illiq_vol": 0.9992,
+      "illiq_amihud": 0.0007,
+      "illiq_spread": 0.0823,
+      "surface_risk": 42.0521
+    },
+    {
+      "ticker": "BAIG",
+      "dollar_adv": 539197,
+      "amihud": 0.1442,
+      "est_spread": 0.0081,
+      "illiq_vol": 0.9997,
+      "illiq_amihud": 0.0082,
+      "illiq_spread": 0.071,
+      "surface_risk": 42.0521
+    },
+    {
+      "ticker": "CNQQ",
+      "dollar_adv": 475846,
+      "amihud": 0.2975,
+      "est_spread": 0.0066,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0169,
+      "illiq_spread": 0.058,
+      "surface_risk": 42.033
+    },
+    {
+      "ticker": "BCTK",
+      "dollar_adv": 2044376,
+      "amihud": 0.055,
+      "est_spread": 0.0089,
+      "illiq_vol": 0.999,
+      "illiq_amihud": 0.0031,
+      "illiq_spread": 0.0782,
+      "surface_risk": 42.0245
+    },
+    {
+      "ticker": "HOOX",
+      "dollar_adv": 2193864,
+      "amihud": 0.0376,
+      "est_spread": 0.0089,
+      "illiq_vol": 0.9989,
+      "illiq_amihud": 0.0021,
+      "illiq_spread": 0.0784,
+      "surface_risk": 41.9919
+    },
+    {
+      "ticker": "ACEP",
+      "dollar_adv": 68657,
+      "amihud": 0.5233,
+      "est_spread": 0.0044,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0298,
+      "illiq_spread": 0.0379,
+      "surface_risk": 41.9896
+    },
+    {
+      "ticker": "ISTM",
+      "dollar_adv": 175578,
+      "amihud": 0.1004,
+      "est_spread": 0.0081,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0057,
+      "illiq_spread": 0.0709,
+      "surface_risk": 41.9696
+    },
+    {
+      "ticker": "DVAL",
+      "dollar_adv": 124916,
+      "amihud": 0.3494,
+      "est_spread": 0.0058,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0199,
+      "illiq_spread": 0.0507,
+      "surface_risk": 41.9625
+    },
+    {
+      "ticker": "HBR",
+      "dollar_adv": 430218,
+      "amihud": 0.0554,
+      "est_spread": 0.0084,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0032,
+      "illiq_spread": 0.0742,
+      "surface_risk": 41.956
+    },
+    {
+      "ticker": "AMZU",
+      "dollar_adv": 123808449,
+      "amihud": 0.0003,
+      "est_spread": 0.0194,
+      "illiq_vol": 0.9402,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.1733,
+      "surface_risk": 41.943
+    },
+    {
+      "ticker": "LCDS",
+      "dollar_adv": 31491,
+      "amihud": 0.6473,
+      "est_spread": 0.0031,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0369,
+      "illiq_spread": 0.0261,
+      "surface_risk": 41.943
+    },
+    {
+      "ticker": "BAIV",
+      "dollar_adv": 446008,
+      "amihud": 0.2638,
+      "est_spread": 0.0065,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.015,
+      "illiq_spread": 0.0567,
+      "surface_risk": 41.9358
+    },
+    {
+      "ticker": "MKAM",
+      "dollar_adv": 11037,
+      "amihud": 0.8289,
+      "est_spread": 0.0015,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0472,
+      "illiq_spread": 0.0113,
+      "surface_risk": 41.9334
+    },
+    {
+      "ticker": "LGCF",
+      "dollar_adv": 6266,
+      "amihud": 0.9471,
+      "est_spread": 0.0003,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0539,
+      "illiq_spread": 0.0008,
+      "surface_risk": 41.9068
+    },
+    {
+      "ticker": "AAEQ",
+      "dollar_adv": 27114,
+      "amihud": 0.7256,
+      "est_spread": 0.0022,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0413,
+      "illiq_spread": 0.0183,
+      "surface_risk": 41.9025
+    },
+    {
+      "ticker": "CLOU",
+      "dollar_adv": 7200783,
+      "amihud": 0.003,
+      "est_spread": 0.0091,
+      "illiq_vol": 0.9965,
+      "illiq_amihud": 0.0002,
+      "illiq_spread": 0.0804,
+      "surface_risk": 41.8776
+    },
+    {
+      "ticker": "MFVL",
+      "dollar_adv": 54596,
+      "amihud": 0.371,
+      "est_spread": 0.0052,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0211,
+      "illiq_spread": 0.0453,
+      "surface_risk": 41.8697
+    },
+    {
+      "ticker": "CSCS",
+      "dollar_adv": 61673,
+      "amihud": 0.434,
+      "est_spread": 0.0046,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0247,
+      "illiq_spread": 0.04,
+      "surface_risk": 41.8629
+    },
+    {
+      "ticker": "JMID",
+      "dollar_adv": 141195,
+      "amihud": 0.5706,
+      "est_spread": 0.0033,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0325,
+      "illiq_spread": 0.0283,
+      "surface_risk": 41.8431
+    },
+    {
+      "ticker": "LTCC",
+      "dollar_adv": 189369,
+      "amihud": 0.2659,
+      "est_spread": 0.006,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0151,
+      "illiq_spread": 0.0525,
+      "surface_risk": 41.8377
+    },
+    {
+      "ticker": "BIS",
+      "dollar_adv": 98014,
+      "amihud": 0.3207,
+      "est_spread": 0.0055,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0183,
+      "illiq_spread": 0.0477,
+      "surface_risk": 41.8298
+    },
+    {
+      "ticker": "DVGR",
+      "dollar_adv": 92890,
+      "amihud": 0.6147,
+      "est_spread": 0.0029,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.035,
+      "illiq_spread": 0.0241,
+      "surface_risk": 41.8253
+    },
+    {
+      "ticker": "KEAT",
+      "dollar_adv": 190479,
+      "amihud": 0.6777,
+      "est_spread": 0.0023,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0386,
+      "illiq_spread": 0.0188,
+      "surface_risk": 41.818
+    },
+    {
+      "ticker": "BTGD",
+      "dollar_adv": 717705,
+      "amihud": 0.0638,
+      "est_spread": 0.0077,
+      "illiq_vol": 0.9997,
+      "illiq_amihud": 0.0036,
+      "illiq_spread": 0.0681,
+      "surface_risk": 41.8167
+    },
+    {
+      "ticker": "JEMA",
+      "dollar_adv": 8413641,
+      "amihud": 0.0038,
+      "est_spread": 0.0089,
+      "illiq_vol": 0.9959,
+      "illiq_amihud": 0.0002,
+      "illiq_spread": 0.0782,
+      "surface_risk": 41.8004
+    },
+    {
+      "ticker": "KBAB",
+      "dollar_adv": 159179,
+      "amihud": 0.4466,
+      "est_spread": 0.0042,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0254,
+      "illiq_spread": 0.0357,
+      "surface_risk": 41.7807
+    },
+    {
+      "ticker": "FIYY",
+      "dollar_adv": 3082,
+      "amihud": 0.8187,
+      "est_spread": 0.0009,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0466,
+      "illiq_spread": 0.0059,
+      "surface_risk": 41.7798
+    },
+    {
+      "ticker": "AIFD",
+      "dollar_adv": 1209894,
+      "amihud": 0.0331,
+      "est_spread": 0.0079,
+      "illiq_vol": 0.9994,
+      "illiq_amihud": 0.0019,
+      "illiq_spread": 0.0694,
+      "surface_risk": 41.7778
+    },
+    {
+      "ticker": "GEME",
+      "dollar_adv": 3982922,
+      "amihud": 0.0086,
+      "est_spread": 0.0083,
+      "illiq_vol": 0.9981,
+      "illiq_amihud": 0.0005,
+      "illiq_spread": 0.073,
+      "surface_risk": 41.7653
+    },
+    {
+      "ticker": "MCDS",
+      "dollar_adv": 45026,
+      "amihud": 0.611,
+      "est_spread": 0.0026,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0348,
+      "illiq_spread": 0.0219,
+      "surface_risk": 41.7652
+    },
+    {
+      "ticker": "LDEM",
+      "dollar_adv": 108197,
+      "amihud": 0.3898,
+      "est_spread": 0.0046,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0222,
+      "illiq_spread": 0.0394,
+      "surface_risk": 41.7589
+    },
+    {
+      "ticker": "HYP",
+      "dollar_adv": 938388,
+      "amihud": 0.1214,
+      "est_spread": 0.007,
+      "illiq_vol": 0.9995,
+      "illiq_amihud": 0.0069,
+      "illiq_spread": 0.0612,
+      "surface_risk": 41.7541
+    },
+    {
+      "ticker": "MNZL",
+      "dollar_adv": 343067,
+      "amihud": 0.0399,
+      "est_spread": 0.0076,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0023,
+      "illiq_spread": 0.0666,
+      "surface_risk": 41.7368
+    },
+    {
+      "ticker": "CHPX",
+      "dollar_adv": 7850779,
+      "amihud": 0.0068,
+      "est_spread": 0.0085,
+      "illiq_vol": 0.9962,
+      "illiq_amihud": 0.0004,
+      "illiq_spread": 0.075,
+      "surface_risk": 41.7364
+    },
+    {
+      "ticker": "ILIT",
+      "dollar_adv": 367008,
+      "amihud": 0.1159,
+      "est_spread": 0.0069,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0066,
+      "illiq_spread": 0.0603,
+      "surface_risk": 41.731
+    },
+    {
+      "ticker": "MQQQ",
+      "dollar_adv": 10704745,
+      "amihud": 0.0076,
+      "est_spread": 0.0087,
+      "illiq_vol": 0.9948,
+      "illiq_amihud": 0.0004,
+      "illiq_spread": 0.0768,
+      "surface_risk": 41.7274
+    },
+    {
+      "ticker": "MAXI",
+      "dollar_adv": 132134,
+      "amihud": 0.2645,
+      "est_spread": 0.0055,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0151,
+      "illiq_spread": 0.0481,
+      "surface_risk": 41.7263
+    },
+    {
+      "ticker": "GTOP",
+      "dollar_adv": 756238,
+      "amihud": 0.0453,
+      "est_spread": 0.0074,
+      "illiq_vol": 0.9996,
+      "illiq_amihud": 0.0026,
+      "illiq_spread": 0.0648,
+      "surface_risk": 41.6952
+    },
+    {
+      "ticker": "COWS",
+      "dollar_adv": 272404,
+      "amihud": 0.0586,
+      "est_spread": 0.0071,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0033,
+      "illiq_spread": 0.0627,
+      "surface_risk": 41.6794
+    },
+    {
+      "ticker": "AMID",
+      "dollar_adv": 281450,
+      "amihud": 0.0484,
+      "est_spread": 0.0072,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0028,
+      "illiq_spread": 0.0629,
+      "surface_risk": 41.6639
+    },
+    {
+      "ticker": "IBGC",
+      "dollar_adv": 65674,
+      "amihud": 0.6768,
+      "est_spread": 0.0016,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0385,
+      "illiq_spread": 0.0124,
+      "surface_risk": 41.6579
+    },
+    {
+      "ticker": "AVXC",
+      "dollar_adv": 2985065,
+      "amihud": 0.0074,
+      "est_spread": 0.0077,
+      "illiq_vol": 0.9986,
+      "illiq_amihud": 0.0004,
+      "illiq_spread": 0.068,
+      "surface_risk": 41.6562
+    },
+    {
+      "ticker": "DGRE",
+      "dollar_adv": 591214,
+      "amihud": 0.0517,
+      "est_spread": 0.0071,
+      "illiq_vol": 0.9997,
+      "illiq_amihud": 0.0029,
+      "illiq_spread": 0.0622,
+      "surface_risk": 41.6472
+    },
+    {
+      "ticker": "GFLW",
+      "dollar_adv": 4792161,
+      "amihud": 0.0042,
+      "est_spread": 0.0078,
+      "illiq_vol": 0.9977,
+      "illiq_amihud": 0.0002,
+      "illiq_spread": 0.0685,
+      "surface_risk": 41.6295
+    },
+    {
+      "ticker": "FCTE",
+      "dollar_adv": 795251,
+      "amihud": 0.0175,
+      "est_spread": 0.0073,
+      "illiq_vol": 0.9996,
+      "illiq_amihud": 0.001,
+      "illiq_spread": 0.0644,
+      "surface_risk": 41.6294
+    },
+    {
+      "ticker": "FV",
+      "dollar_adv": 4540259,
+      "amihud": 0.0031,
+      "est_spread": 0.0077,
+      "illiq_vol": 0.9978,
+      "illiq_amihud": 0.0002,
+      "illiq_spread": 0.0681,
+      "surface_risk": 41.6216
+    },
+    {
+      "ticker": "GRW",
+      "dollar_adv": 112553,
+      "amihud": 0.2177,
+      "est_spread": 0.0055,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0124,
+      "illiq_spread": 0.0475,
+      "surface_risk": 41.6193
+    },
+    {
+      "ticker": "HMYY",
+      "dollar_adv": 27251,
+      "amihud": 0.4262,
+      "est_spread": 0.0036,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0243,
+      "illiq_spread": 0.0307,
+      "surface_risk": 41.6167
+    },
+    {
+      "ticker": "EZMO",
+      "dollar_adv": 248307,
+      "amihud": 0.3313,
+      "est_spread": 0.0045,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0189,
+      "illiq_spread": 0.0384,
+      "surface_risk": 41.6166
+    },
+    {
+      "ticker": "FJP",
+      "dollar_adv": 784039,
+      "amihud": 0.0162,
+      "est_spread": 0.0073,
+      "illiq_vol": 0.9996,
+      "illiq_amihud": 0.0009,
+      "illiq_spread": 0.0639,
+      "surface_risk": 41.6137
+    },
+    {
+      "ticker": "GIND",
+      "dollar_adv": 313774,
+      "amihud": 0.4044,
+      "est_spread": 0.0038,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.023,
+      "illiq_spread": 0.0325,
+      "surface_risk": 41.6126
+    },
+    {
+      "ticker": "FTAG",
+      "dollar_adv": 86022,
+      "amihud": 0.2979,
+      "est_spread": 0.0047,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.017,
+      "illiq_spread": 0.0408,
+      "surface_risk": 41.6113
+    },
+    {
+      "ticker": "FDFF",
+      "dollar_adv": 141911,
+      "amihud": 0.1226,
+      "est_spread": 0.0063,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.007,
+      "illiq_spread": 0.0547,
+      "surface_risk": 41.6087
+    },
+    {
+      "ticker": "ECOW",
+      "dollar_adv": 867158,
+      "amihud": 0.0113,
+      "est_spread": 0.0073,
+      "illiq_vol": 0.9996,
+      "illiq_amihud": 0.0006,
+      "illiq_spread": 0.0639,
+      "surface_risk": 41.6033
+    },
+    {
+      "ticker": "CARZ",
+      "dollar_adv": 479003,
+      "amihud": 0.1173,
+      "est_spread": 0.0062,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0067,
+      "illiq_spread": 0.0544,
+      "surface_risk": 41.5849
+    },
+    {
+      "ticker": "BRES",
+      "dollar_adv": 409223,
+      "amihud": 0.1958,
+      "est_spread": 0.0055,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0112,
+      "illiq_spread": 0.048,
+      "surface_risk": 41.583
+    },
+    {
+      "ticker": "FEM",
+      "dollar_adv": 3790912,
+      "amihud": 0.0043,
+      "est_spread": 0.0075,
+      "illiq_vol": 0.9982,
+      "illiq_amihud": 0.0002,
+      "illiq_spread": 0.0658,
+      "surface_risk": 41.5801
+    },
+    {
+      "ticker": "MFLX",
+      "dollar_adv": 136405,
+      "amihud": 0.1669,
+      "est_spread": 0.0057,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0095,
+      "illiq_spread": 0.0498,
+      "surface_risk": 41.5755
+    },
+    {
+      "ticker": "FTDS",
+      "dollar_adv": 149392,
+      "amihud": 0.1091,
+      "est_spread": 0.0062,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0062,
+      "illiq_spread": 0.0538,
+      "surface_risk": 41.5605
+    },
+    {
+      "ticker": "JPY",
+      "dollar_adv": 201635,
+      "amihud": 0.1528,
+      "est_spread": 0.0058,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0087,
+      "illiq_spread": 0.0502,
+      "surface_risk": 41.5568
+    },
+    {
+      "ticker": "FREI",
+      "dollar_adv": 976157,
+      "amihud": 0.1292,
+      "est_spread": 0.006,
+      "illiq_vol": 0.9995,
+      "illiq_amihud": 0.0074,
+      "illiq_spread": 0.0525,
+      "surface_risk": 41.5513
+    },
+    {
+      "ticker": "ASCI",
+      "dollar_adv": 95159,
+      "amihud": 0.1724,
+      "est_spread": 0.0055,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0098,
+      "illiq_spread": 0.0476,
+      "surface_risk": 41.5313
+    },
+    {
+      "ticker": "EXUS",
+      "dollar_adv": 555991,
+      "amihud": 0.095,
+      "est_spread": 0.0061,
+      "illiq_vol": 0.9997,
+      "illiq_amihud": 0.0054,
+      "illiq_spread": 0.0533,
+      "surface_risk": 41.5117
+    },
+    {
+      "ticker": "JOYT",
+      "dollar_adv": 308312,
+      "amihud": 0.0382,
+      "est_spread": 0.0066,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0022,
+      "illiq_spread": 0.0577,
+      "surface_risk": 41.5116
+    },
+    {
+      "ticker": "ANV",
+      "dollar_adv": 73657,
+      "amihud": 0.0794,
+      "est_spread": 0.0062,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0045,
+      "illiq_spread": 0.0538,
+      "surface_risk": 41.5028
+    },
+    {
+      "ticker": "FEUZ",
+      "dollar_adv": 275286,
+      "amihud": 0.1149,
+      "est_spread": 0.0059,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0065,
+      "illiq_spread": 0.0511,
+      "surface_risk": 41.5022
+    },
+    {
+      "ticker": "AHD",
+      "dollar_adv": 64115,
+      "amihud": 0.4049,
+      "est_spread": 0.0033,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0231,
+      "illiq_spread": 0.0276,
+      "surface_risk": 41.4953
+    },
+    {
+      "ticker": "DWAS",
+      "dollar_adv": 3015019,
+      "amihud": 0.0134,
+      "est_spread": 0.0069,
+      "illiq_vol": 0.9985,
+      "illiq_amihud": 0.0008,
+      "illiq_spread": 0.0608,
+      "surface_risk": 41.4889
+    },
+    {
+      "ticker": "HERO",
+      "dollar_adv": 477180,
+      "amihud": 0.0404,
+      "est_spread": 0.0064,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0023,
+      "illiq_spread": 0.0564,
+      "surface_risk": 41.4807
+    },
+    {
+      "ticker": "AIPO",
+      "dollar_adv": 41435182,
+      "amihud": 0.0006,
+      "est_spread": 0.0103,
+      "illiq_vol": 0.98,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.091,
+      "surface_risk": 41.476
+    },
+    {
+      "ticker": "BBB",
+      "dollar_adv": 72353,
+      "amihud": 0.2758,
+      "est_spread": 0.0043,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0157,
+      "illiq_spread": 0.0371,
+      "surface_risk": 41.475
+    },
+    {
+      "ticker": "HERD",
+      "dollar_adv": 165241,
+      "amihud": 0.056,
+      "est_spread": 0.0062,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0032,
+      "illiq_spread": 0.0541,
+      "surface_risk": 41.4597
+    },
+    {
+      "ticker": "AZYY",
+      "dollar_adv": 41404,
+      "amihud": 0.4363,
+      "est_spread": 0.0028,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0248,
+      "illiq_spread": 0.0233,
+      "surface_risk": 41.4511
+    },
+    {
+      "ticker": "BABU",
+      "dollar_adv": 2780854,
+      "amihud": 0.0287,
+      "est_spread": 0.0066,
+      "illiq_vol": 0.9987,
+      "illiq_amihud": 0.0016,
+      "illiq_spread": 0.0578,
+      "surface_risk": 41.4487
+    },
+    {
+      "ticker": "MOOD",
+      "dollar_adv": 735249,
+      "amihud": 0.0097,
+      "est_spread": 0.0066,
+      "illiq_vol": 0.9996,
+      "illiq_amihud": 0.0005,
+      "illiq_spread": 0.0577,
+      "surface_risk": 41.4486
+    },
+    {
+      "ticker": "FIMU",
+      "dollar_adv": 94690,
+      "amihud": 0.5075,
+      "est_spread": 0.0021,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0289,
+      "illiq_spread": 0.0173,
+      "surface_risk": 41.4416
+    },
+    {
+      "ticker": "EWZS",
+      "dollar_adv": 1630217,
+      "amihud": 0.0125,
+      "est_spread": 0.0065,
+      "illiq_vol": 0.9992,
+      "illiq_amihud": 0.0007,
+      "illiq_spread": 0.0568,
+      "surface_risk": 41.4139
+    },
+    {
+      "ticker": "AAUS",
+      "dollar_adv": 1033275,
+      "amihud": 0.1871,
+      "est_spread": 0.0049,
+      "illiq_vol": 0.9995,
+      "illiq_amihud": 0.0107,
+      "illiq_spread": 0.0423,
+      "surface_risk": 41.4105
+    },
+    {
+      "ticker": "FTXL",
+      "dollar_adv": 99216555,
+      "amihud": 0.0005,
+      "est_spread": 0.0149,
+      "illiq_vol": 0.9521,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.1329,
+      "surface_risk": 41.4065
+    },
+    {
+      "ticker": "EVMT",
+      "dollar_adv": 30312,
+      "amihud": 0.315,
+      "est_spread": 0.0036,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0179,
+      "illiq_spread": 0.0311,
+      "surface_risk": 41.4047
+    },
+    {
+      "ticker": "HCOW",
+      "dollar_adv": 135656,
+      "amihud": 0.0639,
+      "est_spread": 0.0059,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0036,
+      "illiq_spread": 0.0511,
+      "surface_risk": 41.4022
+    },
+    {
+      "ticker": "BEEX",
+      "dollar_adv": 79347,
+      "amihud": 0.5229,
+      "est_spread": 0.0018,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0298,
+      "illiq_spread": 0.0143,
+      "surface_risk": 41.3976
+    },
+    {
+      "ticker": "INRO",
+      "dollar_adv": 77810,
+      "amihud": 0.3222,
+      "est_spread": 0.0035,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0183,
+      "illiq_spread": 0.0301,
+      "surface_risk": 41.3929
+    },
+    {
+      "ticker": "CANC",
+      "dollar_adv": 1816912,
+      "amihud": 0.0144,
+      "est_spread": 0.0064,
+      "illiq_vol": 0.9991,
+      "illiq_amihud": 0.0008,
+      "illiq_spread": 0.0559,
+      "surface_risk": 41.392
+    },
+    {
+      "ticker": "AAVM",
+      "dollar_adv": 53318,
+      "amihud": 0.3109,
+      "est_spread": 0.0036,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0177,
+      "illiq_spread": 0.0309,
+      "surface_risk": 41.3913
+    },
+    {
+      "ticker": "BRRR",
+      "dollar_adv": 1879297,
+      "amihud": 0.0118,
+      "est_spread": 0.0064,
+      "illiq_vol": 0.9991,
+      "illiq_amihud": 0.0007,
+      "illiq_spread": 0.0561,
+      "surface_risk": 41.391
+    },
+    {
+      "ticker": "LDRX",
+      "dollar_adv": 216662,
+      "amihud": 0.0542,
+      "est_spread": 0.0058,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0031,
+      "illiq_spread": 0.0509,
+      "surface_risk": 41.3757
+    },
+    {
+      "ticker": "CSEN",
+      "dollar_adv": 730845,
+      "amihud": 0.0234,
+      "est_spread": 0.0061,
+      "illiq_vol": 0.9996,
+      "illiq_amihud": 0.0013,
+      "illiq_spread": 0.0537,
+      "surface_risk": 41.3742
+    },
+    {
+      "ticker": "MULT",
+      "dollar_adv": 4934,
+      "amihud": 0.4741,
+      "est_spread": 0.0021,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.027,
+      "illiq_spread": 0.0168,
+      "surface_risk": 41.3655
+    },
+    {
+      "ticker": "GQQQ",
+      "dollar_adv": 729507,
+      "amihud": 0.0299,
+      "est_spread": 0.006,
+      "illiq_vol": 0.9996,
+      "illiq_amihud": 0.0017,
+      "illiq_spread": 0.0524,
+      "surface_risk": 41.355
+    },
+    {
+      "ticker": "BIB",
+      "dollar_adv": 1177671,
+      "amihud": 0.0246,
+      "est_spread": 0.0061,
+      "illiq_vol": 0.9994,
+      "illiq_amihud": 0.0014,
+      "illiq_spread": 0.053,
+      "surface_risk": 41.3526
+    },
+    {
+      "ticker": "HYPG",
+      "dollar_adv": 2055663,
+      "amihud": 0.0286,
+      "est_spread": 0.0061,
+      "illiq_vol": 0.999,
+      "illiq_amihud": 0.0016,
+      "illiq_spread": 0.0534,
+      "surface_risk": 41.3517
+    },
+    {
+      "ticker": "MAAY",
+      "dollar_adv": 115551,
+      "amihud": 0.1389,
+      "est_spread": 0.0049,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0079,
+      "illiq_spread": 0.0428,
+      "surface_risk": 41.3439
+    },
+    {
+      "ticker": "ESGE",
+      "dollar_adv": 40088018,
+      "amihud": 0.0005,
+      "est_spread": 0.0096,
+      "illiq_vol": 0.9806,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0845,
+      "surface_risk": 41.3385
+    },
+    {
+      "ticker": "HBDC",
+      "dollar_adv": 36634,
+      "amihud": 0.1587,
+      "est_spread": 0.0047,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.009,
+      "illiq_spread": 0.0405,
+      "surface_risk": 41.3284
+    },
+    {
+      "ticker": "DMXF",
+      "dollar_adv": 11777933,
+      "amihud": 0.0047,
+      "est_spread": 0.007,
+      "illiq_vol": 0.9943,
+      "illiq_amihud": 0.0003,
+      "illiq_spread": 0.0613,
+      "surface_risk": 41.3149
+    },
+    {
+      "ticker": "GRIN",
+      "dollar_adv": 1413866,
+      "amihud": 0.2021,
+      "est_spread": 0.0043,
+      "illiq_vol": 0.9993,
+      "illiq_amihud": 0.0115,
+      "illiq_spread": 0.0369,
+      "surface_risk": 41.2986
+    },
+    {
+      "ticker": "CXSE",
+      "dollar_adv": 654157,
+      "amihud": 0.0297,
+      "est_spread": 0.0057,
+      "illiq_vol": 0.9997,
+      "illiq_amihud": 0.0017,
+      "illiq_spread": 0.05,
+      "surface_risk": 41.2976
+    },
+    {
+      "ticker": "IBGB",
+      "dollar_adv": 37367,
+      "amihud": 0.5726,
+      "est_spread": 0.0009,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0326,
+      "illiq_spread": 0.0059,
+      "surface_risk": 41.2889
+    },
+    {
+      "ticker": "JSMD",
+      "dollar_adv": 7042403,
+      "amihud": 0.0019,
+      "est_spread": 0.0064,
+      "illiq_vol": 0.9966,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.0563,
+      "surface_risk": 41.2753
+    },
+    {
+      "ticker": "EMXF",
+      "dollar_adv": 548116,
+      "amihud": 0.0343,
+      "est_spread": 0.0055,
+      "illiq_vol": 0.9997,
+      "illiq_amihud": 0.002,
+      "illiq_spread": 0.0481,
+      "surface_risk": 41.2595
+    },
+    {
+      "ticker": "DTCR",
+      "dollar_adv": 39195947,
+      "amihud": 0.0005,
+      "est_spread": 0.0091,
+      "illiq_vol": 0.9811,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0806,
+      "surface_risk": 41.2586
+    },
+    {
+      "ticker": "COYY",
+      "dollar_adv": 297020,
+      "amihud": 0.0296,
+      "est_spread": 0.0055,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0017,
+      "illiq_spread": 0.0481,
+      "surface_risk": 41.2556
+    },
+    {
+      "ticker": "CHGX",
+      "dollar_adv": 506509,
+      "amihud": 0.0286,
+      "est_spread": 0.0055,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0016,
+      "illiq_spread": 0.0481,
+      "surface_risk": 41.2492
+    },
+    {
+      "ticker": "GVLE",
+      "dollar_adv": 146680,
+      "amihud": 0.3103,
+      "est_spread": 0.003,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0177,
+      "illiq_spread": 0.0253,
+      "surface_risk": 41.2477
+    },
+    {
+      "ticker": "ARMY",
+      "dollar_adv": 56073,
+      "amihud": 0.3721,
+      "est_spread": 0.0024,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0212,
+      "illiq_spread": 0.0203,
+      "surface_risk": 41.2477
+    },
+    {
+      "ticker": "ALTY",
+      "dollar_adv": 194186,
+      "amihud": 0.0211,
+      "est_spread": 0.0055,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0012,
+      "illiq_spread": 0.0478,
+      "surface_risk": 41.2326
+    },
+    {
+      "ticker": "FINY",
+      "dollar_adv": 33217,
+      "amihud": 0.3176,
+      "est_spread": 0.0029,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0181,
+      "illiq_spread": 0.024,
+      "surface_risk": 41.2324
+    },
+    {
+      "ticker": "DRIV",
+      "dollar_adv": 2132876,
+      "amihud": 0.0133,
+      "est_spread": 0.0057,
+      "illiq_vol": 0.999,
+      "illiq_amihud": 0.0008,
+      "illiq_spread": 0.0495,
+      "surface_risk": 41.2229
+    },
+    {
+      "ticker": "IVAL",
+      "dollar_adv": 736703,
+      "amihud": 0.0195,
+      "est_spread": 0.0055,
+      "illiq_vol": 0.9996,
+      "illiq_amihud": 0.0011,
+      "illiq_spread": 0.0479,
+      "surface_risk": 41.2229
+    },
+    {
+      "ticker": "FNY",
+      "dollar_adv": 3074674,
+      "amihud": 0.0062,
+      "est_spread": 0.0058,
+      "illiq_vol": 0.9985,
+      "illiq_amihud": 0.0004,
+      "illiq_spread": 0.0507,
+      "surface_risk": 41.2206
+    },
+    {
+      "ticker": "GLDI",
+      "dollar_adv": 9087492,
+      "amihud": 0.0012,
+      "est_spread": 0.0063,
+      "illiq_vol": 0.9956,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.0554,
+      "surface_risk": 41.2121
+    },
+    {
+      "ticker": "ETHB",
+      "dollar_adv": 9541954,
+      "amihud": 0.0027,
+      "est_spread": 0.0064,
+      "illiq_vol": 0.9954,
+      "illiq_amihud": 0.0002,
+      "illiq_spread": 0.0555,
+      "surface_risk": 41.2092
+    },
+    {
+      "ticker": "FDT",
+      "dollar_adv": 12562254,
+      "amihud": 0.001,
+      "est_spread": 0.0066,
+      "illiq_vol": 0.9939,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.058,
+      "surface_risk": 41.2082
+    },
+    {
+      "ticker": "CHRI",
+      "dollar_adv": 137820,
+      "amihud": 0.146,
+      "est_spread": 0.0042,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0083,
+      "illiq_spread": 0.0359,
+      "surface_risk": 41.1868
+    },
+    {
+      "ticker": "DUSG",
+      "dollar_adv": 65047,
+      "amihud": 0.5912,
+      "est_spread": 0.0002,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0337,
+      "illiq_spread": 0.0003,
+      "surface_risk": 41.1855
+    },
+    {
+      "ticker": "DEMZ",
+      "dollar_adv": 117987,
+      "amihud": 0.126,
+      "est_spread": 0.0043,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0072,
+      "illiq_spread": 0.0374,
+      "surface_risk": 41.1836
+    },
+    {
+      "ticker": "FKU",
+      "dollar_adv": 100649,
+      "amihud": 0.1722,
+      "est_spread": 0.0039,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0098,
+      "illiq_spread": 0.0335,
+      "surface_risk": 41.1795
+    },
+    {
+      "ticker": "DADS",
+      "dollar_adv": 135163,
+      "amihud": 0.2479,
+      "est_spread": 0.0032,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0141,
+      "illiq_spread": 0.0274,
+      "surface_risk": 41.1763
+    },
+    {
+      "ticker": "GKAT",
+      "dollar_adv": 79653,
+      "amihud": 0.3612,
+      "est_spread": 0.0022,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0206,
+      "illiq_spread": 0.0182,
+      "surface_risk": 41.1729
+    },
+    {
+      "ticker": "GEQ",
+      "dollar_adv": 197769,
+      "amihud": 0.4558,
+      "est_spread": 0.0013,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.026,
+      "illiq_spread": 0.0101,
+      "surface_risk": 41.1562
+    },
+    {
+      "ticker": "AUMI",
+      "dollar_adv": 287701,
+      "amihud": 0.1551,
+      "est_spread": 0.004,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0088,
+      "illiq_spread": 0.0339,
+      "surface_risk": 41.1513
+    },
+    {
+      "ticker": "FTRI",
+      "dollar_adv": 746300,
+      "amihud": 0.0242,
+      "est_spread": 0.0052,
+      "illiq_vol": 0.9996,
+      "illiq_amihud": 0.0014,
+      "illiq_spread": 0.0447,
+      "surface_risk": 41.1508
+    },
+    {
+      "ticker": "BDYN",
+      "dollar_adv": 10092680,
+      "amihud": 0.0008,
+      "est_spread": 0.0062,
+      "illiq_vol": 0.9951,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0538,
+      "surface_risk": 41.1507
+    },
+    {
+      "ticker": "HOYY",
+      "dollar_adv": 100798,
+      "amihud": 0.1042,
+      "est_spread": 0.0044,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0059,
+      "illiq_spread": 0.0378,
+      "surface_risk": 41.1502
+    },
+    {
+      "ticker": "CEPI",
+      "dollar_adv": 1294028,
+      "amihud": 0.0142,
+      "est_spread": 0.0053,
+      "illiq_vol": 0.9994,
+      "illiq_amihud": 0.0008,
+      "illiq_spread": 0.0459,
+      "surface_risk": 41.1502
+    },
+    {
+      "ticker": "AIMS",
+      "dollar_adv": 72052,
+      "amihud": 0.2619,
+      "est_spread": 0.003,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0149,
+      "illiq_spread": 0.0249,
+      "surface_risk": 41.1424
+    },
+    {
+      "ticker": "GLOW",
+      "dollar_adv": 388003,
+      "amihud": 0.0336,
+      "est_spread": 0.005,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0019,
+      "illiq_spread": 0.0432,
+      "surface_risk": 41.14
+    },
+    {
+      "ticker": "HODU",
+      "dollar_adv": 1891975,
+      "amihud": 0.0451,
+      "est_spread": 0.005,
+      "illiq_vol": 0.9991,
+      "illiq_amihud": 0.0026,
+      "illiq_spread": 0.0431,
+      "surface_risk": 41.1312
+    },
+    {
+      "ticker": "CAFG",
+      "dollar_adv": 866080,
+      "amihud": 0.0488,
+      "est_spread": 0.0048,
+      "illiq_vol": 0.9996,
+      "illiq_amihud": 0.0028,
+      "illiq_spread": 0.0419,
+      "surface_risk": 41.1282
+    },
+    {
+      "ticker": "HEAL",
+      "dollar_adv": 209208,
+      "amihud": 0.0894,
+      "est_spread": 0.0044,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0051,
+      "illiq_spread": 0.038,
+      "surface_risk": 41.1245
+    },
+    {
+      "ticker": "BFLX",
+      "dollar_adv": 33648955,
+      "amihud": 0.0017,
+      "est_spread": 0.008,
+      "illiq_vol": 0.9838,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.0708,
+      "surface_risk": 41.1228
+    },
+    {
+      "ticker": "CPTL",
+      "dollar_adv": 152999,
+      "amihud": 0.0524,
+      "est_spread": 0.0047,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.003,
+      "illiq_spread": 0.0407,
+      "surface_risk": 41.1191
+    },
+    {
+      "ticker": "EEMA",
+      "dollar_adv": 21575333,
+      "amihud": 0.0024,
+      "est_spread": 0.0069,
+      "illiq_vol": 0.9896,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.0609,
+      "surface_risk": 41.1116
+    },
+    {
+      "ticker": "CANQ",
+      "dollar_adv": 54601,
+      "amihud": 0.3335,
+      "est_spread": 0.0022,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.019,
+      "illiq_spread": 0.0179,
+      "surface_risk": 41.111
+    },
+    {
+      "ticker": "FPXI",
+      "dollar_adv": 3915626,
+      "amihud": 0.0115,
+      "est_spread": 0.0054,
+      "illiq_vol": 0.9981,
+      "illiq_amihud": 0.0007,
+      "illiq_spread": 0.0465,
+      "surface_risk": 41.1109
+    },
+    {
+      "ticker": "JSML",
+      "dollar_adv": 2869239,
+      "amihud": 0.0059,
+      "est_spread": 0.0053,
+      "illiq_vol": 0.9986,
+      "illiq_amihud": 0.0003,
+      "illiq_spread": 0.046,
+      "surface_risk": 41.1076
+    },
+    {
+      "ticker": "JTEK",
+      "dollar_adv": 32842644,
+      "amihud": 0.0008,
+      "est_spread": 0.0079,
+      "illiq_vol": 0.9841,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0695,
+      "surface_risk": 41.1044
+    },
+    {
+      "ticker": "ESN",
+      "dollar_adv": 1486317,
+      "amihud": 0.005,
+      "est_spread": 0.0052,
+      "illiq_vol": 0.9993,
+      "illiq_amihud": 0.0003,
+      "illiq_spread": 0.0449,
+      "surface_risk": 41.1026
+    },
+    {
+      "ticker": "BREM",
+      "dollar_adv": 72482,
+      "amihud": 0.1896,
+      "est_spread": 0.0034,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0108,
+      "illiq_spread": 0.0288,
+      "surface_risk": 41.0966
+    },
+    {
+      "ticker": "FYC",
+      "dollar_adv": 8460049,
+      "amihud": 0.0015,
+      "est_spread": 0.0058,
+      "illiq_vol": 0.9959,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.0501,
+      "surface_risk": 41.0934
+    },
+    {
+      "ticker": "EWJV",
+      "dollar_adv": 10074594,
+      "amihud": 0.0019,
+      "est_spread": 0.0059,
+      "illiq_vol": 0.9951,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.0512,
+      "surface_risk": 41.0904
+    },
+    {
+      "ticker": "FMTM",
+      "dollar_adv": 10075274,
+      "amihud": 0.0022,
+      "est_spread": 0.0059,
+      "illiq_vol": 0.9951,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.0512,
+      "surface_risk": 41.0899
+    },
+    {
+      "ticker": "BSJV",
+      "dollar_adv": 1011370,
+      "amihud": 0.002,
+      "est_spread": 0.0051,
+      "illiq_vol": 0.9995,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.0442,
+      "surface_risk": 41.0893
+    },
+    {
+      "ticker": "FMET",
+      "dollar_adv": 120141,
+      "amihud": 0.1291,
+      "est_spread": 0.0039,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0074,
+      "illiq_spread": 0.0333,
+      "surface_risk": 41.0865
+    },
+    {
+      "ticker": "EMCB",
+      "dollar_adv": 228158,
+      "amihud": 0.0144,
+      "est_spread": 0.0049,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0008,
+      "illiq_spread": 0.0423,
+      "surface_risk": 41.0828
+    },
+    {
+      "ticker": "EYEG",
+      "dollar_adv": 9168,
+      "amihud": 0.4717,
+      "est_spread": 0.0008,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0269,
+      "illiq_spread": 0.0057,
+      "surface_risk": 41.0823
+    },
+    {
+      "ticker": "CAIQ",
+      "dollar_adv": 5832019,
+      "amihud": 0.0011,
+      "est_spread": 0.0055,
+      "illiq_vol": 0.9972,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.0476,
+      "surface_risk": 41.079
+    },
+    {
+      "ticker": "AIA",
+      "dollar_adv": 70806453,
+      "amihud": 0.0005,
+      "est_spread": 0.011,
+      "illiq_vol": 0.9658,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0978,
+      "surface_risk": 41.0789
+    },
+    {
+      "ticker": "BUG",
+      "dollar_adv": 47413787,
+      "amihud": 0.0004,
+      "est_spread": 0.009,
+      "illiq_vol": 0.9771,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0797,
+      "surface_risk": 41.0777
+    },
+    {
+      "ticker": "CDIG",
+      "dollar_adv": 217867,
+      "amihud": 0.0637,
+      "est_spread": 0.0044,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0036,
+      "illiq_spread": 0.038,
+      "surface_risk": 41.0723
+    },
+    {
+      "ticker": "FMED",
+      "dollar_adv": 223652,
+      "amihud": 0.0685,
+      "est_spread": 0.0043,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0039,
+      "illiq_spread": 0.037,
+      "surface_risk": 41.0579
+    },
+    {
+      "ticker": "CLSM",
+      "dollar_adv": 435770,
+      "amihud": 0.1109,
+      "est_spread": 0.0039,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0063,
+      "illiq_spread": 0.0338,
+      "surface_risk": 41.0566
+    },
+    {
+      "ticker": "IOYY",
+      "dollar_adv": 274562,
+      "amihud": 0.0411,
+      "est_spread": 0.0045,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0023,
+      "illiq_spread": 0.0391,
+      "surface_risk": 41.0546
+    },
+    {
+      "ticker": "JAPN",
+      "dollar_adv": 152846,
+      "amihud": 0.1498,
+      "est_spread": 0.0036,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0085,
+      "illiq_spread": 0.0303,
+      "surface_risk": 41.0522
+    },
+    {
+      "ticker": "GNMA",
+      "dollar_adv": 1395488,
+      "amihud": 0.0031,
+      "est_spread": 0.005,
+      "illiq_vol": 0.9993,
+      "illiq_amihud": 0.0002,
+      "illiq_spread": 0.0429,
+      "surface_risk": 41.0514
+    },
+    {
+      "ticker": "EBIZ",
+      "dollar_adv": 112353,
+      "amihud": 0.1313,
+      "est_spread": 0.0037,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0075,
+      "illiq_spread": 0.0315,
+      "surface_risk": 41.0475
+    },
+    {
+      "ticker": "BDGS",
+      "dollar_adv": 234505,
+      "amihud": 0.2615,
+      "est_spread": 0.0026,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0149,
+      "illiq_spread": 0.0212,
+      "surface_risk": 41.047
+    },
+    {
+      "ticker": "HNDL",
+      "dollar_adv": 1098606,
+      "amihud": 0.003,
+      "est_spread": 0.0049,
+      "illiq_vol": 0.9995,
+      "illiq_amihud": 0.0002,
+      "illiq_spread": 0.0423,
+      "surface_risk": 41.0412
+    },
+    {
+      "ticker": "DVLU",
+      "dollar_adv": 149799,
+      "amihud": 0.0489,
+      "est_spread": 0.0044,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0028,
+      "illiq_spread": 0.0377,
+      "surface_risk": 41.0381
+    },
+    {
+      "ticker": "IVSS",
+      "dollar_adv": 122154,
+      "amihud": 0.096,
+      "est_spread": 0.004,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0055,
+      "illiq_spread": 0.0339,
+      "surface_risk": 41.0358
+    },
+    {
+      "ticker": "FCEF",
+      "dollar_adv": 477336,
+      "amihud": 0.0123,
+      "est_spread": 0.0047,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0007,
+      "illiq_spread": 0.0407,
+      "surface_risk": 41.033
+    },
+    {
+      "ticker": "COWG",
+      "dollar_adv": 10499345,
+      "amihud": 0.0012,
+      "est_spread": 0.0056,
+      "illiq_vol": 0.9949,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.0491,
+      "surface_risk": 41.0283
+    },
+    {
+      "ticker": "DYTA",
+      "dollar_adv": 309103,
+      "amihud": 0.0208,
+      "est_spread": 0.0046,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0012,
+      "illiq_spread": 0.0397,
+      "surface_risk": 41.027
+    },
+    {
+      "ticker": "AGIX",
+      "dollar_adv": 7668271,
+      "amihud": 0.0025,
+      "est_spread": 0.0053,
+      "illiq_vol": 0.9963,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.0463,
+      "surface_risk": 41.0153
+    },
+    {
+      "ticker": "MBS",
+      "dollar_adv": 507890,
+      "amihud": 0.0037,
+      "est_spread": 0.0047,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0002,
+      "illiq_spread": 0.0407,
+      "surface_risk": 41.0145
+    },
+    {
+      "ticker": "FEMS",
+      "dollar_adv": 1178797,
+      "amihud": 0.0132,
+      "est_spread": 0.0046,
+      "illiq_vol": 0.9994,
+      "illiq_amihud": 0.0007,
+      "illiq_spread": 0.04,
+      "surface_risk": 41.0025
+    },
+    {
+      "ticker": "AQWA",
+      "dollar_adv": 158654,
+      "amihud": 0.1024,
+      "est_spread": 0.0037,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0058,
+      "illiq_spread": 0.0319,
+      "surface_risk": 40.9997
+    },
+    {
+      "ticker": "CCNR",
+      "dollar_adv": 2089053,
+      "amihud": 0.0403,
+      "est_spread": 0.0045,
+      "illiq_vol": 0.999,
+      "illiq_amihud": 0.0023,
+      "illiq_spread": 0.0384,
+      "surface_risk": 40.9992
+    },
+    {
+      "ticker": "CRY",
+      "dollar_adv": 173330,
+      "amihud": 0.1043,
+      "est_spread": 0.0037,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0059,
+      "illiq_spread": 0.0316,
+      "surface_risk": 40.9955
+    },
+    {
+      "ticker": "MPG",
+      "dollar_adv": 983324,
+      "amihud": 0.1022,
+      "est_spread": 0.0037,
+      "illiq_vol": 0.9995,
+      "illiq_amihud": 0.0058,
+      "illiq_spread": 0.032,
+      "surface_risk": 40.9835
+    },
+    {
+      "ticker": "BRNY",
+      "dollar_adv": 1231817,
+      "amihud": 0.0098,
+      "est_spread": 0.0045,
+      "illiq_vol": 0.9994,
+      "illiq_amihud": 0.0006,
+      "illiq_spread": 0.0392,
+      "surface_risk": 40.9761
+    },
+    {
+      "ticker": "MUD",
+      "dollar_adv": 195926625,
+      "amihud": 0.0003,
+      "est_spread": 0.0213,
+      "illiq_vol": 0.9054,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.1904,
+      "surface_risk": 40.9759
+    },
+    {
+      "ticker": "FEX",
+      "dollar_adv": 3642704,
+      "amihud": 0.003,
+      "est_spread": 0.0048,
+      "illiq_vol": 0.9982,
+      "illiq_amihud": 0.0002,
+      "illiq_spread": 0.0416,
+      "surface_risk": 40.975
+    },
+    {
+      "ticker": "GSGO",
+      "dollar_adv": 403834,
+      "amihud": 0.0576,
+      "est_spread": 0.004,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0033,
+      "illiq_spread": 0.0347,
+      "surface_risk": 40.975
+    },
+    {
+      "ticker": "FNX",
+      "dollar_adv": 2365038,
+      "amihud": 0.0035,
+      "est_spread": 0.0047,
+      "illiq_vol": 0.9989,
+      "illiq_amihud": 0.0002,
+      "illiq_spread": 0.0405,
+      "surface_risk": 40.974
+    },
+    {
+      "ticker": "LEGR",
+      "dollar_adv": 144836,
+      "amihud": 0.084,
+      "est_spread": 0.0038,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0048,
+      "illiq_spread": 0.0321,
+      "surface_risk": 40.9671
+    },
+    {
+      "ticker": "FEP",
+      "dollar_adv": 1420517,
+      "amihud": 0.007,
+      "est_spread": 0.0045,
+      "illiq_vol": 0.9993,
+      "illiq_amihud": 0.0004,
+      "illiq_spread": 0.0388,
+      "surface_risk": 40.9554
+    },
+    {
+      "ticker": "BGCG",
+      "dollar_adv": 423375,
+      "amihud": 0.1094,
+      "est_spread": 0.0035,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0062,
+      "illiq_spread": 0.0298,
+      "surface_risk": 40.9539
+    },
+    {
+      "ticker": "IMOM",
+      "dollar_adv": 682400,
+      "amihud": 0.0273,
+      "est_spread": 0.0042,
+      "illiq_vol": 0.9997,
+      "illiq_amihud": 0.0016,
+      "illiq_spread": 0.0363,
+      "surface_risk": 40.9476
+    },
+    {
+      "ticker": "FICS",
+      "dollar_adv": 638512,
+      "amihud": 0.016,
+      "est_spread": 0.0043,
+      "illiq_vol": 0.9997,
+      "illiq_amihud": 0.0009,
+      "illiq_spread": 0.0369,
+      "surface_risk": 40.9431
+    },
+    {
+      "ticker": "LRGE",
+      "dollar_adv": 2725889,
+      "amihud": 0.0151,
+      "est_spread": 0.0045,
+      "illiq_vol": 0.9987,
+      "illiq_amihud": 0.0009,
+      "illiq_spread": 0.0386,
+      "surface_risk": 40.9428
+    },
+    {
+      "ticker": "BITA",
+      "dollar_adv": 2075315,
+      "amihud": 0.012,
+      "est_spread": 0.0044,
+      "illiq_vol": 0.999,
+      "illiq_amihud": 0.0007,
+      "illiq_spread": 0.0382,
+      "surface_risk": 40.9399
+    },
+    {
+      "ticker": "AMGR",
+      "dollar_adv": 267736,
+      "amihud": 0.0838,
+      "est_spread": 0.0036,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0048,
+      "illiq_spread": 0.031,
+      "surface_risk": 40.9375
+    },
+    {
+      "ticker": "DDIV",
+      "dollar_adv": 428800,
+      "amihud": 0.0517,
+      "est_spread": 0.0039,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0029,
+      "illiq_spread": 0.0337,
+      "surface_risk": 40.9367
+    },
+    {
+      "ticker": "FTC",
+      "dollar_adv": 2795836,
+      "amihud": 0.0076,
+      "est_spread": 0.0045,
+      "illiq_vol": 0.9987,
+      "illiq_amihud": 0.0004,
+      "illiq_spread": 0.0387,
+      "surface_risk": 40.9298
+    },
+    {
+      "ticker": "FBOT",
+      "dollar_adv": 645219,
+      "amihud": 0.0221,
+      "est_spread": 0.0042,
+      "illiq_vol": 0.9997,
+      "illiq_amihud": 0.0013,
+      "illiq_spread": 0.0359,
+      "surface_risk": 40.929
+    },
+    {
+      "ticker": "BSSX",
+      "dollar_adv": 652549,
+      "amihud": 0.0031,
+      "est_spread": 0.0043,
+      "illiq_vol": 0.9997,
+      "illiq_amihud": 0.0002,
+      "illiq_spread": 0.0372,
+      "surface_risk": 40.9245
+    },
+    {
+      "ticker": "ISHG",
+      "dollar_adv": 8779843,
+      "amihud": 0.0007,
+      "est_spread": 0.005,
+      "illiq_vol": 0.9958,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0436,
+      "surface_risk": 40.9223
+    },
+    {
+      "ticker": "GUSE",
+      "dollar_adv": 238833,
+      "amihud": 0.0547,
+      "est_spread": 0.0038,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0031,
+      "illiq_spread": 0.0327,
+      "surface_risk": 40.9212
+    },
+    {
+      "ticker": "AAXJ",
+      "dollar_adv": 69385811,
+      "amihud": 0.0003,
+      "est_spread": 0.0102,
+      "illiq_vol": 0.9665,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0904,
+      "surface_risk": 40.9203
+    },
+    {
+      "ticker": "FNK",
+      "dollar_adv": 257144,
+      "amihud": 0.0404,
+      "est_spread": 0.0039,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0023,
+      "illiq_spread": 0.0337,
+      "surface_risk": 40.9177
+    },
+    {
+      "ticker": "IFLO",
+      "dollar_adv": 1549804,
+      "amihud": 0.0199,
+      "est_spread": 0.0042,
+      "illiq_vol": 0.9993,
+      "illiq_amihud": 0.0011,
+      "illiq_spread": 0.0363,
+      "surface_risk": 40.9163
+    },
+    {
+      "ticker": "DIVD",
+      "dollar_adv": 133492,
+      "amihud": 0.0826,
+      "est_spread": 0.0035,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0047,
+      "illiq_spread": 0.0301,
+      "surface_risk": 40.9153
+    },
+    {
+      "ticker": "ENDW",
+      "dollar_adv": 485786,
+      "amihud": 0.0137,
+      "est_spread": 0.0041,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0008,
+      "illiq_spread": 0.0354,
+      "surface_risk": 40.9021
+    },
+    {
+      "ticker": "MFIG",
+      "dollar_adv": 243662,
+      "amihud": 0.1021,
+      "est_spread": 0.0033,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0058,
+      "illiq_spread": 0.0278,
+      "surface_risk": 40.8947
+    },
+    {
+      "ticker": "BSVO",
+      "dollar_adv": 4806524,
+      "amihud": 0.0018,
+      "est_spread": 0.0046,
+      "illiq_vol": 0.9977,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.0393,
+      "surface_risk": 40.8923
+    },
+    {
+      "ticker": "ENZL",
+      "dollar_adv": 4763519,
+      "amihud": 0.0045,
+      "est_spread": 0.0045,
+      "illiq_vol": 0.9977,
+      "illiq_amihud": 0.0003,
+      "illiq_spread": 0.0388,
+      "surface_risk": 40.8868
+    },
+    {
+      "ticker": "GGLS",
+      "dollar_adv": 40802579,
+      "amihud": 0.0016,
+      "est_spread": 0.0076,
+      "illiq_vol": 0.9803,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.0668,
+      "surface_risk": 40.8855
+    },
+    {
+      "ticker": "AMUU",
+      "dollar_adv": 23640585,
+      "amihud": 0.0041,
+      "est_spread": 0.0061,
+      "illiq_vol": 0.9886,
+      "illiq_amihud": 0.0002,
+      "illiq_spread": 0.0531,
+      "surface_risk": 40.8782
+    },
+    {
+      "ticker": "HLAL",
+      "dollar_adv": 3835884,
+      "amihud": 0.0025,
+      "est_spread": 0.0044,
+      "illiq_vol": 0.9981,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.0376,
+      "surface_risk": 40.8703
+    },
+    {
+      "ticker": "GINX",
+      "dollar_adv": 314604,
+      "amihud": 0.0246,
+      "est_spread": 0.0038,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0014,
+      "illiq_spread": 0.0329,
+      "surface_risk": 40.8663
+    },
+    {
+      "ticker": "GGLL",
+      "dollar_adv": 173920401,
+      "amihud": 0.0003,
+      "est_spread": 0.0189,
+      "illiq_vol": 0.916,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.1685,
+      "surface_risk": 40.8535
+    },
+    {
+      "ticker": "EFAS",
+      "dollar_adv": 477241,
+      "amihud": 0.0222,
+      "est_spread": 0.0038,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0013,
+      "illiq_spread": 0.0326,
+      "surface_risk": 40.8506
+    },
+    {
+      "ticker": "MDIV",
+      "dollar_adv": 1092189,
+      "amihud": 0.0039,
+      "est_spread": 0.004,
+      "illiq_vol": 0.9995,
+      "illiq_amihud": 0.0002,
+      "illiq_spread": 0.0344,
+      "surface_risk": 40.8477
+    },
+    {
+      "ticker": "BSTV",
+      "dollar_adv": 31839,
+      "amihud": 0.3878,
+      "est_spread": 0.0005,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0221,
+      "illiq_spread": 0.003,
+      "surface_risk": 40.8473
+    },
+    {
+      "ticker": "FTXO",
+      "dollar_adv": 4050001,
+      "amihud": 0.0025,
+      "est_spread": 0.0042,
+      "illiq_vol": 0.998,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.0365,
+      "surface_risk": 40.839
+    },
+    {
+      "ticker": "IPKW",
+      "dollar_adv": 2001828,
+      "amihud": 0.0044,
+      "est_spread": 0.004,
+      "illiq_vol": 0.999,
+      "illiq_amihud": 0.0002,
+      "illiq_spread": 0.0347,
+      "surface_risk": 40.8385
+    },
+    {
+      "ticker": "AVS",
+      "dollar_adv": 105155769,
+      "amihud": 0.0002,
+      "est_spread": 0.0129,
+      "illiq_vol": 0.9492,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.1147,
+      "surface_risk": 40.8368
+    },
+    {
+      "ticker": "BDVL",
+      "dollar_adv": 8149029,
+      "amihud": 0.0008,
+      "est_spread": 0.0046,
+      "illiq_vol": 0.9961,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0396,
+      "surface_risk": 40.8355
+    },
+    {
+      "ticker": "EQRR",
+      "dollar_adv": 2278804,
+      "amihud": 0.0207,
+      "est_spread": 0.0039,
+      "illiq_vol": 0.9989,
+      "illiq_amihud": 0.0012,
+      "illiq_spread": 0.0335,
+      "surface_risk": 40.835
+    },
+    {
+      "ticker": "KQQQ",
+      "dollar_adv": 1448557,
+      "amihud": 0.0089,
+      "est_spread": 0.0039,
+      "illiq_vol": 0.9993,
+      "illiq_amihud": 0.0005,
+      "illiq_spread": 0.0337,
+      "surface_risk": 40.8328
+    },
+    {
+      "ticker": "GNOM",
+      "dollar_adv": 2021219,
+      "amihud": 0.0118,
+      "est_spread": 0.0039,
+      "illiq_vol": 0.999,
+      "illiq_amihud": 0.0007,
+      "illiq_spread": 0.0335,
+      "surface_risk": 40.8233
+    },
+    {
+      "ticker": "FTXG",
+      "dollar_adv": 339217,
+      "amihud": 0.1532,
+      "est_spread": 0.0025,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0087,
+      "illiq_spread": 0.0209,
+      "surface_risk": 40.8226
+    },
+    {
+      "ticker": "IFGL",
+      "dollar_adv": 243077,
+      "amihud": 0.0425,
+      "est_spread": 0.0035,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0024,
+      "illiq_spread": 0.0296,
+      "surface_risk": 40.8207
+    },
+    {
+      "ticker": "BSGT",
+      "dollar_adv": 79383,
+      "amihud": 0.2628,
+      "est_spread": 0.0015,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.015,
+      "illiq_spread": 0.0119,
+      "surface_risk": 40.8195
+    },
+    {
+      "ticker": "MUYY",
+      "dollar_adv": 1517387,
+      "amihud": 0.008,
+      "est_spread": 0.0039,
+      "illiq_vol": 0.9993,
+      "illiq_amihud": 0.0005,
+      "illiq_spread": 0.0332,
+      "surface_risk": 40.816
+    },
+    {
+      "ticker": "AVUQ",
+      "dollar_adv": 1610361,
+      "amihud": 0.011,
+      "est_spread": 0.0039,
+      "illiq_vol": 0.9992,
+      "illiq_amihud": 0.0006,
+      "illiq_spread": 0.0329,
+      "surface_risk": 40.8143
+    },
+    {
+      "ticker": "GTR",
+      "dollar_adv": 147548,
+      "amihud": 0.1128,
+      "est_spread": 0.0027,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0064,
+      "illiq_spread": 0.0229,
+      "surface_risk": 40.7949
+    },
+    {
+      "ticker": "ABCS",
+      "dollar_adv": 69976,
+      "amihud": 0.0953,
+      "est_spread": 0.0029,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0054,
+      "illiq_spread": 0.0241,
+      "surface_risk": 40.7923
+    },
+    {
+      "ticker": "BABX",
+      "dollar_adv": 16921226,
+      "amihud": 0.0026,
+      "est_spread": 0.0051,
+      "illiq_vol": 0.9918,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.0442,
+      "surface_risk": 40.7836
+    },
+    {
+      "ticker": "FINX",
+      "dollar_adv": 2180230,
+      "amihud": 0.0089,
+      "est_spread": 0.0038,
+      "illiq_vol": 0.9989,
+      "illiq_amihud": 0.0005,
+      "illiq_spread": 0.0323,
+      "surface_risk": 40.7828
+    },
+    {
+      "ticker": "LMBS",
+      "dollar_adv": 27990943,
+      "amihud": 0.0,
+      "est_spread": 0.006,
+      "illiq_vol": 0.9865,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0528,
+      "surface_risk": 40.7791
+    },
+    {
+      "ticker": "AFOS",
+      "dollar_adv": 488366,
+      "amihud": 0.0434,
+      "est_spread": 0.0033,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0025,
+      "illiq_spread": 0.0277,
+      "surface_risk": 40.7707
+    },
+    {
+      "ticker": "FID",
+      "dollar_adv": 382437,
+      "amihud": 0.0247,
+      "est_spread": 0.0034,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0014,
+      "illiq_spread": 0.0288,
+      "surface_risk": 40.7614
+    },
+    {
+      "ticker": "FAD",
+      "dollar_adv": 2853538,
+      "amihud": 0.0057,
+      "est_spread": 0.0038,
+      "illiq_vol": 0.9986,
+      "illiq_amihud": 0.0003,
+      "illiq_spread": 0.0321,
+      "surface_risk": 40.759
+    },
+    {
+      "ticker": "ELFY",
+      "dollar_adv": 2098527,
+      "amihud": 0.0082,
+      "est_spread": 0.0037,
+      "illiq_vol": 0.999,
+      "illiq_amihud": 0.0005,
+      "illiq_spread": 0.0313,
+      "surface_risk": 40.7588
+    },
+    {
+      "ticker": "KBWP",
+      "dollar_adv": 2871944,
+      "amihud": 0.0063,
+      "est_spread": 0.0037,
+      "illiq_vol": 0.9986,
+      "illiq_amihud": 0.0004,
+      "illiq_spread": 0.032,
+      "surface_risk": 40.7559
+    },
+    {
+      "ticker": "KNGZ",
+      "dollar_adv": 209304,
+      "amihud": 0.0906,
+      "est_spread": 0.0027,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0052,
+      "illiq_spread": 0.0227,
+      "surface_risk": 40.7435
+    },
+    {
+      "ticker": "BOEU",
+      "dollar_adv": 816442,
+      "amihud": 0.0417,
+      "est_spread": 0.0032,
+      "illiq_vol": 0.9996,
+      "illiq_amihud": 0.0024,
+      "illiq_spread": 0.027,
+      "surface_risk": 40.7418
+    },
+    {
+      "ticker": "FYX",
+      "dollar_adv": 3958877,
+      "amihud": 0.0021,
+      "est_spread": 0.0038,
+      "illiq_vol": 0.9981,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.0325,
+      "surface_risk": 40.7408
+    },
+    {
+      "ticker": "FDCF",
+      "dollar_adv": 398518,
+      "amihud": 0.0419,
+      "est_spread": 0.0031,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0024,
+      "illiq_spread": 0.0265,
+      "surface_risk": 40.7374
+    },
+    {
+      "ticker": "AMYY",
+      "dollar_adv": 329320,
+      "amihud": 0.0258,
+      "est_spread": 0.0033,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0015,
+      "illiq_spread": 0.0277,
+      "surface_risk": 40.7366
+    },
+    {
+      "ticker": "IBBQ",
+      "dollar_adv": 986590,
+      "amihud": 0.0158,
+      "est_spread": 0.0034,
+      "illiq_vol": 0.9995,
+      "illiq_amihud": 0.0009,
+      "illiq_spread": 0.0287,
+      "surface_risk": 40.7301
+    },
+    {
+      "ticker": "FYT",
+      "dollar_adv": 889606,
+      "amihud": 0.0263,
+      "est_spread": 0.0032,
+      "illiq_vol": 0.9996,
+      "illiq_amihud": 0.0015,
+      "illiq_spread": 0.0274,
+      "surface_risk": 40.7214
+    },
+    {
+      "ticker": "BASG",
+      "dollar_adv": 303072,
+      "amihud": 0.0812,
+      "est_spread": 0.0027,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0046,
+      "illiq_spread": 0.0226,
+      "surface_risk": 40.7201
+    },
+    {
+      "ticker": "IBOT",
+      "dollar_adv": 1275510,
+      "amihud": 0.0151,
+      "est_spread": 0.0034,
+      "illiq_vol": 0.9994,
+      "illiq_amihud": 0.0009,
+      "illiq_spread": 0.0286,
+      "surface_risk": 40.7195
+    },
+    {
+      "ticker": "HYXF",
+      "dollar_adv": 1107748,
+      "amihud": 0.0036,
+      "est_spread": 0.0034,
+      "illiq_vol": 0.9995,
+      "illiq_amihud": 0.0002,
+      "illiq_spread": 0.0288,
+      "surface_risk": 40.707
+    },
+    {
+      "ticker": "EBI",
+      "dollar_adv": 631762,
+      "amihud": 0.0456,
+      "est_spread": 0.003,
+      "illiq_vol": 0.9997,
+      "illiq_amihud": 0.0026,
+      "illiq_spread": 0.0251,
+      "surface_risk": 40.706
+    },
+    {
+      "ticker": "FEPI",
+      "dollar_adv": 8601800,
+      "amihud": 0.0018,
+      "est_spread": 0.004,
+      "illiq_vol": 0.9958,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.0342,
+      "surface_risk": 40.6919
+    },
+    {
+      "ticker": "HRTS",
+      "dollar_adv": 256231,
+      "amihud": 0.0747,
+      "est_spread": 0.0026,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0043,
+      "illiq_spread": 0.0219,
+      "surface_risk": 40.6906
+    },
+    {
+      "ticker": "BUFI",
+      "dollar_adv": 524862,
+      "amihud": 0.0412,
+      "est_spread": 0.0029,
+      "illiq_vol": 0.9997,
+      "illiq_amihud": 0.0023,
+      "illiq_spread": 0.0246,
+      "surface_risk": 40.6871
+    },
+    {
+      "ticker": "BGGG",
+      "dollar_adv": 2039253,
+      "amihud": 0.0089,
+      "est_spread": 0.0033,
+      "illiq_vol": 0.999,
+      "illiq_amihud": 0.0005,
+      "illiq_spread": 0.0283,
+      "surface_risk": 40.6848
+    },
+    {
+      "ticker": "IBAT",
+      "dollar_adv": 1521086,
+      "amihud": 0.0175,
+      "est_spread": 0.0032,
+      "illiq_vol": 0.9993,
+      "illiq_amihud": 0.001,
+      "illiq_spread": 0.0269,
+      "surface_risk": 40.677
+    },
+    {
+      "ticker": "FDIV",
+      "dollar_adv": 679127,
+      "amihud": 0.0482,
+      "est_spread": 0.0028,
+      "illiq_vol": 0.9997,
+      "illiq_amihud": 0.0027,
+      "illiq_spread": 0.0236,
+      "surface_risk": 40.6723
+    },
+    {
+      "ticker": "LVHD",
+      "dollar_adv": 2999548,
+      "amihud": 0.0037,
+      "est_spread": 0.0034,
+      "illiq_vol": 0.9986,
+      "illiq_amihud": 0.0002,
+      "illiq_spread": 0.0286,
+      "surface_risk": 40.6646
+    },
+    {
+      "ticker": "ESGD",
+      "dollar_adv": 26598256,
+      "amihud": 0.0003,
+      "est_spread": 0.0054,
+      "illiq_vol": 0.9872,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0471,
+      "surface_risk": 40.6644
+    },
+    {
+      "ticker": "JPEF",
+      "dollar_adv": 7768778,
+      "amihud": 0.0011,
+      "est_spread": 0.0037,
+      "illiq_vol": 0.9963,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.0319,
+      "surface_risk": 40.6508
+    },
+    {
+      "ticker": "AGZD",
+      "dollar_adv": 1717868,
+      "amihud": 0.0017,
+      "est_spread": 0.0032,
+      "illiq_vol": 0.9992,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.0272,
+      "surface_risk": 40.65
+    },
+    {
+      "ticker": "MODL",
+      "dollar_adv": 2944476,
+      "amihud": 0.0029,
+      "est_spread": 0.0033,
+      "illiq_vol": 0.9986,
+      "illiq_amihud": 0.0002,
+      "illiq_spread": 0.0279,
+      "surface_risk": 40.6472
+    },
+    {
+      "ticker": "AOHY",
+      "dollar_adv": 765097,
+      "amihud": 0.0041,
+      "est_spread": 0.0031,
+      "illiq_vol": 0.9996,
+      "illiq_amihud": 0.0002,
+      "illiq_spread": 0.0261,
+      "surface_risk": 40.6469
+    },
+    {
+      "ticker": "BBH",
+      "dollar_adv": 1133083,
+      "amihud": 0.0107,
+      "est_spread": 0.003,
+      "illiq_vol": 0.9995,
+      "illiq_amihud": 0.0006,
+      "illiq_spread": 0.0251,
+      "surface_risk": 40.6271
+    },
+    {
+      "ticker": "FAB",
+      "dollar_adv": 2403027,
+      "amihud": 0.0199,
+      "est_spread": 0.003,
+      "illiq_vol": 0.9988,
+      "illiq_amihud": 0.0011,
+      "illiq_spread": 0.0253,
+      "surface_risk": 40.6251
+    },
+    {
+      "ticker": "FAAR",
+      "dollar_adv": 2391982,
+      "amihud": 0.0061,
+      "est_spread": 0.0031,
+      "illiq_vol": 0.9988,
+      "illiq_amihud": 0.0003,
+      "illiq_spread": 0.0262,
+      "surface_risk": 40.622
+    },
+    {
+      "ticker": "KAT",
+      "dollar_adv": 760120,
+      "amihud": 0.0095,
+      "est_spread": 0.0029,
+      "illiq_vol": 0.9996,
+      "illiq_amihud": 0.0005,
+      "illiq_spread": 0.0245,
+      "surface_risk": 40.6165
+    },
+    {
+      "ticker": "CORO",
+      "dollar_adv": 29911324,
+      "amihud": 0.0003,
+      "est_spread": 0.0055,
+      "illiq_vol": 0.9856,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0475,
+      "surface_risk": 40.6113
+    },
+    {
+      "ticker": "EASY",
+      "dollar_adv": 173906,
+      "amihud": 0.0713,
+      "est_spread": 0.0023,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0041,
+      "illiq_spread": 0.0188,
+      "surface_risk": 40.6087
+    },
+    {
+      "ticker": "HYZD",
+      "dollar_adv": 1931420,
+      "amihud": 0.0008,
+      "est_spread": 0.003,
+      "illiq_vol": 0.9991,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0254,
+      "surface_risk": 40.5991
+    },
+    {
+      "ticker": "EVPF",
+      "dollar_adv": 311819,
+      "amihud": 0.0243,
+      "est_spread": 0.0027,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0014,
+      "illiq_spread": 0.0222,
+      "surface_risk": 40.5971
+    },
+    {
+      "ticker": "BOEG",
+      "dollar_adv": 526361,
+      "amihud": 0.0835,
+      "est_spread": 0.0021,
+      "illiq_vol": 0.9997,
+      "illiq_amihud": 0.0048,
+      "illiq_spread": 0.0174,
+      "surface_risk": 40.5918
+    },
+    {
+      "ticker": "CDC",
+      "dollar_adv": 1087016,
+      "amihud": 0.0092,
+      "est_spread": 0.0028,
+      "illiq_vol": 0.9995,
+      "illiq_amihud": 0.0005,
+      "illiq_spread": 0.0236,
+      "surface_risk": 40.5881
+    },
+    {
+      "ticker": "CFO",
+      "dollar_adv": 365923,
+      "amihud": 0.017,
+      "est_spread": 0.0027,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.001,
+      "illiq_spread": 0.0224,
+      "surface_risk": 40.588
+    },
+    {
+      "ticker": "BRKU",
+      "dollar_adv": 1863430,
+      "amihud": 0.008,
+      "est_spread": 0.0029,
+      "illiq_vol": 0.9991,
+      "illiq_amihud": 0.0005,
+      "illiq_spread": 0.0242,
+      "surface_risk": 40.5856
+    },
+    {
+      "ticker": "FEMB",
+      "dollar_adv": 3330945,
+      "amihud": 0.0015,
+      "est_spread": 0.0031,
+      "illiq_vol": 0.9984,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.0258,
+      "surface_risk": 40.5831
+    },
+    {
+      "ticker": "LDSF",
+      "dollar_adv": 435486,
+      "amihud": 0.0047,
+      "est_spread": 0.0027,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0003,
+      "illiq_spread": 0.023,
+      "surface_risk": 40.5758
+    },
+    {
+      "ticker": "IQQQ",
+      "dollar_adv": 2523921,
+      "amihud": 0.0056,
+      "est_spread": 0.0029,
+      "illiq_vol": 0.9988,
+      "illiq_amihud": 0.0003,
+      "illiq_spread": 0.0243,
+      "surface_risk": 40.5709
+    },
+    {
+      "ticker": "AMDD",
+      "dollar_adv": 44072909,
+      "amihud": 0.0014,
+      "est_spread": 0.0065,
+      "illiq_vol": 0.9787,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.0566,
+      "surface_risk": 40.5668
+    },
+    {
+      "ticker": "FTGC",
+      "dollar_adv": 16021475,
+      "amihud": 0.0005,
+      "est_spread": 0.0041,
+      "illiq_vol": 0.9923,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.035,
+      "surface_risk": 40.5655
+    },
+    {
+      "ticker": "MILN",
+      "dollar_adv": 296794,
+      "amihud": 0.0456,
+      "est_spread": 0.0023,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0026,
+      "illiq_spread": 0.0189,
+      "surface_risk": 40.5575
+    },
+    {
+      "ticker": "JGLO",
+      "dollar_adv": 19755458,
+      "amihud": 0.0016,
+      "est_spread": 0.0043,
+      "illiq_vol": 0.9905,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.0373,
+      "surface_risk": 40.555
+    },
+    {
+      "ticker": "FTA",
+      "dollar_adv": 3763984,
+      "amihud": 0.0028,
+      "est_spread": 0.0029,
+      "illiq_vol": 0.9982,
+      "illiq_amihud": 0.0002,
+      "illiq_spread": 0.0245,
+      "surface_risk": 40.5447
+    },
+    {
+      "ticker": "LOTI",
+      "dollar_adv": 126040,
+      "amihud": 0.0725,
+      "est_spread": 0.0019,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0041,
+      "illiq_spread": 0.0157,
+      "surface_risk": 40.5348
+    },
+    {
+      "ticker": "GBUG",
+      "dollar_adv": 1088751,
+      "amihud": 0.0237,
+      "est_spread": 0.0024,
+      "illiq_vol": 0.9995,
+      "illiq_amihud": 0.0014,
+      "illiq_spread": 0.0198,
+      "surface_risk": 40.5203
+    },
+    {
+      "ticker": "EVYM",
+      "dollar_adv": 283281,
+      "amihud": 0.0148,
+      "est_spread": 0.0024,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0008,
+      "illiq_spread": 0.0198,
+      "surface_risk": 40.5193
+    },
+    {
+      "ticker": "ABI",
+      "dollar_adv": 3553,
+      "amihud": 0.1877,
+      "est_spread": 0.0008,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0107,
+      "illiq_spread": 0.0058,
+      "surface_risk": 40.5182
+    },
+    {
+      "ticker": "LGRO",
+      "dollar_adv": 421989,
+      "amihud": 0.0953,
+      "est_spread": 0.0017,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0054,
+      "illiq_spread": 0.0134,
+      "surface_risk": 40.5168
+    },
+    {
+      "ticker": "BMOP",
+      "dollar_adv": 2153799,
+      "amihud": 0.0008,
+      "est_spread": 0.0026,
+      "illiq_vol": 0.999,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0218,
+      "surface_risk": 40.5043
+    },
+    {
+      "ticker": "CPHY",
+      "dollar_adv": 30936,
+      "amihud": 0.1657,
+      "est_spread": 0.0009,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0094,
+      "illiq_spread": 0.0066,
+      "surface_risk": 40.4942
+    },
+    {
+      "ticker": "CDL",
+      "dollar_adv": 608021,
+      "amihud": 0.0154,
+      "est_spread": 0.0023,
+      "illiq_vol": 0.9997,
+      "illiq_amihud": 0.0009,
+      "illiq_spread": 0.0189,
+      "surface_risk": 40.4916
+    },
+    {
+      "ticker": "JIVE",
+      "dollar_adv": 29404770,
+      "amihud": 0.0003,
+      "est_spread": 0.0049,
+      "illiq_vol": 0.9858,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0421,
+      "surface_risk": 40.484
+    },
+    {
+      "ticker": "ESPO",
+      "dollar_adv": 1401450,
+      "amihud": 0.0093,
+      "est_spread": 0.0024,
+      "illiq_vol": 0.9993,
+      "illiq_amihud": 0.0005,
+      "illiq_spread": 0.0194,
+      "surface_risk": 40.4761
+    },
+    {
+      "ticker": "HIS",
+      "dollar_adv": 361833,
+      "amihud": 0.0264,
+      "est_spread": 0.0021,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0015,
+      "illiq_spread": 0.0172,
+      "surface_risk": 40.4759
+    },
+    {
+      "ticker": "AIPI",
+      "dollar_adv": 5526639,
+      "amihud": 0.0022,
+      "est_spread": 0.0028,
+      "illiq_vol": 0.9973,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.023,
+      "surface_risk": 40.4731
+    },
+    {
+      "ticker": "BOTZ",
+      "dollar_adv": 30458837,
+      "amihud": 0.0005,
+      "est_spread": 0.0049,
+      "illiq_vol": 0.9853,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0422,
+      "surface_risk": 40.4679
+    },
+    {
+      "ticker": "LEXI",
+      "dollar_adv": 502184,
+      "amihud": 0.0146,
+      "est_spread": 0.0022,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0008,
+      "illiq_spread": 0.0176,
+      "surface_risk": 40.4597
+    },
+    {
+      "ticker": "FTGS",
+      "dollar_adv": 4382156,
+      "amihud": 0.0016,
+      "est_spread": 0.0026,
+      "illiq_vol": 0.9979,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.0213,
+      "surface_risk": 40.452
+    },
+    {
+      "ticker": "FDIF",
+      "dollar_adv": 503589,
+      "amihud": 0.0673,
+      "est_spread": 0.0016,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0038,
+      "illiq_spread": 0.0125,
+      "surface_risk": 40.4362
+    },
+    {
+      "ticker": "KBWD",
+      "dollar_adv": 4693296,
+      "amihud": 0.0021,
+      "est_spread": 0.0024,
+      "illiq_vol": 0.9977,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.0201,
+      "surface_risk": 40.4173
+    },
+    {
+      "ticker": "DVOL",
+      "dollar_adv": 239283,
+      "amihud": 0.0477,
+      "est_spread": 0.0016,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0027,
+      "illiq_spread": 0.013,
+      "surface_risk": 40.4156
+    },
+    {
+      "ticker": "AMUN",
+      "dollar_adv": 47916,
+      "amihud": 0.0677,
+      "est_spread": 0.0014,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0039,
+      "illiq_spread": 0.0112,
+      "surface_risk": 40.4148
+    },
+    {
+      "ticker": "CATH",
+      "dollar_adv": 4881654,
+      "amihud": 0.002,
+      "est_spread": 0.0024,
+      "illiq_vol": 0.9976,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.0198,
+      "surface_risk": 40.4053
+    },
+    {
+      "ticker": "BUFM",
+      "dollar_adv": 1247608,
+      "amihud": 0.0116,
+      "est_spread": 0.002,
+      "illiq_vol": 0.9994,
+      "illiq_amihud": 0.0007,
+      "illiq_spread": 0.0161,
+      "surface_risk": 40.4025
+    },
+    {
+      "ticker": "BCLO",
+      "dollar_adv": 505272,
+      "amihud": 0.0052,
+      "est_spread": 0.002,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0003,
+      "illiq_spread": 0.016,
+      "surface_risk": 40.401
+    },
+    {
+      "ticker": "FCVT",
+      "dollar_adv": 1843754,
+      "amihud": 0.019,
+      "est_spread": 0.0019,
+      "illiq_vol": 0.9991,
+      "illiq_amihud": 0.0011,
+      "illiq_spread": 0.0156,
+      "surface_risk": 40.3919
+    },
+    {
+      "ticker": "CCSB",
+      "dollar_adv": 72712,
+      "amihud": 0.0552,
+      "est_spread": 0.0014,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0031,
+      "illiq_spread": 0.0111,
+      "surface_risk": 40.3852
+    },
+    {
+      "ticker": "BLCR",
+      "dollar_adv": 21580498,
+      "amihud": 0.0005,
+      "est_spread": 0.0037,
+      "illiq_vol": 0.9896,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0317,
+      "surface_risk": 40.377
+    },
+    {
+      "ticker": "BSMY",
+      "dollar_adv": 529098,
+      "amihud": 0.0045,
+      "est_spread": 0.0018,
+      "illiq_vol": 0.9997,
+      "illiq_amihud": 0.0003,
+      "illiq_spread": 0.0148,
+      "surface_risk": 40.3694
+    },
+    {
+      "ticker": "FSTB",
+      "dollar_adv": 5956152,
+      "amihud": 0.0505,
+      "est_spread": 0.0019,
+      "illiq_vol": 0.9971,
+      "illiq_amihud": 0.0029,
+      "illiq_spread": 0.0153,
+      "surface_risk": 40.3689
+    },
+    {
+      "ticker": "FTHI",
+      "dollar_adv": 19407130,
+      "amihud": 0.0003,
+      "est_spread": 0.0035,
+      "illiq_vol": 0.9906,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0294,
+      "surface_risk": 40.3615
+    },
+    {
+      "ticker": "HYLS",
+      "dollar_adv": 10859714,
+      "amihud": 0.0002,
+      "est_spread": 0.0027,
+      "illiq_vol": 0.9948,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0227,
+      "surface_risk": 40.3588
+    },
+    {
+      "ticker": "BSMW",
+      "dollar_adv": 791464,
+      "amihud": 0.0022,
+      "est_spread": 0.0018,
+      "illiq_vol": 0.9996,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.0148,
+      "surface_risk": 40.358
+    },
+    {
+      "ticker": "IALT",
+      "dollar_adv": 35254192,
+      "amihud": 0.0001,
+      "est_spread": 0.0048,
+      "illiq_vol": 0.983,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0412,
+      "surface_risk": 40.3499
+    },
+    {
+      "ticker": "FTXR",
+      "dollar_adv": 10948306,
+      "amihud": 0.005,
+      "est_spread": 0.0026,
+      "illiq_vol": 0.9947,
+      "illiq_amihud": 0.0003,
+      "illiq_spread": 0.0218,
+      "surface_risk": 40.3446
+    },
+    {
+      "ticker": "BRHY",
+      "dollar_adv": 1388171,
+      "amihud": 0.0026,
+      "est_spread": 0.0018,
+      "illiq_vol": 0.9993,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.0145,
+      "surface_risk": 40.3418
+    },
+    {
+      "ticker": "COMT",
+      "dollar_adv": 10820724,
+      "amihud": 0.0012,
+      "est_spread": 0.0026,
+      "illiq_vol": 0.9948,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.0219,
+      "surface_risk": 40.3411
+    },
+    {
+      "ticker": "HIDE",
+      "dollar_adv": 1203302,
+      "amihud": 0.0053,
+      "est_spread": 0.0017,
+      "illiq_vol": 0.9994,
+      "illiq_amihud": 0.0003,
+      "illiq_spread": 0.0137,
+      "surface_risk": 40.3295
+    },
+    {
+      "ticker": "BSMZ",
+      "dollar_adv": 397799,
+      "amihud": 0.0061,
+      "est_spread": 0.0016,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0003,
+      "illiq_spread": 0.0125,
+      "surface_risk": 40.3181
+    },
+    {
+      "ticker": "CARY",
+      "dollar_adv": 8946725,
+      "amihud": 0.0002,
+      "est_spread": 0.0024,
+      "illiq_vol": 0.9957,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0195,
+      "surface_risk": 40.3147
+    },
+    {
+      "ticker": "FMUB",
+      "dollar_adv": 2175980,
+      "amihud": 0.001,
+      "est_spread": 0.0018,
+      "illiq_vol": 0.999,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.014,
+      "surface_risk": 40.3102
+    },
+    {
+      "ticker": "BNDP",
+      "dollar_adv": 496472,
+      "amihud": 0.0099,
+      "est_spread": 0.0015,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0006,
+      "illiq_spread": 0.0115,
+      "surface_risk": 40.2987
+    },
+    {
+      "ticker": "CFA",
+      "dollar_adv": 452133,
+      "amihud": 0.0133,
+      "est_spread": 0.0014,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0008,
+      "illiq_spread": 0.0112,
+      "surface_risk": 40.2971
+    },
+    {
+      "ticker": "KBWY",
+      "dollar_adv": 2876886,
+      "amihud": 0.0031,
+      "est_spread": 0.0017,
+      "illiq_vol": 0.9986,
+      "illiq_amihud": 0.0002,
+      "illiq_spread": 0.0138,
+      "surface_risk": 40.2956
+    },
+    {
+      "ticker": "FCAL",
+      "dollar_adv": 909800,
+      "amihud": 0.0021,
+      "est_spread": 0.0016,
+      "illiq_vol": 0.9996,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.0123,
+      "surface_risk": 40.2935
+    },
+    {
+      "ticker": "AAPU",
+      "dollar_adv": 82244959,
+      "amihud": 0.0005,
+      "est_spread": 0.0085,
+      "illiq_vol": 0.9603,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0751,
+      "surface_risk": 40.2891
+    },
+    {
+      "ticker": "BSJS",
+      "dollar_adv": 4336358,
+      "amihud": 0.0003,
+      "est_spread": 0.0019,
+      "illiq_vol": 0.9979,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0149,
+      "surface_risk": 40.2886
+    },
+    {
+      "ticker": "IBGA",
+      "dollar_adv": 324937,
+      "amihud": 0.0161,
+      "est_spread": 0.0014,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0009,
+      "illiq_spread": 0.0105,
+      "surface_risk": 40.2879
+    },
+    {
+      "ticker": "FLDB",
+      "dollar_adv": 371290,
+      "amihud": 0.0037,
+      "est_spread": 0.0015,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0002,
+      "illiq_spread": 0.0115,
+      "surface_risk": 40.2872
+    },
+    {
+      "ticker": "BUFC",
+      "dollar_adv": 1604021,
+      "amihud": 0.0023,
+      "est_spread": 0.0016,
+      "illiq_vol": 0.9992,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.0124,
+      "surface_risk": 40.2846
+    },
+    {
+      "ticker": "BSJT",
+      "dollar_adv": 4166386,
+      "amihud": 0.0005,
+      "est_spread": 0.0018,
+      "illiq_vol": 0.998,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0145,
+      "surface_risk": 40.2839
+    },
+    {
+      "ticker": "DUKH",
+      "dollar_adv": 242118,
+      "amihud": 0.0176,
+      "est_spread": 0.0013,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.001,
+      "illiq_spread": 0.0101,
+      "surface_risk": 40.2824
+    },
+    {
+      "ticker": "BAFE",
+      "dollar_adv": 1308129,
+      "amihud": 0.0085,
+      "est_spread": 0.0015,
+      "illiq_vol": 0.9994,
+      "illiq_amihud": 0.0005,
+      "illiq_spread": 0.0115,
+      "surface_risk": 40.2792
+    },
+    {
+      "ticker": "CSB",
+      "dollar_adv": 898020,
+      "amihud": 0.0183,
+      "est_spread": 0.0013,
+      "illiq_vol": 0.9996,
+      "illiq_amihud": 0.001,
+      "illiq_spread": 0.0102,
+      "surface_risk": 40.2734
+    },
+    {
+      "ticker": "IBTR",
+      "dollar_adv": 290170,
+      "amihud": 0.0303,
+      "est_spread": 0.0012,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0017,
+      "illiq_spread": 0.0087,
+      "surface_risk": 40.2714
+    },
+    {
+      "ticker": "MYCF",
+      "dollar_adv": 228628,
+      "amihud": 0.0075,
+      "est_spread": 0.0013,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0004,
+      "illiq_spread": 0.0103,
+      "surface_risk": 40.2683
+    },
+    {
+      "ticker": "LVDS",
+      "dollar_adv": 201728,
+      "amihud": 0.058,
+      "est_spread": 0.0008,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0033,
+      "illiq_spread": 0.0058,
+      "surface_risk": 40.2559
+    },
+    {
+      "ticker": "BKMS",
+      "dollar_adv": 1006240,
+      "amihud": 0.001,
+      "est_spread": 0.0014,
+      "illiq_vol": 0.9995,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.0106,
+      "surface_risk": 40.2488
+    },
+    {
+      "ticker": "BSJX",
+      "dollar_adv": 109645,
+      "amihud": 0.0787,
+      "est_spread": 0.0006,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0045,
+      "illiq_spread": 0.0036,
+      "surface_risk": 40.2443
+    },
+    {
+      "ticker": "DYFI",
+      "dollar_adv": 124087,
+      "amihud": 0.0288,
+      "est_spread": 0.001,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0016,
+      "illiq_spread": 0.0075,
+      "surface_risk": 40.2428
+    },
+    {
+      "ticker": "FIXD",
+      "dollar_adv": 14096750,
+      "amihud": 0.0002,
+      "est_spread": 0.0025,
+      "illiq_vol": 0.9932,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0204,
+      "surface_risk": 40.2384
+    },
+    {
+      "ticker": "BKMI",
+      "dollar_adv": 2556591,
+      "amihud": 0.001,
+      "est_spread": 0.0014,
+      "illiq_vol": 0.9988,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.011,
+      "surface_risk": 40.2284
+    },
+    {
+      "ticker": "AGNG",
+      "dollar_adv": 345707,
+      "amihud": 0.0278,
+      "est_spread": 0.001,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0016,
+      "illiq_spread": 0.0072,
+      "surface_risk": 40.228
+    },
+    {
+      "ticker": "FMUN",
+      "dollar_adv": 465921,
+      "amihud": 0.0039,
+      "est_spread": 0.0012,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0002,
+      "illiq_spread": 0.0091,
+      "surface_risk": 40.2262
+    },
+    {
+      "ticker": "BSMV",
+      "dollar_adv": 828376,
+      "amihud": 0.002,
+      "est_spread": 0.0013,
+      "illiq_vol": 0.9996,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.0095,
+      "surface_risk": 40.2248
+    },
+    {
+      "ticker": "BSCA",
+      "dollar_adv": 218724,
+      "amihud": 0.0227,
+      "est_spread": 0.001,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0013,
+      "illiq_spread": 0.0073,
+      "surface_risk": 40.2232
+    },
+    {
+      "ticker": "IDEF",
+      "dollar_adv": 19055045,
+      "amihud": 0.0007,
+      "est_spread": 0.0028,
+      "illiq_vol": 0.9908,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0235,
+      "surface_risk": 40.2211
+    },
+    {
+      "ticker": "ALLW",
+      "dollar_adv": 13611634,
+      "amihud": 0.0004,
+      "est_spread": 0.0023,
+      "illiq_vol": 0.9934,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0193,
+      "surface_risk": 40.2196
+    },
+    {
+      "ticker": "METL",
+      "dollar_adv": 407233,
+      "amihud": 0.0674,
+      "est_spread": 0.0006,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0038,
+      "illiq_spread": 0.0037,
+      "surface_risk": 40.2191
+    },
+    {
+      "ticker": "GTOQ",
+      "dollar_adv": 330850,
+      "amihud": 0.0948,
+      "est_spread": 0.0003,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0054,
+      "illiq_spread": 0.0012,
+      "surface_risk": 40.2135
+    },
+    {
+      "ticker": "IGOV",
+      "dollar_adv": 13850540,
+      "amihud": 0.0004,
+      "est_spread": 0.0023,
+      "illiq_vol": 0.9933,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.019,
+      "surface_risk": 40.2089
+    },
+    {
+      "ticker": "AVGB",
+      "dollar_adv": 80931,
+      "amihud": 0.0736,
+      "est_spread": 0.0005,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0042,
+      "illiq_spread": 0.0024,
+      "surface_risk": 40.2063
+    },
+    {
+      "ticker": "BSJR",
+      "dollar_adv": 4304765,
+      "amihud": 0.0003,
+      "est_spread": 0.0015,
+      "illiq_vol": 0.9979,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0113,
+      "surface_risk": 40.1994
+    },
+    {
+      "ticker": "DYNB",
+      "dollar_adv": 229530,
+      "amihud": 0.0465,
+      "est_spread": 0.0007,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0026,
+      "illiq_spread": 0.0043,
+      "surface_risk": 40.1953
+    },
+    {
+      "ticker": "LEND",
+      "dollar_adv": 2909357,
+      "amihud": 0.0009,
+      "est_spread": 0.0013,
+      "illiq_vol": 0.9986,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0095,
+      "surface_risk": 40.1832
+    },
+    {
+      "ticker": "FTQI",
+      "dollar_adv": 7584150,
+      "amihud": 0.0012,
+      "est_spread": 0.0016,
+      "illiq_vol": 0.9963,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.013,
+      "surface_risk": 40.1812
+    },
+    {
+      "ticker": "BSCY",
+      "dollar_adv": 2167586,
+      "amihud": 0.0016,
+      "est_spread": 0.0012,
+      "illiq_vol": 0.999,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.0086,
+      "surface_risk": 40.1756
+    },
+    {
+      "ticker": "BSJU",
+      "dollar_adv": 1938511,
+      "amihud": 0.0009,
+      "est_spread": 0.0011,
+      "illiq_vol": 0.9991,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0083,
+      "surface_risk": 40.1726
+    },
+    {
+      "ticker": "BASV",
+      "dollar_adv": 579881,
+      "amihud": 0.0359,
+      "est_spread": 0.0007,
+      "illiq_vol": 0.9997,
+      "illiq_amihud": 0.002,
+      "illiq_spread": 0.0044,
+      "surface_risk": 40.1696
+    },
+    {
+      "ticker": "CPLS",
+      "dollar_adv": 414333,
+      "amihud": 0.0118,
+      "est_spread": 0.0009,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0007,
+      "illiq_spread": 0.0061,
+      "surface_risk": 40.1679
+    },
+    {
+      "ticker": "HISF",
+      "dollar_adv": 318976,
+      "amihud": 0.0097,
+      "est_spread": 0.0008,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0006,
+      "illiq_spread": 0.0057,
+      "surface_risk": 40.1546
+    },
+    {
+      "ticker": "IQQ",
+      "dollar_adv": 35161252,
+      "amihud": 0.0005,
+      "est_spread": 0.0038,
+      "illiq_vol": 0.983,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0329,
+      "surface_risk": 40.1446
+    },
+    {
+      "ticker": "BSCX",
+      "dollar_adv": 3674890,
+      "amihud": 0.0007,
+      "est_spread": 0.0011,
+      "illiq_vol": 0.9982,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0085,
+      "surface_risk": 40.1438
+    },
+    {
+      "ticker": "FDRS",
+      "dollar_adv": 1114960,
+      "amihud": 0.0247,
+      "est_spread": 0.0007,
+      "illiq_vol": 0.9995,
+      "illiq_amihud": 0.0014,
+      "illiq_spread": 0.0045,
+      "surface_risk": 40.14
+    },
+    {
+      "ticker": "LVIG",
+      "dollar_adv": 522386,
+      "amihud": 0.0172,
+      "est_spread": 0.0007,
+      "illiq_vol": 0.9997,
+      "illiq_amihud": 0.001,
+      "illiq_spread": 0.0044,
+      "surface_risk": 40.1341
+    },
+    {
+      "ticker": "DGCB",
+      "dollar_adv": 8589864,
+      "amihud": 0.0003,
+      "est_spread": 0.0015,
+      "illiq_vol": 0.9959,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0119,
+      "surface_risk": 40.1311
+    },
+    {
+      "ticker": "DAX",
+      "dollar_adv": 2035297,
+      "amihud": 0.0067,
+      "est_spread": 0.0009,
+      "illiq_vol": 0.999,
+      "illiq_amihud": 0.0004,
+      "illiq_spread": 0.0063,
+      "surface_risk": 40.1309
+    },
+    {
+      "ticker": "MYCG",
+      "dollar_adv": 162114,
+      "amihud": 0.0075,
+      "est_spread": 0.0007,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0004,
+      "illiq_spread": 0.0047,
+      "surface_risk": 40.1303
+    },
+    {
+      "ticker": "DGRS",
+      "dollar_adv": 2241202,
+      "amihud": 0.0051,
+      "est_spread": 0.0009,
+      "illiq_vol": 0.9989,
+      "illiq_amihud": 0.0003,
+      "illiq_spread": 0.0064,
+      "surface_risk": 40.1265
+    },
+    {
+      "ticker": "BSMQ",
+      "dollar_adv": 1406453,
+      "amihud": 0.0006,
+      "est_spread": 0.0009,
+      "illiq_vol": 0.9993,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.006,
+      "surface_risk": 40.1252
+    },
+    {
+      "ticker": "BSMR",
+      "dollar_adv": 1226024,
+      "amihud": 0.0006,
+      "est_spread": 0.0009,
+      "illiq_vol": 0.9994,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0058,
+      "surface_risk": 40.1234
+    },
+    {
+      "ticker": "BSMT",
+      "dollar_adv": 1087689,
+      "amihud": 0.0012,
+      "est_spread": 0.0008,
+      "illiq_vol": 0.9995,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.0057,
+      "surface_risk": 40.1229
+    },
+    {
+      "ticker": "BSCZ",
+      "dollar_adv": 1790978,
+      "amihud": 0.0021,
+      "est_spread": 0.0009,
+      "illiq_vol": 0.9991,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.0061,
+      "surface_risk": 40.121
+    },
+    {
+      "ticker": "CPAG",
+      "dollar_adv": 567994,
+      "amihud": 0.0265,
+      "est_spread": 0.0005,
+      "illiq_vol": 0.9997,
+      "illiq_amihud": 0.0015,
+      "illiq_spread": 0.003,
+      "surface_risk": 40.1169
+    },
+    {
+      "ticker": "BSJW",
+      "dollar_adv": 330040,
+      "amihud": 0.0087,
+      "est_spread": 0.0006,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0005,
+      "illiq_spread": 0.0039,
+      "surface_risk": 40.1096
+    },
+    {
+      "ticker": "IEUS",
+      "dollar_adv": 556995,
+      "amihud": 0.0396,
+      "est_spread": 0.0004,
+      "illiq_vol": 0.9997,
+      "illiq_amihud": 0.0023,
+      "illiq_spread": 0.0016,
+      "surface_risk": 40.1071
+    },
+    {
+      "ticker": "BSMS",
+      "dollar_adv": 1339717,
+      "amihud": 0.0009,
+      "est_spread": 0.0008,
+      "illiq_vol": 0.9994,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.005,
+      "surface_risk": 40.1017
+    },
+    {
+      "ticker": "BOTT",
+      "dollar_adv": 1147816,
+      "amihud": 0.0285,
+      "est_spread": 0.0005,
+      "illiq_vol": 0.9994,
+      "illiq_amihud": 0.0016,
+      "illiq_spread": 0.0025,
+      "surface_risk": 40.0967
+    },
+    {
+      "ticker": "IBTP",
+      "dollar_adv": 1473302,
+      "amihud": 0.0022,
+      "est_spread": 0.0007,
+      "illiq_vol": 0.9993,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.0048,
+      "surface_risk": 40.0959
+    },
+    {
+      "ticker": "GOVI",
+      "dollar_adv": 4529507,
+      "amihud": 0.0007,
+      "est_spread": 0.001,
+      "illiq_vol": 0.9978,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.007,
+      "surface_risk": 40.0897
+    },
+    {
+      "ticker": "HYBI",
+      "dollar_adv": 1526109,
+      "amihud": 0.0013,
+      "est_spread": 0.0007,
+      "illiq_vol": 0.9993,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.0046,
+      "surface_risk": 40.0872
+    },
+    {
+      "ticker": "KOID",
+      "dollar_adv": 7326598,
+      "amihud": 0.0032,
+      "est_spread": 0.0012,
+      "illiq_vol": 0.9965,
+      "illiq_amihud": 0.0002,
+      "illiq_spread": 0.0086,
+      "surface_risk": 40.0809
+    },
+    {
+      "ticker": "FCLO",
+      "dollar_adv": 263778,
+      "amihud": 0.0041,
+      "est_spread": 0.0005,
+      "illiq_vol": 0.9999,
+      "illiq_amihud": 0.0002,
+      "illiq_spread": 0.0027,
+      "surface_risk": 40.0697
+    },
+    {
+      "ticker": "BSCW",
+      "dollar_adv": 6169389,
+      "amihud": 0.0004,
+      "est_spread": 0.001,
+      "illiq_vol": 0.997,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0074,
+      "surface_risk": 40.0655
+    },
+    {
+      "ticker": "FMHI",
+      "dollar_adv": 5074010,
+      "amihud": 0.0004,
+      "est_spread": 0.0009,
+      "illiq_vol": 0.9976,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0064,
+      "surface_risk": 40.0623
+    },
+    {
+      "ticker": "MSFU",
+      "dollar_adv": 222050248,
+      "amihud": 0.0002,
+      "est_spread": 0.0194,
+      "illiq_vol": 0.8928,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.1738,
+      "surface_risk": 40.0561
+    },
+    {
+      "ticker": "BNDW",
+      "dollar_adv": 6369116,
+      "amihud": 0.0003,
+      "est_spread": 0.001,
+      "illiq_vol": 0.9969,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0071,
+      "surface_risk": 40.055
+    },
+    {
+      "ticker": "BSMU",
+      "dollar_adv": 1553877,
+      "amihud": 0.0015,
+      "est_spread": 0.0005,
+      "illiq_vol": 0.9993,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.0029,
+      "surface_risk": 40.0446
+    },
+    {
+      "ticker": "CMBO",
+      "dollar_adv": 52229,
+      "amihud": 0.0155,
+      "est_spread": 0.0003,
+      "illiq_vol": 1.0,
+      "illiq_amihud": 0.0009,
+      "illiq_spread": 0.0005,
+      "surface_risk": 40.0422
+    },
+    {
+      "ticker": "FAAA",
+      "dollar_adv": 1719180,
+      "amihud": 0.0002,
+      "est_spread": 0.0005,
+      "illiq_vol": 0.9992,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0029,
+      "surface_risk": 40.04
+    },
+    {
+      "ticker": "IUS",
+      "dollar_adv": 3653627,
+      "amihud": 0.0017,
+      "est_spread": 0.0007,
+      "illiq_vol": 0.9982,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.0041,
+      "surface_risk": 40.0359
+    },
+    {
+      "ticker": "AGGA",
+      "dollar_adv": 437900,
+      "amihud": 0.0079,
+      "est_spread": 0.0002,
+      "illiq_vol": 0.9998,
+      "illiq_amihud": 0.0005,
+      "illiq_spread": 0.0002,
+      "surface_risk": 40.0136
+    },
+    {
+      "ticker": "IBTM",
+      "dollar_adv": 2658485,
+      "amihud": 0.0009,
+      "est_spread": 0.0005,
+      "illiq_vol": 0.9987,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.0023,
+      "surface_risk": 40.0077
+    },
+    {
+      "ticker": "IMCV",
+      "dollar_adv": 2223949,
+      "amihud": 0.0029,
+      "est_spread": 0.0004,
+      "illiq_vol": 0.9989,
+      "illiq_amihud": 0.0002,
+      "illiq_spread": 0.0013,
+      "surface_risk": 39.9965
+    },
+    {
+      "ticker": "BSCV",
+      "dollar_adv": 7075918,
+      "amihud": 0.0003,
+      "est_spread": 0.0008,
+      "illiq_vol": 0.9966,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0052,
+      "surface_risk": 39.9951
+    },
+    {
+      "ticker": "BGRN",
+      "dollar_adv": 1960453,
+      "amihud": 0.0011,
+      "est_spread": 0.0003,
+      "illiq_vol": 0.9991,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.001,
+      "surface_risk": 39.9887
+    },
+    {
+      "ticker": "IBTQ",
+      "dollar_adv": 1271337,
+      "amihud": 0.0029,
+      "est_spread": 0.0002,
+      "illiq_vol": 0.9994,
+      "illiq_amihud": 0.0002,
+      "illiq_spread": 0.0003,
+      "surface_risk": 39.9886
+    },
+    {
+      "ticker": "BRTR",
+      "dollar_adv": 2878026,
+      "amihud": 0.0008,
+      "est_spread": 0.0004,
+      "illiq_vol": 0.9986,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0017,
+      "surface_risk": 39.9878
+    },
+    {
+      "ticker": "BSJQ",
+      "dollar_adv": 7368155,
+      "amihud": 0.0001,
+      "est_spread": 0.0008,
+      "illiq_vol": 0.9964,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.005,
+      "surface_risk": 39.9825
+    },
+    {
+      "ticker": "MYCH",
+      "dollar_adv": 5104685,
+      "amihud": 0.0003,
+      "est_spread": 0.0005,
+      "illiq_vol": 0.9975,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0029,
+      "surface_risk": 39.9745
+    },
+    {
+      "ticker": "BSCU",
+      "dollar_adv": 10509407,
+      "amihud": 0.0002,
+      "est_spread": 0.001,
+      "illiq_vol": 0.9949,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.007,
+      "surface_risk": 39.9722
+    },
+    {
+      "ticker": "IBTL",
+      "dollar_adv": 5103010,
+      "amihud": 0.0006,
+      "est_spread": 0.0005,
+      "illiq_vol": 0.9975,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0025,
+      "surface_risk": 39.9657
+    },
+    {
+      "ticker": "CALI",
+      "dollar_adv": 5361836,
+      "amihud": 0.0001,
+      "est_spread": 0.0005,
+      "illiq_vol": 0.9974,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0025,
+      "surface_risk": 39.96
+    },
+    {
+      "ticker": "IBTO",
+      "dollar_adv": 2662344,
+      "amihud": 0.0015,
+      "est_spread": 0.0002,
+      "illiq_vol": 0.9987,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.0002,
+      "surface_risk": 39.957
+    },
+    {
+      "ticker": "EVSD",
+      "dollar_adv": 6597049,
+      "amihud": 0.0002,
+      "est_spread": 0.0006,
+      "illiq_vol": 0.9968,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0034,
+      "surface_risk": 39.9568
+    },
+    {
+      "ticker": "IBTK",
+      "dollar_adv": 6440962,
+      "amihud": 0.0004,
+      "est_spread": 0.0005,
+      "illiq_vol": 0.9969,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0031,
+      "surface_risk": 39.9542
+    },
+    {
+      "ticker": "FTSL",
+      "dollar_adv": 9861554,
+      "amihud": 0.0001,
+      "est_spread": 0.0008,
+      "illiq_vol": 0.9952,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0053,
+      "surface_risk": 39.943
+    },
+    {
+      "ticker": "BSCT",
+      "dollar_adv": 9864460,
+      "amihud": 0.0001,
+      "est_spread": 0.0008,
+      "illiq_vol": 0.9952,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0049,
+      "surface_risk": 39.9332
+    },
+    {
+      "ticker": "INDY",
+      "dollar_adv": 4607394,
+      "amihud": 0.0018,
+      "est_spread": 0.0003,
+      "illiq_vol": 0.9978,
+      "illiq_amihud": 0.0001,
+      "illiq_spread": 0.0005,
+      "surface_risk": 39.9273
+    },
+    {
+      "ticker": "AMZD",
+      "dollar_adv": 137442478,
+      "amihud": 0.0001,
+      "est_spread": 0.0116,
+      "illiq_vol": 0.9336,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.1029,
+      "surface_risk": 39.9189
+    },
+    {
+      "ticker": "BSCS",
+      "dollar_adv": 10901335,
+      "amihud": 0.0001,
+      "est_spread": 0.0008,
+      "illiq_vol": 0.9947,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0051,
+      "surface_risk": 39.9168
+    },
+    {
+      "ticker": "DFGX",
+      "dollar_adv": 9029902,
+      "amihud": 0.0002,
+      "est_spread": 0.0005,
+      "illiq_vol": 0.9956,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0027,
+      "surface_risk": 39.8933
+    },
+    {
+      "ticker": "FTXH",
+      "dollar_adv": 44088377,
+      "amihud": 0.0287,
+      "est_spread": 0.0032,
+      "illiq_vol": 0.9787,
+      "illiq_amihud": 0.0016,
+      "illiq_spread": 0.0272,
+      "surface_risk": 39.8848
+    },
+    {
+      "ticker": "BSCR",
+      "dollar_adv": 11183463,
+      "amihud": 0.0,
+      "est_spread": 0.0006,
+      "illiq_vol": 0.9946,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0038,
+      "surface_risk": 39.8802
+    },
+    {
+      "ticker": "IBTJ",
+      "dollar_adv": 6674605,
+      "amihud": 0.0002,
+      "est_spread": 0.0002,
+      "illiq_vol": 0.9968,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0003,
+      "surface_risk": 39.8786
+    },
+    {
+      "ticker": "IBTH",
+      "dollar_adv": 10615891,
+      "amihud": 0.0,
+      "est_spread": 0.0005,
+      "illiq_vol": 0.9949,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.003,
+      "surface_risk": 39.8711
+    },
+    {
+      "ticker": "FMB",
+      "dollar_adv": 8542437,
+      "amihud": 0.0002,
+      "est_spread": 0.0003,
+      "illiq_vol": 0.9959,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0013,
+      "surface_risk": 39.8682
+    },
+    {
+      "ticker": "IBTI",
+      "dollar_adv": 9941937,
+      "amihud": 0.0001,
+      "est_spread": 0.0004,
+      "illiq_vol": 0.9952,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0016,
+      "surface_risk": 39.8484
+    },
+    {
+      "ticker": "IBTG",
+      "dollar_adv": 11577130,
+      "amihud": 0.0,
+      "est_spread": 0.0005,
+      "illiq_vol": 0.9944,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0027,
+      "surface_risk": 39.8448
+    },
+    {
+      "ticker": "FTXN",
+      "dollar_adv": 50309482,
+      "amihud": 0.0044,
+      "est_spread": 0.0036,
+      "illiq_vol": 0.9757,
+      "illiq_amihud": 0.0002,
+      "illiq_spread": 0.0308,
+      "surface_risk": 39.8069
+    },
+    {
+      "ticker": "AMDL",
+      "dollar_adv": 235400882,
+      "amihud": 0.0004,
+      "est_spread": 0.0195,
+      "illiq_vol": 0.8863,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.174,
+      "surface_risk": 39.8055
+    },
+    {
+      "ticker": "FTCS",
+      "dollar_adv": 53095903,
+      "amihud": 0.0001,
+      "est_spread": 0.0039,
+      "illiq_vol": 0.9744,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0331,
+      "surface_risk": 39.8018
+    },
+    {
+      "ticker": "IJT",
+      "dollar_adv": 44151420,
+      "amihud": 0.0003,
+      "est_spread": 0.0031,
+      "illiq_vol": 0.9787,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0257,
+      "surface_risk": 39.7908
+    },
+    {
+      "ticker": "BSCQ",
+      "dollar_adv": 16768606,
+      "amihud": 0.0,
+      "est_spread": 0.0005,
+      "illiq_vol": 0.9919,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0025,
+      "surface_risk": 39.7384
+    },
+    {
+      "ticker": "CLOA",
+      "dollar_adv": 22183800,
+      "amihud": 0.0,
+      "est_spread": 0.0007,
+      "illiq_vol": 0.9893,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0044,
+      "surface_risk": 39.6805
+    },
+    {
+      "ticker": "ISTB",
+      "dollar_adv": 19314445,
+      "amihud": 0.0001,
+      "est_spread": 0.0004,
+      "illiq_vol": 0.9907,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0019,
+      "surface_risk": 39.6746
+    },
+    {
+      "ticker": "FALN",
+      "dollar_adv": 21517397,
+      "amihud": 0.0001,
+      "est_spread": 0.0005,
+      "illiq_vol": 0.9896,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0026,
+      "surface_risk": 39.6507
+    },
+    {
+      "ticker": "ICLN",
+      "dollar_adv": 107397075,
+      "amihud": 0.0002,
+      "est_spread": 0.0078,
+      "illiq_vol": 0.9481,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0689,
+      "surface_risk": 39.6487
+    },
+    {
+      "ticker": "GPIQ",
+      "dollar_adv": 83575437,
+      "amihud": 0.0002,
+      "est_spread": 0.0058,
+      "illiq_vol": 0.9596,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0503,
+      "surface_risk": 39.6441
+    },
+    {
+      "ticker": "ANGL",
+      "dollar_adv": 20500178,
+      "amihud": 0.0001,
+      "est_spread": 0.0002,
+      "illiq_vol": 0.9901,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0,
+      "surface_risk": 39.6043
+    },
+    {
+      "ticker": "EUFN",
+      "dollar_adv": 57323233,
+      "amihud": 0.0002,
+      "est_spread": 0.0032,
+      "illiq_vol": 0.9723,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.027,
+      "surface_risk": 39.5673
+    },
+    {
+      "ticker": "GPIX",
+      "dollar_adv": 56743725,
+      "amihud": 0.0001,
+      "est_spread": 0.0026,
+      "illiq_vol": 0.9726,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0219,
+      "surface_risk": 39.4526
+    },
+    {
+      "ticker": "DFGP",
+      "dollar_adv": 37656799,
+      "amihud": 0.0001,
+      "est_spread": 0.0009,
+      "illiq_vol": 0.9818,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0063,
+      "surface_risk": 39.43
+    },
+    {
+      "ticker": "ESGU",
+      "dollar_adv": 68414537,
+      "amihud": 0.0001,
+      "est_spread": 0.0033,
+      "illiq_vol": 0.967,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0281,
+      "surface_risk": 39.3819
+    },
+    {
+      "ticker": "DVY",
+      "dollar_adv": 69760606,
+      "amihud": 0.0001,
+      "est_spread": 0.0033,
+      "illiq_vol": 0.9663,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0277,
+      "surface_risk": 39.3451
+    },
+    {
+      "ticker": "AIQ",
+      "dollar_adv": 138540444,
+      "amihud": 0.0002,
+      "est_spread": 0.009,
+      "illiq_vol": 0.9331,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0797,
+      "surface_risk": 39.3181
+    },
+    {
+      "ticker": "FTSM",
+      "dollar_adv": 40530229,
+      "amihud": 0.0,
+      "est_spread": 0.0005,
+      "illiq_vol": 0.9804,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0025,
+      "surface_risk": 39.2805
+    },
+    {
+      "ticker": "DGRW",
+      "dollar_adv": 52795210,
+      "amihud": 0.0001,
+      "est_spread": 0.0009,
+      "illiq_vol": 0.9745,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0065,
+      "surface_risk": 39.1429
+    },
+    {
+      "ticker": "IGF",
+      "dollar_adv": 61448514,
+      "amihud": 0.0001,
+      "est_spread": 0.001,
+      "illiq_vol": 0.9703,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0076,
+      "surface_risk": 39.0033
+    },
+    {
+      "ticker": "IUSG",
+      "dollar_adv": 95281388,
+      "amihud": 0.0001,
+      "est_spread": 0.0037,
+      "illiq_vol": 0.954,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.032,
+      "surface_risk": 38.9608
+    },
+    {
+      "ticker": "AIRR",
+      "dollar_adv": 95885797,
+      "amihud": 0.0002,
+      "est_spread": 0.0037,
+      "illiq_vol": 0.9537,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0316,
+      "surface_risk": 38.9398
+    },
+    {
+      "ticker": "IUSV",
+      "dollar_adv": 67959556,
+      "amihud": 0.0001,
+      "est_spread": 0.001,
+      "illiq_vol": 0.9672,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0076,
+      "surface_risk": 38.8771
+    },
+    {
+      "ticker": "GRID",
+      "dollar_adv": 117774217,
+      "amihud": 0.0002,
+      "est_spread": 0.0047,
+      "illiq_vol": 0.9431,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0406,
+      "surface_risk": 38.7416
+    },
+    {
+      "ticker": "ACWX",
+      "dollar_adv": 143751551,
+      "amihud": 0.0001,
+      "est_spread": 0.0068,
+      "illiq_vol": 0.9306,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0593,
+      "surface_risk": 38.7056
+    },
+    {
+      "ticker": "AAPD",
+      "dollar_adv": 116306762,
+      "amihud": 0.0002,
+      "est_spread": 0.0042,
+      "illiq_vol": 0.9438,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0365,
+      "surface_risk": 38.6672
+    },
+    {
+      "ticker": "IXUS",
+      "dollar_adv": 155006228,
+      "amihud": 0.0001,
+      "est_spread": 0.0066,
+      "illiq_vol": 0.9252,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0578,
+      "surface_risk": 38.4526
+    },
+    {
+      "ticker": "CIBR",
+      "dollar_adv": 138132674,
+      "amihud": 0.0001,
+      "est_spread": 0.0023,
+      "illiq_vol": 0.9333,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0191,
+      "surface_risk": 37.8098
+    },
+    {
+      "ticker": "MCHI",
+      "dollar_adv": 166790973,
+      "amihud": 0.0001,
+      "est_spread": 0.0044,
+      "illiq_vol": 0.9195,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0378,
+      "surface_risk": 37.7231
+    },
+    {
+      "ticker": "IGIB",
+      "dollar_adv": 148445465,
+      "amihud": 0.0,
+      "est_spread": 0.0008,
+      "illiq_vol": 0.9283,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0055,
+      "surface_risk": 37.2701
+    },
+    {
+      "ticker": "EMXC",
+      "dollar_adv": 265557274,
+      "amihud": 0.0001,
+      "est_spread": 0.0106,
+      "illiq_vol": 0.8718,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0937,
+      "surface_risk": 37.2138
+    },
+    {
+      "ticker": "IUSB",
+      "dollar_adv": 153722950,
+      "amihud": 0.0,
+      "est_spread": 0.0007,
+      "illiq_vol": 0.9258,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0044,
+      "surface_risk": 37.1402
+    },
+    {
+      "ticker": "IEI",
+      "dollar_adv": 154427973,
+      "amihud": 0.0,
+      "est_spread": 0.0003,
+      "illiq_vol": 0.9254,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0011,
+      "surface_risk": 37.046
+    },
+    {
+      "ticker": "IGSB",
+      "dollar_adv": 158017376,
+      "amihud": 0.0,
+      "est_spread": 0.0005,
+      "illiq_vol": 0.9237,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0025,
+      "surface_risk": 37.0115
+    },
+    {
+      "ticker": "KBWB",
+      "dollar_adv": 196473581,
+      "amihud": 0.0001,
+      "est_spread": 0.0037,
+      "illiq_vol": 0.9051,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0316,
+      "surface_risk": 36.9954
+    },
+    {
+      "ticker": "MBB",
+      "dollar_adv": 191573433,
+      "amihud": 0.0,
+      "est_spread": 0.0008,
+      "illiq_vol": 0.9075,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.005,
+      "surface_risk": 36.4242
+    },
+    {
+      "ticker": "BNDX",
+      "dollar_adv": 205010492,
+      "amihud": 0.0,
+      "est_spread": 0.0009,
+      "illiq_vol": 0.901,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0059,
+      "surface_risk": 36.1892
+    },
+    {
+      "ticker": "IBB",
+      "dollar_adv": 316644055,
+      "amihud": 0.0,
+      "est_spread": 0.0029,
+      "illiq_vol": 0.8471,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.024,
+      "surface_risk": 34.4851
+    },
+    {
+      "ticker": "JEPQ",
+      "dollar_adv": 418802551,
+      "amihud": 0.0,
+      "est_spread": 0.0057,
+      "illiq_vol": 0.7978,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0495,
+      "surface_risk": 33.1485
+    },
+    {
+      "ticker": "ETHA",
+      "dollar_adv": 404708100,
+      "amihud": 0.0001,
+      "est_spread": 0.0045,
+      "illiq_vol": 0.8046,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0384,
+      "surface_risk": 33.1445
+    },
+    {
+      "ticker": "ACWI",
+      "dollar_adv": 511003754,
+      "amihud": 0.0,
+      "est_spread": 0.0039,
+      "illiq_vol": 0.7533,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0338,
+      "surface_risk": 30.9753
+    },
+    {
+      "ticker": "IEF",
+      "dollar_adv": 516791945,
+      "amihud": 0.0,
+      "est_spread": 0.0003,
+      "illiq_vol": 0.7505,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0013,
+      "surface_risk": 30.0507
+    },
+    {
+      "ticker": "EMB",
+      "dollar_adv": 568753237,
+      "amihud": 0.0,
+      "est_spread": 0.0012,
+      "illiq_vol": 0.7254,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0092,
+      "surface_risk": 29.2453
+    },
+    {
+      "ticker": "BND",
+      "dollar_adv": 565927448,
+      "amihud": 0.0,
+      "est_spread": 0.0006,
+      "illiq_vol": 0.7268,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0037,
+      "surface_risk": 29.1628
+    },
+    {
+      "ticker": "IBIT",
+      "dollar_adv": 1509889180,
+      "amihud": 0.0,
+      "est_spread": 0.0064,
+      "illiq_vol": 0.271,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.0561,
+      "surface_risk": 12.2417
+    },
+    {
+      "ticker": "MUU",
+      "dollar_adv": 2071173757,
+      "amihud": 0.0001,
+      "est_spread": 0.0429,
+      "illiq_vol": 0.0,
+      "illiq_amihud": 0.0,
+      "illiq_spread": 0.3861,
+      "surface_risk": 9.6517
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+# Render Blueprint — free Static Site.
+#
+# Render's Static Site type has no paid plan and no `plan:` field: it is free
+# permanently (100 GB bandwidth/month, free TLS). Nothing here can silently
+# provision a billable service.
+#
+# The app is pre-built HTML/JS, so there is no build step. Render still wants a
+# buildCommand, so it is a no-op.
+
+services:
+  - type: web
+    name: illiquidity-illusion
+    runtime: static
+    buildCommand: "echo 'static site — nothing to build'"
+    staticPublishPath: ./web
+    pullRequestPreviewsEnabled: false
+    headers:
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+    routes:
+      - type: rewrite
+        source: /
+        destination: /index.html

@@ -1,0 +1,1517 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&amp;family=Outfit:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; padding: 0; background: #06080f; }
+  body { font-family: Outfit, system-ui, sans-serif; color: #e8e6df; -webkit-font-smoothing: antialiased; }
+  a { color: #c9a84c; text-decoration: none; }
+  a:hover { color: #e0c877; }
+  * { box-sizing: border-box; }
+  input[type=range] { -webkit-appearance: none; appearance: none; background: transparent; }
+  input[type=range]::-webkit-slider-runnable-track { height: 1px; background: rgba(201,168,76,.32); }
+  input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 13px; height: 13px; margin-top: -6px; border-radius: 50%; background: #c9a84c; cursor: pointer; }
+  ::selection { background: rgba(201,168,76,.3); }
+  @keyframes shimmer { 0% { background-position: -420px 0; } 100% { background-position: 420px 0; } }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+</style>
+</helmet>
+<div style="position: relative; min-height: 100vh; background: radial-gradient(ellipse 120% 80% at 50% -20%, rgba(201,168,76,.07), transparent 60%), #06080f;">
+  <canvas ref="{{ starRef }}" style="position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; background: linear-gradient(180deg, #000000, #28211a)"></canvas>
+
+  <div style="position: relative; z-index: 1; max-width: 1240px; margin: 0 auto; padding: 40px 32px 96px; background: linear-gradient(180deg, #000000, #28211a)">
+
+    <header style="display: flex; align-items: flex-end; justify-content: space-between; gap: 32px; padding-bottom: 22px; border-bottom: 1px solid rgba(201,168,76,.18);">
+      <div>
+        <div style="font-size: 10px; text-transform: uppercase; letter-spacing: .3em; color: #c9a84c; font-weight: 500;">ETF Liquidity Risk Terminal</div>
+        <h1 style="font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 44px; line-height: 1.05; margin: 12px 0 0; letter-spacing: -.01em;">The Illiquidity Illusion</h1>
+      </div>
+      <nav style="display: flex; gap: 30px; padding-bottom: 6px;">
+        <sc-for list="{{ tabs }}" as="t" hint-placeholder-count="4">
+          <div onClick="{{ t.pick }}" style="font-size: 11px; text-transform: uppercase; letter-spacing: .18em; cursor: pointer; padding-bottom: 8px; color: {{ t.color }}; border-bottom: 1px solid {{ t.rule }}; transition: color 240ms, border-color 240ms;">{{ t.label }}</div>
+        </sc-for>
+      </nav>
+    </header>
+
+    <sc-if value="{{ isAnalyze }}" hint-placeholder-val="{{ true }}">
+    <div>
+    <p style="max-width: 68ch; font-size: 15px; line-height: 1.65; color: #9aa0ae; margin: 24px 0 0; text-wrap: pretty;">An ETF trades like a stock. The securities inside it trade on their own markets, at their own pace. Standard liquidity checks measure the wrapper. This measures the contents.</p>
+
+    <section style="margin-top: 40px;">
+      <div style="display: flex; align-items: baseline; gap: 16px; border-bottom: 1px solid rgba(201,168,76,.18); padding-bottom: 12px;">
+        <span style="font-size: 10px; text-transform: uppercase; letter-spacing: .3em; color: #c9a84c; font-weight: 500;">Ticker</span>
+        <input value="{{ query }}" onChange="{{ onQuery }}" onKeyDown="{{ onQueryKey }}" placeholder="ARKK" spellcheck="false" style="flex: 1; background: transparent; border: 0; outline: none; color: #e8e6df; font-family: Outfit, sans-serif; font-size: 30px; font-weight: 300; letter-spacing: .22em; text-transform: uppercase; padding: 0;">
+        <span style="font-size: 11px; color: #8a8f9e; letter-spacing: .08em;">{{ sourceLabel }}</span>
+      </div>
+      <sc-if value="{{ showSuggest }}" hint-placeholder-val="{{ false }}">
+        <div style="border: 1px solid rgba(201,168,76,.18); border-top: 0; background: linear-gradient(160deg, #0c1020, #080b16);">
+          <sc-for list="{{ suggestions }}" as="s" hint-placeholder-count="0">
+            <div onClick="{{ s.pick }}" style="display: flex; justify-content: space-between; align-items: center; padding: 10px 16px; cursor: pointer; border-bottom: 1px solid rgba(201,168,76,.08);" style-hover="background: rgba(201,168,76,.06);">
+              <span style="letter-spacing: .16em; font-size: 14px;">{{ s.ticker }}</span>
+              <span style="font-size: 10px; text-transform: uppercase; letter-spacing: .16em; color: {{ s.tagColor }};">{{ s.tag }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </sc-if>
+      <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; align-items: center;">
+        <span style="font-size: 10px; text-transform: uppercase; letter-spacing: .3em; color: #8a8f9e; margin-right: 6px;">Seeded</span>
+        <sc-for list="{{ seeds }}" as="p" hint-placeholder-count="5">
+          <div onClick="{{ p.pick }}" style="padding: 7px 16px; border: 1px solid {{ p.border }}; border-radius: 999px; font-size: 11px; letter-spacing: .18em; cursor: pointer; color: {{ p.color }}; background: {{ p.bg }}; transition: border-color 240ms;">{{ p.ticker }}</div>
+        </sc-for>
+      </div>
+    </section>
+
+    <sc-if value="{{ loading }}" hint-placeholder-val="{{ true }}">
+      <div style="margin-top: 28px; height: 320px; border: 1px solid rgba(201,168,76,.18); border-radius: 14px; background: linear-gradient(90deg, #0c1020 8%, #131832 18%, #0c1020 33%); background-size: 840px 100%; animation: shimmer 1.6s linear infinite;"></div>
+    </sc-if>
+
+    <sc-if value="{{ notFound }}" hint-placeholder-val="{{ false }}">
+      <div style="margin-top: 28px; border: 1px solid rgba(201,88,74,.4); border-radius: 14px; padding: 28px; background: linear-gradient(160deg, #0c1020, #080b16);">
+        <div style="font-size: 10px; text-transform: uppercase; letter-spacing: .3em; color: #d4695b; font-weight: 500;">{{ errorTitle }}</div>
+        <p style="margin: 14px 0 0; font-size: 15.5px; line-height: 1.7; color: #c3c6cf; max-width: 68ch;">{{ errorMsg }}</p>
+        <sc-if value="{{ hasErrorDetail }}" hint-placeholder-val="{{ false }}">
+          <div style="margin-top: 16px; font-size: 12.5px; color: #8a8f9e; font-variant-numeric: tabular-nums;">{{ errorDetail }}</div>
+        </sc-if>
+        <div onClick="{{ onErrorAction }}" style="display: inline-block; margin-top: 22px; padding: 11px 22px; border: 1px solid rgba(201,168,76,.4); font-size: 10px; text-transform: uppercase; letter-spacing: .2em; color: #c9a84c; cursor: pointer;" style-hover="background: rgba(201,168,76,.06);">{{ errorAction }}</div>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ ready }}" hint-placeholder-val="{{ false }}">
+    <div>
+
+      <section style="margin-top: 36px; display: grid; grid-template-columns: 1.35fr 1fr; gap: 24px;">
+        <div style="border: 1px solid rgba(201,168,76,.18); border-radius: 14px; padding: 28px; background: linear-gradient(160deg, #0c1020, #080b16);">
+          <div style="font-size: 10px; text-transform: uppercase; letter-spacing: .3em; color: #c9a84c; font-weight: 500;">Fund profile</div>
+          <h2 style="font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 40px; margin: 14px 0 0; letter-spacing: .02em;">{{ fund }}</h2>
+          <p style="margin: 16px 0 0; font-size: 14.5px; line-height: 1.7; color: #9aa0ae; max-width: 62ch; text-wrap: pretty;">{{ narrative }}</p>
+          <div style="margin-top: 22px; padding-top: 18px; border-top: 1px solid rgba(201,168,76,.18); display: flex; gap: 12px; align-items: flex-start;">
+            <div style="width: 2px; align-self: stretch; background: #c9a84c;"></div>
+            <p style="margin: 0; font-size: 13px; line-height: 1.65; color: #8a8f9e; max-width: 60ch;">{{ caution }}</p>
+          </div>
+        </div>
+        <div style="border: 1px solid rgba(201,168,76,.18); border-radius: 14px; padding: 28px; background: linear-gradient(160deg, #0c1020, #080b16);">
+          <div style="font-size: 10px; text-transform: uppercase; letter-spacing: .3em; color: #c9a84c; font-weight: 500;">Filing</div>
+          <sc-for list="{{ profileRows }}" as="r" hint-placeholder-count="5">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 11px 0; border-bottom: 1px solid rgba(201,168,76,.1);">
+              <span style="font-size: 12px; color: #8a8f9e; letter-spacing: .04em;">{{ r.label }}</span>
+              <span style="font-size: 14px; font-variant-numeric: tabular-nums; color: #e8e6df;">{{ r.value }}</span>
+            </div>
+          </sc-for>
+          <p style="margin: 16px 0 0; font-size: 11.5px; line-height: 1.6; color: #7d8290;">Issuer, AUM, expense ratio and ETF-level average daily volume are not carried in the current data source. They populate from the live API.</p>
+        </div>
+      </section>
+
+      <section style="margin-top: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+        <div style="border: 1px solid rgba(201,168,76,.18); border-radius: 14px; padding: 28px; background: linear-gradient(160deg, #0c1020, #080b16);">
+          <div style="display: flex; justify-content: space-between; align-items: baseline;">
+            <div style="font-size: 10px; text-transform: uppercase; letter-spacing: .3em; color: #c9a84c; font-weight: 500;">Liquidity Mismatch Score</div>
+            <sc-if value="{{ modified }}" hint-placeholder-val="{{ false }}">
+              <span style="font-size: 9.5px; text-transform: uppercase; letter-spacing: .2em; color: #c9a84c; border: 1px solid rgba(201,168,76,.4); padding: 4px 9px; border-radius: 999px;">Modified from default</span>
+            </sc-if>
+          </div>
+          <div style="display: flex; justify-content: center; margin-top: 18px;">
+            <div style="position: relative; width: 340px;">
+              <svg viewBox="0 0 340 190" style="width: 100%; display: block;" role="img" aria-label="{{ gaugeAria }}">
+                <path d="M 20 170 A 150 150 0 0 1 320 170" fill="none" stroke="rgba(201,168,76,.10)" stroke-width="14"></path>
+                <path d="M 20 170 A 150 150 0 0 1 320 170" fill="none" stroke="#4a9d7f" stroke-width="3" stroke-opacity=".55" stroke-dasharray="94.2 377"></path>
+                <path d="M 20 170 A 150 150 0 0 1 320 170" fill="none" stroke="#c9a84c" stroke-width="3" stroke-opacity=".55" stroke-dasharray="0 94.2 94.2 283"></path>
+                <path d="M 20 170 A 150 150 0 0 1 320 170" fill="none" stroke="#d98a4a" stroke-width="3" stroke-opacity=".55" stroke-dasharray="0 188.5 94.2 189"></path>
+                <path d="M 20 170 A 150 150 0 0 1 320 170" fill="none" stroke="#c9584a" stroke-width="3" stroke-opacity=".55" stroke-dasharray="0 282.7 188.5"></path>
+                <path d="M 20 170 A 150 150 0 0 1 320 170" fill="none" stroke="{{ bandColor }}" stroke-width="14" stroke-linecap="butt" stroke-dasharray="{{ gaugeDash }}"></path>
+                <sc-for list="{{ gaugeTicks }}" as="t" hint-placeholder-count="3">
+                  <line x1="{{ t.x1 }}" y1="{{ t.y1 }}" x2="{{ t.x2 }}" y2="{{ t.y2 }}" stroke="rgba(232,230,223,.35)" stroke-width="1"></line>
+                  <text x="{{ t.lx }}" y="{{ t.ly }}" fill="#7d8290" font-size="10" font-family="Outfit" text-anchor="middle">{{ t.label }}</text>
+                </sc-for>
+              </svg>
+              <div style="text-align: center; margin-top: -46px;">
+                <div style="font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 76px; line-height: 1; letter-spacing: -.02em; font-variant-numeric: tabular-nums; color: {{ bandColor }};">{{ scoreDisplay }}</div>
+                <div style="font-size: 10px; text-transform: uppercase; letter-spacing: .3em; margin-top: 10px; color: {{ bandColor }}; font-weight: 500;">{{ bandLabel }} mismatch</div>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top: 22px; font-size: 11.5px; color: #8a8f9e; text-align: center; letter-spacing: .04em;">{{ scoreProvenance }}</div>
+        </div>
+
+        <div style="display: grid; grid-template-rows: auto 1fr; gap: 24px;">
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;">
+            <sc-for list="{{ statTiles }}" as="s" hint-placeholder-count="3">
+              <div style="border: 1px solid rgba(201,168,76,.18); border-radius: 14px; padding: 18px; background: linear-gradient(160deg, #0c1020, #080b16);">
+                <div style="font-size: 9.5px; text-transform: uppercase; letter-spacing: .2em; color: #8a8f9e; line-height: 1.5; min-height: 28px;">{{ s.label }}</div>
+                <div style="font-family: 'Cormorant Garamond', serif; font-size: 30px; font-weight: 400; margin-top: 8px; font-variant-numeric: tabular-nums;">{{ s.value }}</div>
+                <div style="font-size: 10px; color: #7d8290; letter-spacing: .1em; margin-top: 2px;">{{ s.unit }}</div>
+              </div>
+            </sc-for>
+          </div>
+
+          <div style="border: 1px solid rgba(201,168,76,.18); border-radius: 14px; padding: 28px; background: linear-gradient(160deg, #0c1020, #080b16);">
+            <div style="font-size: 10px; text-transform: uppercase; letter-spacing: .3em; color: #c9a84c; font-weight: 500;">Coverage</div>
+            <div style="display: flex; align-items: center; gap: 22px; margin-top: 16px;">
+              <svg viewBox="0 0 100 100" style="width: 92px; height: 92px; flex: none;" role="img" aria-label="{{ coverageAria }}">
+                <circle cx="50" cy="50" r="40" fill="none" stroke="rgba(201,168,76,.14)" stroke-width="10"></circle>
+                <circle cx="50" cy="50" r="40" fill="none" stroke="#c9a84c" stroke-width="10" stroke-dasharray="{{ coverageDash }}" transform="rotate(-90 50 50)"></circle>
+              </svg>
+              <div>
+                <div style="font-family: 'Cormorant Garamond', serif; font-size: 30px; font-weight: 400; font-variant-numeric: tabular-nums;">{{ coverageHeadline }}</div>
+                <div style="font-size: 12px; color: #8a8f9e; margin-top: 4px;">holdings priced · {{ coveragePctLabel }} of the book</div>
+              </div>
+            </div>
+            <p style="margin: 18px 0 0; font-size: 13px; line-height: 1.65; color: #8a8f9e; max-width: 60ch;">Unpriceable holdings are overwhelmingly thinly traded foreign listings, and holdings that are hardest to get data on are almost by definition the hardest to sell. This score is a floor on true risk, not the full picture.</p>
+            <sc-if value="{{ hasUnpriced }}" hint-placeholder-val="{{ false }}">
+              <div>
+                <div onClick="{{ toggleUnpriced }}" style="margin-top: 16px; font-size: 11px; text-transform: uppercase; letter-spacing: .2em; color: #c9a84c; cursor: pointer;">{{ unpricedToggleLabel }}</div>
+                <sc-if value="{{ unpricedOpen }}" hint-placeholder-val="{{ false }}">
+                  <div style="margin-top: 14px; display: flex; flex-wrap: wrap; gap: 7px;">
+                    <sc-for list="{{ unpricedTickers }}" as="u" hint-placeholder-count="0">
+                      <span style="font-size: 11px; letter-spacing: .12em; padding: 5px 10px; border: 1px solid rgba(201,168,76,.18); border-radius: 4px; color: #8a8f9e;">{{ u }}</span>
+                    </sc-for>
+                  </div>
+                </sc-if>
+              </div>
+            </sc-if>
+          </div>
+        </div>
+      </section>
+
+      <section style="margin-top: 24px; border: 1px solid rgba(201,168,76,.18); border-radius: 14px; padding: 28px; background: linear-gradient(160deg, #0c1020, #080b16);">
+        <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 16px;">
+          <div>
+            <div style="font-size: 10px; text-transform: uppercase; letter-spacing: .3em; color: #c9a84c; font-weight: 500;">Assumptions</div>
+            <div style="font-family: 'Cormorant Garamond', serif; font-size: 26px; margin-top: 8px;">Participation and weights are choices</div>
+          </div>
+          <div onClick="{{ resetAll }}" style="font-size: 11px; text-transform: uppercase; letter-spacing: .2em; color: #c9a84c; cursor: pointer; border-bottom: 1px solid rgba(201,168,76,.4); padding-bottom: 3px;">Reset to defaults</div>
+        </div>
+        <div style="margin-top: 24px; display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px;">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+              <span style="font-size: 12px; color: #8a8f9e;">Volume participation cap</span>
+              <span style="font-size: 20px; font-variant-numeric: tabular-nums; color: #c9a84c;">{{ participationLabel }}</span>
+            </div>
+            <input type="range" min="5" max="25" step="1" value="{{ participationPct }}" onChange="{{ onParticipation }}" style="width: 100%; margin: 16px 0 0;">
+            <div style="display: flex; gap: 8px; margin-top: 14px;">
+              <sc-for list="{{ presets }}" as="p" hint-placeholder-count="3">
+                <div onClick="{{ p.pick }}" style="padding: 7px 14px; border: 1px solid {{ p.border }}; font-size: 10px; text-transform: uppercase; letter-spacing: .18em; cursor: pointer; color: {{ p.color }}; background: {{ p.bg }};">{{ p.label }}</div>
+              </sc-for>
+            </div>
+            <p style="margin: 16px 0 0; font-size: 12px; line-height: 1.6; color: #7d8290; max-width: 46ch;">Days to Liquidate is shares held divided by the participation cap times average daily volume. Tightening the cap stretches every exit.</p>
+          </div>
+          <div>
+            <sc-for list="{{ weightRows }}" as="w" hint-placeholder-count="3">
+              <div style="margin-bottom: 18px;">
+                <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                  <span style="font-size: 12px; color: #8a8f9e;">{{ w.label }}</span>
+                  <span style="font-size: 15px; font-variant-numeric: tabular-nums; color: #e8e6df;">{{ w.value }}</span>
+                </div>
+                <input type="range" min="0" max="100" step="1" value="{{ w.pct }}" onChange="{{ w.onChange }}" style="width: 100%; margin-top: 8px;">
+              </div>
+            </sc-for>
+            <div style="font-size: 11.5px; color: #7d8290; letter-spacing: .04em;">Weights are held to a sum of 1.00. {{ weightSumLabel }}</div>
+          </div>
+        </div>
+        <div style="margin-top: 20px; padding-top: 18px; border-top: 1px solid rgba(201,168,76,.18); display: flex; gap: 12px; align-items: flex-start;">
+          <div style="width: 2px; align-self: stretch; background: #c9a84c;"></div>
+          <p style="margin: 0; font-size: 12.5px; line-height: 1.65; color: #8a8f9e; max-width: 92ch;">Moving the participation cap rescales every holding's Days to Liquidate by the same factor, so the min-max rescaling inside the fund returns the same relative ranks and the composite score does not move. The exit times below do. That invariance is the relative-scaling limitation made visible: the score ranks holdings against each other, not against the market.</p>
+        </div>
+      </section>
+
+      <section style="margin-top: 24px; display: grid; grid-template-columns: 1.15fr 1fr; gap: 24px;">
+        <div style="border: 1px solid rgba(201,168,76,.18); border-radius: 14px; padding: 28px; background: linear-gradient(160deg, #0c1020, #080b16);">
+          <div style="font-size: 10px; text-transform: uppercase; letter-spacing: .3em; color: #c9a84c; font-weight: 500;">Concentration map</div>
+          <div style="font-family: 'Cormorant Garamond', serif; font-size: 26px; margin-top: 8px;">Where the risk sits in the book</div>
+          <div style="position: relative; height: 340px; margin: 24px 0 0 48px; border-left: 1px solid rgba(201,168,76,.18); border-bottom: 1px solid rgba(201,168,76,.18);" role="img" aria-label="{{ scatterAria }}">
+            <div style="position: absolute; left: {{ dangerLeft }}; right: 0; top: 0; height: {{ dangerHeight }}; background: rgba(201,88,74,.07); border-left: 1px dashed rgba(201,88,74,.3); border-bottom: 1px dashed rgba(201,88,74,.3);"></div>
+            <div style="position: absolute; right: 8px; top: 8px; font-size: 9.5px; text-transform: uppercase; letter-spacing: .2em; color: rgba(201,88,74,.75);">Danger quadrant</div>
+            <sc-for list="{{ bubbles }}" as="b" hint-placeholder-count="0">
+              <div onMouseEnter="{{ b.enter }}" onMouseLeave="{{ b.leave }}" title="{{ b.title }}" style="position: absolute; left: {{ b.left }}; bottom: {{ b.bottom }}; width: {{ b.size }}; height: {{ b.size }}; margin-left: {{ b.off }}; margin-bottom: {{ b.off }}; border-radius: 50%; background: {{ b.fill }}; border: 1px solid {{ b.stroke }}; cursor: crosshair; transition: transform 160ms;"></div>
+            </sc-for>
+            <sc-for list="{{ xTicks }}" as="t" hint-placeholder-count="0">
+              <div style="position: absolute; left: {{ t.left }}; bottom: -22px; transform: translateX(-50%); font-size: 10px; color: #7d8290; font-variant-numeric: tabular-nums;">{{ t.label }}</div>
+            </sc-for>
+            <sc-for list="{{ yTicks }}" as="t" hint-placeholder-count="0">
+              <div style="position: absolute; left: -46px; bottom: {{ t.bottom }}; transform: translateY(50%); font-size: 10px; color: #7d8290; font-variant-numeric: tabular-nums; width: 40px; text-align: right;">{{ t.label }}</div>
+            </sc-for>
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-top: 30px; font-size: 10px; text-transform: uppercase; letter-spacing: .2em; color: #7d8290;">
+            <span>Fund weight %  ↑</span>
+            <span>Days to liquidate, log scale →</span>
+          </div>
+          <div style="margin-top: 18px; display: flex; flex-wrap: wrap; gap: 16px;">
+            <sc-for list="{{ bandLegend }}" as="l" hint-placeholder-count="4">
+              <div style="display: flex; align-items: center; gap: 7px;">
+                <span style="width: 8px; height: 8px; border-radius: 50%; background: {{ l.color }};"></span>
+                <span style="font-size: 10px; text-transform: uppercase; letter-spacing: .16em; color: #8a8f9e;">{{ l.label }}</span>
+              </div>
+            </sc-for>
+          </div>
+          <p style="margin: 14px 0 0; font-size: 11.5px; color: #7d8290; line-height: 1.6;">Bubble area is proportional to fund weight; position value in dollars is not carried in this data source. {{ hoverNote }}</p>
+        </div>
+
+        <div style="border: 1px solid rgba(201,168,76,.18); border-radius: 14px; padding: 28px; background: linear-gradient(160deg, #0c1020, #080b16);">
+          <div style="font-size: 10px; text-transform: uppercase; letter-spacing: .3em; color: #c9a84c; font-weight: 500;">Riskiest holdings</div>
+          <div style="font-family: 'Cormorant Garamond', serif; font-size: 26px; margin-top: 8px;">Top 12 by days to liquidate</div>
+          <div style="margin-top: 22px;">
+            <sc-for list="{{ topBars }}" as="b" hint-placeholder-count="12">
+              <div onMouseEnter="{{ b.enter }}" onMouseLeave="{{ b.leave }}" style="display: flex; align-items: center; gap: 12px; padding: 5px 6px; border-radius: 4px; background: {{ b.rowBg }};">
+                <span style="width: 58px; flex: none; font-size: 12px; letter-spacing: .1em; color: #e8e6df;">{{ b.ticker }}</span>
+                <div style="flex: 1; height: 15px; background: rgba(232,230,223,.04); border-radius: 2px; overflow: hidden;">
+                  <div style="height: 100%; width: {{ b.width }}; background: {{ b.fill }}; transition: width 500ms cubic-bezier(.2,.8,.2,1);"></div>
+                </div>
+                <span style="width: 62px; flex: none; text-align: right; font-size: 12.5px; font-variant-numeric: tabular-nums; color: #c9d0c9;">{{ b.value }}</span>
+              </div>
+            </sc-for>
+          </div>
+          <div style="font-size: 10px; text-transform: uppercase; letter-spacing: .2em; color: #7d8290; margin-top: 16px; text-align: right;">Days at a {{ participationLabel }} participation cap</div>
+        </div>
+      </section>
+
+      <section style="margin-top: 24px; border: 1px solid rgba(201,168,76,.18); border-radius: 14px; padding: 28px; background: linear-gradient(160deg, #0c1020, #080b16);">
+        <div style="font-size: 10px; text-transform: uppercase; letter-spacing: .3em; color: #c9a84c; font-weight: 500;">Score contribution</div>
+        <div style="font-family: 'Cormorant Garamond', serif; font-size: 26px; margin-top: 8px;">If you could fix one position</div>
+        <div style="display: flex; height: 40px; margin-top: 24px; border-radius: 3px; overflow: hidden;">
+          <sc-for list="{{ waterfall }}" as="w" hint-placeholder-count="10">
+            <div onMouseEnter="{{ w.enter }}" onMouseLeave="{{ w.leave }}" title="{{ w.title }}" style="width: {{ w.width }}; background: {{ w.fill }}; border-right: 1px solid #06080f; transition: width 500ms cubic-bezier(.2,.8,.2,1);"></div>
+          </sc-for>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 6px 20px; margin-top: 18px;">
+          <sc-for list="{{ waterfall }}" as="w" hint-placeholder-count="10">
+            <div style="display: flex; align-items: center; gap: 7px;">
+              <span style="width: 8px; height: 8px; background: {{ w.fill }};"></span>
+              <span style="font-size: 11px; letter-spacing: .1em; color: #e8e6df;">{{ w.ticker }}</span>
+              <span style="font-size: 11px; color: #8a8f9e; font-variant-numeric: tabular-nums;">{{ w.share }}</span>
+            </div>
+          </sc-for>
+        </div>
+        <p style="margin: 18px 0 0; font-size: 12px; color: #7d8290; line-height: 1.6; max-width: 78ch;">Each segment is one holding's holding-risk times its weight, as a share of the total. {{ waterfallNote }}</p>
+      </section>
+
+      <section style="margin-top: 24px; border: 1px solid rgba(201,168,76,.18); border-radius: 14px; padding: 28px; background: linear-gradient(160deg, #0c1020, #080b16);">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+          <div>
+            <div style="font-size: 10px; text-transform: uppercase; letter-spacing: .3em; color: #c9a84c; font-weight: 500;">Priced holdings</div>
+            <div style="font-family: 'Cormorant Garamond', serif; font-size: 26px; margin-top: 8px;">{{ tableCaption }}</div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 14px;">
+            <input value="{{ filter }}" onChange="{{ onFilter }}" placeholder="Filter ticker" style="background: transparent; border: 0; border-bottom: 1px solid rgba(201,168,76,.18); outline: none; color: #e8e6df; font-family: Outfit, sans-serif; font-size: 13px; letter-spacing: .1em; padding: 6px 2px; width: 150px;">
+            <div onClick="{{ exportCsv }}" style="padding: 9px 18px; border: 1px solid rgba(201,168,76,.4); font-size: 10px; text-transform: uppercase; letter-spacing: .2em; color: #c9a84c; cursor: pointer;" style-hover="background: rgba(201,168,76,.06);">Export CSV</div>
+          </div>
+        </div>
+        <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
+        <div style="margin-top: 22px;">
+          <table style="width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums;">
+            <thead>
+              <tr>
+                <sc-for list="{{ columns }}" as="c" hint-placeholder-count="6">
+                  <th onClick="{{ c.sort }}" style="position: sticky; top: 0; background: #0a0e1c; text-align: {{ c.align }}; padding: 10px 12px; font-size: 9.5px; font-weight: 500; text-transform: uppercase; letter-spacing: .2em; color: #8a8f9e; border-bottom: 1px solid rgba(201,168,76,.18); cursor: pointer; white-space: nowrap;">{{ c.label }}<span style="color: #c9a84c; margin-left: 6px;">{{ c.caret }}</span></th>
+                </sc-for>
+              </tr>
+            </thead>
+            <tbody>
+              <sc-for list="{{ tableRows }}" as="r" hint-placeholder-count="12">
+                <tr onMouseEnter="{{ r.enter }}" onMouseLeave="{{ r.leave }}" style="background: {{ r.bg }};">
+                  <td style="padding: 9px 12px; font-size: 13px; letter-spacing: .1em; border-bottom: 1px solid rgba(201,168,76,.06);">{{ r.ticker }}</td>
+                  <sc-for list="{{ r.cells }}" as="c" hint-placeholder-count="5">
+                    <td style="padding: 9px 12px; border-bottom: 1px solid rgba(201,168,76,.06); text-align: right;">
+                      <div style="position: relative; display: inline-block; min-width: 92px;">
+                        <div style="position: absolute; right: 0; top: 2px; bottom: 2px; width: {{ c.bar }}; background: {{ c.barFill }}; border-radius: 2px;"></div>
+                        <span style="position: relative; font-size: 13px; color: {{ c.color }};">{{ c.text }}</span>
+                      </div>
+                    </td>
+                  </sc-for>
+                </tr>
+              </sc-for>
+            </tbody>
+          </table>
+        </div>
+        </sc-if>
+        <sc-if value="{{ narrow }}" hint-placeholder-val="{{ false }}">
+          <div style="margin-top: 22px; display: grid; gap: 12px;">
+            <sc-for list="{{ tableRows }}" as="r" hint-placeholder-count="0">
+              <div style="border: 1px solid rgba(201,168,76,.14); border-radius: 10px; padding: 16px;">
+                <div style="font-size: 14px; letter-spacing: .16em; padding-bottom: 10px; border-bottom: 1px solid rgba(201,168,76,.1);">{{ r.ticker }}</div>
+                <sc-for list="{{ r.pairs }}" as="p" hint-placeholder-count="5">
+                  <div style="display: flex; justify-content: space-between; gap: 16px; padding: 7px 0;">
+                    <span style="font-size: 12px; color: #8a8f9e;">{{ p.label }}</span>
+                    <span style="font-size: 13px; font-variant-numeric: tabular-nums; color: {{ p.color }};">{{ p.text }}</span>
+                  </div>
+                </sc-for>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+      </section>
+
+      <section style="margin-top: 24px; border: 1px solid rgba(201,168,76,.18); border-radius: 14px; padding: 28px; background: linear-gradient(160deg, #0c1020, #080b16);">
+        <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 16px;">
+          <div>
+            <div style="font-size: 10px; text-transform: uppercase; letter-spacing: .3em; color: #c9a84c; font-weight: 500;">Compare</div>
+            <div style="font-family: 'Cormorant Garamond', serif; font-size: 26px; margin-top: 8px;">Pin up to three funds</div>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+            <sc-for list="{{ pinnable }}" as="p" hint-placeholder-count="5">
+              <div onClick="{{ p.toggle }}" style="padding: 7px 14px; border: 1px solid {{ p.border }}; border-radius: 999px; font-size: 10px; letter-spacing: .18em; cursor: pointer; color: {{ p.color }}; background: {{ p.bg }};">{{ p.label }}</div>
+            </sc-for>
+          </div>
+        </div>
+        <sc-if value="{{ hasPins }}" hint-placeholder-val="{{ false }}">
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 24px;">
+            <sc-for list="{{ pinCards }}" as="c" hint-placeholder-count="0">
+              <div style="border: 1px solid rgba(201,168,76,.18); border-radius: 10px; padding: 22px;">
+                <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                  <span style="font-size: 14px; letter-spacing: .2em;">{{ c.ticker }}</span>
+                  <span style="font-size: 9.5px; text-transform: uppercase; letter-spacing: .2em; color: {{ c.bandColor }};">{{ c.band }}</span>
+                </div>
+                <div style="font-family: 'Cormorant Garamond', serif; font-size: 52px; font-weight: 300; line-height: 1.1; margin-top: 10px; font-variant-numeric: tabular-nums; color: {{ c.bandColor }};">{{ c.score }}</div>
+                <div style="height: 3px; background: rgba(232,230,223,.06); margin-top: 10px;">
+                  <div style="height: 100%; width: {{ c.barWidth }}; background: {{ c.bandColor }};"></div>
+                </div>
+                <div style="font-size: 11.5px; color: #8a8f9e; margin-top: 12px;">{{ c.coverage }}</div>
+                <div style="font-size: 11.5px; color: #8a8f9e;">N-PORT {{ c.asOf }}</div>
+                <div style="margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(201,168,76,.12);">
+                  <div style="font-size: 9.5px; text-transform: uppercase; letter-spacing: .2em; color: #7d8290;">Riskiest three</div>
+                  <sc-for list="{{ c.top }}" as="t" hint-placeholder-count="3">
+                    <div style="display: flex; justify-content: space-between; margin-top: 7px; font-size: 12px;">
+                      <span style="letter-spacing: .1em;">{{ t.ticker }}</span>
+                      <span style="color: #8a8f9e; font-variant-numeric: tabular-nums;">{{ t.dtl }}</span>
+                    </div>
+                  </sc-for>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+      </section>
+
+    </div>
+    </sc-if>
+    </div>
+    </sc-if>
+
+    <sc-if value="{{ isAbout }}" hint-placeholder-val="{{ true }}">
+    <article style="max-width: 68ch; margin: 0 auto;">
+
+      <section style="margin-top: 56px;">
+        <div style="font-size: 10px; text-transform: uppercase; letter-spacing: .3em; color: #c9a84c; font-weight: 500;">The short version</div>
+        <h2 style="font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 40px; line-height: 1.2; margin: 18px 0 0; text-wrap: pretty;">An ETF can be easy to buy and hard to escape.<br />This dashboard measures that gap.</h2>
+      </section>
+
+      <section style="margin-top: 64px;">
+        <div style="font-size: 10px; text-transform: uppercase; letter-spacing: .3em; color: #c9a84c; font-weight: 500;">Start here</div>
+        <h3 style="font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 30px; margin: 14px 0 0;">What is an ETF?</h3>
+        <p style="font-size: 17px; line-height: 1.7; color: #c3c6cf; margin: 20px 0 0; text-wrap: pretty;">Imagine you want to invest in five hundred different American companies. Buying five hundred separate shareholdings would be slow, expensive, and impossible to manage.</p>
+        <p style="font-size: 17px; line-height: 1.7; color: #c3c6cf; margin: 20px 0 0; text-wrap: pretty;">So instead, a company assembles the basket for you. It buys all five hundred shareholdings, puts them in one container, and sells you a slice of that container. That container is an <span title="A fund whose shares trade on a stock exchange, holding a basket of underlying securities." style="border-bottom: 1px dotted rgba(201,168,76,.65); cursor: help;">Exchange Traded Fund</span>, or ETF. You buy and sell your slice on the stock exchange, in one click, the same way you would trade a single company's shares.</p>
+        <p style="font-size: 17px; line-height: 1.7; color: #c3c6cf; margin: 20px 0 0; text-wrap: pretty;">ETFs are genuinely one of the better financial inventions of the last few decades. They are cheap, transparent, and they let ordinary people own a <span title="A portfolio spread across many holdings, so no single one can sink it." style="border-bottom: 1px dotted rgba(201,168,76,.65); cursor: help;">diversified</span> portfolio without needing a private banker. Nothing in this project argues otherwise.</p>
+        <p style="font-size: 17px; line-height: 1.7; color: #c3c6cf; margin: 20px 0 0; text-wrap: pretty;">But there is a structural quirk inside them that almost nobody looks at.</p>
+      </section>
+
+      <section style="margin-top: 64px;">
+        <div style="font-size: 10px; text-transform: uppercase; letter-spacing: .3em; color: #c9a84c; font-weight: 500;">The problem</div>
+        <h3 style="font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 30px; margin: 14px 0 0;">The basket and its contents move at different speeds.</h3>
+        <p style="font-size: 17px; line-height: 1.7; color: #c3c6cf; margin: 20px 0 0; text-wrap: pretty;">Your slice of the fund trades on the stock exchange. It can change hands in a fraction of a second, thousands of times a day.</p>
+        <p style="font-size: 17px; line-height: 1.7; color: #c3c6cf; margin: 20px 0 0; text-wrap: pretty;">The things inside the basket trade in their own separate markets. Some of them, like Apple or Microsoft shares, trade enormously and can absorb almost any order instantly. Others barely trade at all: a <span title="A loan to a company, tradeable between investors, that often sits untraded for days." style="border-bottom: 1px dotted rgba(201,168,76,.65); cursor: help;">corporate bond</span> issued by a mid-sized company might go days without a single transaction. A small foreign-listed company might trade a few thousand shares in a session.</p>
+        <blockquote style="margin: 32px 0 0; padding-left: 22px; border-left: 2px solid #c9a84c;">
+          <p style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 400; font-size: 28px; line-height: 1.4; margin: 0; color: #e8e6df;">The wrapper is <span title="How quickly something can be sold without moving its price." style="border-bottom: 1px dotted rgba(201,168,76,.65); cursor: help;">liquid</span>. The contents may not be. On a calm day, nobody notices.</p>
+        </blockquote>
+        <p style="font-size: 17px; line-height: 1.7; color: #c3c6cf; margin: 28px 0 0; text-wrap: pretty;">On a normal day this mismatch is invisible. Buyers and sellers of the fund roughly balance each other out, and the fund barely has to touch what it holds.</p>
+      </section>
+
+      <section style="margin-top: 64px;">
+        <div style="font-size: 10px; text-transform: uppercase; letter-spacing: .3em; color: #c9a84c; font-weight: 500;">Why it matters</div>
+        <h3 style="font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 30px; margin: 14px 0 0;">The problem only appears when everyone leaves at once.</h3>
+        <p style="font-size: 17px; line-height: 1.7; color: #c3c6cf; margin: 20px 0 0; text-wrap: pretty;">When far more people sell the fund than buy it, the fund cannot simply shrug. Specialist firms called <span title="Large trading firms licensed to create and redeem ETF units directly with the issuer." style="border-bottom: 1px dotted rgba(201,168,76,.65); cursor: help;">Authorised Participants</span> hand fund units back to the issuer and receive the underlying securities, which they then sell. To meet sustained selling, the actual holdings have to be sold.</p>
+        <p style="font-size: 17px; line-height: 1.7; color: #c3c6cf; margin: 20px 0 0; text-wrap: pretty;">Now the mismatch becomes real. The fund is being sold in seconds. Its contents can only be sold over days or weeks without crashing their own prices.</p>
+        <p style="font-size: 17px; line-height: 1.7; color: #c3c6cf; margin: 20px 0 0; text-wrap: pretty;">Three things follow, in order:</p>
+        <ol style="margin: 18px 0 0; padding-left: 22px; display: grid; gap: 14px;">
+          <li style="font-size: 17px; line-height: 1.7; color: #c3c6cf;"><span style="color: #e8e6df;">The fund's price detaches from what it actually owns.</span> It starts trading below the true value of its holdings, because the market can see the exit is narrow.</li>
+          <li style="font-size: 17px; line-height: 1.7; color: #c3c6cf;"><span style="color: #e8e6df;">The fund is forced to sell whatever it can sell,</span> which is usually its best and most liquid holdings. What remains is a worse portfolio for everyone still invested.</li>
+          <li style="font-size: 17px; line-height: 1.7; color: #c3c6cf;"><span style="color: #e8e6df;">In severe cases, <span title="Handing fund units back to the issuer in exchange for the underlying holdings or cash." style="border-bottom: 1px dotted rgba(201,168,76,.65); cursor: help;">redemptions</span> are suspended entirely.</span> Investors are locked in and cannot get their money out at all.</li>
+        </ol>
+        <p style="font-size: 17px; line-height: 1.7; color: #c3c6cf; margin: 22px 0 0; text-wrap: pretty;">That third outcome is not hypothetical. UK investors in several high-profile property and equity funds have been frozen out for months, in some cases years, because the funds owned buildings and unlisted holdings that could not be sold at the speed investors were demanding their money back. During the March 2020 market panic, <span title="Bonds from companies with weaker credit ratings, paying more interest for more risk." style="border-bottom: 1px dotted rgba(201,168,76,.65); cursor: help;">high-yield</span> bond ETFs traded at material discounts to the value of their own holdings while the underlying bond market seized up.</p>
+        <blockquote style="margin: 32px 0 0; padding-left: 22px; border-left: 2px solid #c9a84c;">
+          <p style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 400; font-size: 28px; line-height: 1.4; margin: 0; color: #e8e6df;">A fire exit is only as wide as the crowd it has to clear.</p>
+        </blockquote>
+      </section>
+
+      <section style="margin-top: 64px;">
+        <div style="font-size: 10px; text-transform: uppercase; letter-spacing: .3em; color: #c9a84c; font-weight: 500;">The common mistake</div>
+        <h3 style="font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 30px; margin: 14px 0 0;">Most liquidity checks measure the wrong thing.</h3>
+        <p style="font-size: 17px; line-height: 1.7; color: #c3c6cf; margin: 20px 0 0; text-wrap: pretty;">Ask a standard screening tool whether an ETF is liquid and it will tell you how much the fund itself trades. Large daily volume, tight pricing, no problem.</p>
+        <p style="font-size: 17px; line-height: 1.7; color: #c3c6cf; margin: 20px 0 0; text-wrap: pretty;">That number tells you how easy the fund is to trade on a calm day. It tells you almost nothing about what happens on a bad one, because on a bad day the constraint is not the fund's own market. It is the market for everything inside it.</p>
+        <p style="font-size: 17px; line-height: 1.7; color: #c3c6cf; margin: 20px 0 0; text-wrap: pretty;">That is the illusion this project is named after.</p>
+      </section>
+
+      <section style="margin-top: 64px;">
+        <div style="font-size: 10px; text-transform: uppercase; letter-spacing: .3em; color: #c9a84c; font-weight: 500;">What this does</div>
+        <h3 style="font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 30px; margin: 14px 0 0;">This tool opens the basket and measures the contents.</h3>
+        <p style="font-size: 17px; line-height: 1.7; color: #c3c6cf; margin: 20px 0 0; text-wrap: pretty;">By law, American funds must publish exactly what they hold, filed with the Securities and Exchange Commission on a form called <span title="The SEC filing in which a fund discloses every position it holds, quarterly." style="border-bottom: 1px dotted rgba(201,168,76,.65); cursor: help;">N-PORT</span>. It is public, free, and almost nobody reads it.</p>
+        <p style="font-size: 17px; line-height: 1.7; color: #c3c6cf; margin: 20px 0 0; text-wrap: pretty;">This dashboard does four things:</p>
+        <ol style="margin: 18px 0 0; padding-left: 22px; display: grid; gap: 12px;">
+          <li style="font-size: 17px; line-height: 1.7; color: #c3c6cf;">Downloads a fund's actual holdings from those regulatory filings.</li>
+          <li style="font-size: 17px; line-height: 1.7; color: #c3c6cf;">Pulls the real trading history for every single holding inside it.</li>
+          <li style="font-size: 17px; line-height: 1.7; color: #c3c6cf;">Measures how hard each one would be to sell, three different ways.</li>
+          <li style="font-size: 17px; line-height: 1.7; color: #c3c6cf;">Combines them, weighted by how much of the fund each holding represents, into a single score out of 100.</li>
+        </ol>
+        <p style="font-size: 17px; line-height: 1.7; color: #c3c6cf; margin: 22px 0 0; text-wrap: pretty;">A low score means the fund could realistically unwind its positions without dislocating prices. A high score means it is holding things it cannot get out of quickly, and its calm surface is doing a lot of work.</p>
+      </section>
+
+      <figure style="margin: 56px 0 0; padding: 32px; border: 1px solid rgba(201,168,76,.18); border-radius: 14px; background: linear-gradient(160deg, #0c1020, #080b16);">
+        <div style="font-size: 10px; text-transform: uppercase; letter-spacing: .2em; color: #7d8290;">The ETF: sold in seconds</div>
+        <div style="display: flex; align-items: center; gap: 14px; margin-top: 12px;">
+          <div style="flex: 1; height: 26px; border: 1px solid rgba(201,168,76,.55); background: rgba(201,168,76,.08);"></div>
+          <div style="width: 84px; height: 22px; background: linear-gradient(90deg, rgba(201,168,76,.5), rgba(201,168,76,.9)); clip-path: polygon(0 34%, 62% 34%, 62% 0, 100% 50%, 62% 100%, 62% 66%, 0 66%);"></div>
+        </div>
+        <div style="height: 34px; margin: 6px 0 6px 40%; border-left: 1px dashed rgba(201,168,76,.35);"></div>
+        <div style="font-size: 10px; text-transform: uppercase; letter-spacing: .2em; color: #7d8290;">What it actually holds</div>
+        <div style="display: grid; gap: 7px; margin-top: 12px;">
+          <sc-for list="{{ diagramBars }}" as="d" hint-placeholder-count="12">
+            <div style="display: flex; align-items: center; gap: 14px;">
+              <div style="flex: 1; display: flex;">
+                <div style="height: 9px; width: {{ d.bar }}; background: rgba(232,230,223,.16);"></div>
+              </div>
+              <div style="width: 84px; display: flex; justify-content: flex-start;">
+                <div style="height: {{ d.arrow }}; width: 84px; background: rgba(201,168,76,.55); clip-path: polygon(0 34%, 62% 34%, 62% 0, 100% 50%, 62% 100%, 62% 66%, 0 66%);"></div>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+        <figcaption style="margin-top: 22px; font-size: 12.5px; line-height: 1.6; color: #7d8290;">The fund has one exit. Its holdings each have their own, and some are very narrow.</figcaption>
+      </figure>
+
+      <section style="margin-top: 64px;">
+        <div style="font-size: 10px; text-transform: uppercase; letter-spacing: .3em; color: #c9a84c; font-weight: 500;">The measurements</div>
+        <h3 style="font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 30px; margin: 14px 0 0;">The three things we measure, in plain English.</h3>
+
+        <h4 style="font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 24px; margin: 34px 0 0; color: #c9a84c;">Days to Liquidate</h4>
+        <p style="font-size: 17px; line-height: 1.7; color: #e8e6df; margin: 10px 0 0;">How long would it take to get out?</p>
+        <p style="font-size: 17px; line-height: 1.7; color: #c3c6cf; margin: 16px 0 0; text-wrap: pretty;">Every stock has a normal daily trading volume. A fund cannot dump its entire position into one day without becoming the whole market and crushing the price against itself. The industry rule of thumb is that it can safely account for about a fifth of a stock's normal daily volume.</p>
+        <p style="font-size: 17px; line-height: 1.7; color: #c3c6cf; margin: 16px 0 0; text-wrap: pretty;">So: if a fund owns 10 million shares of a company that normally trades 1 million shares a day, it can responsibly sell about 200,000 a day. Getting out takes 50 trading days. That is ten weeks, during which anything can happen.</p>
+        <p style="font-size: 17px; line-height: 1.7; color: #c3c6cf; margin: 16px 0 0; text-wrap: pretty;">This is the metric we weight most heavily, because it is the one that physically breaks first in a crisis.</p>
+
+        <h4 style="font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 24px; margin: 34px 0 0; color: #c9a84c;">Amihud illiquidity</h4>
+        <p style="font-size: 17px; line-height: 1.7; color: #e8e6df; margin: 10px 0 0;">How much does the price move when you trade?</p>
+        <p style="font-size: 17px; line-height: 1.7; color: #c3c6cf; margin: 16px 0 0; text-wrap: pretty;">In a deep, liquid market you can trade a large amount and the price barely reacts. In a thin one, a modest order sends the price lurching.</p>
+        <p style="font-size: 17px; line-height: 1.7; color: #c3c6cf; margin: 16px 0 0; text-wrap: pretty;">Amihud measures exactly that: how far the price moves for each dollar traded. A higher number means the holding is fragile, and that selling it in size would be self-defeating.</p>
+
+        <h4 style="font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 24px; margin: 34px 0 0; color: #c9a84c;">Estimated bid-ask spread</h4>
+        <p style="font-size: 17px; line-height: 1.7; color: #e8e6df; margin: 10px 0 0;">What does it cost you just to trade at all?</p>
+        <p style="font-size: 17px; line-height: 1.7; color: #c3c6cf; margin: 16px 0 0; text-wrap: pretty;">At any moment there are two prices for anything: what buyers are willing to pay, and what sellers are asking. The gap between them is the <span title="The difference between the best buying price and the best selling price at any moment." style="border-bottom: 1px dotted rgba(201,168,76,.65); cursor: help;">spread</span>, and it is a real cost you pay the instant you trade, like the difference between the buy and sell rates at an airport currency desk.</p>
+        <p style="font-size: 17px; line-height: 1.7; color: #c3c6cf; margin: 16px 0 0; text-wrap: pretty;">Liquid holdings have a spread so thin it is almost invisible. Illiquid ones have a wide one, and that width is a direct measure of how reluctant the market is to take the other side of your trade.</p>
+      </section>
+
+      <figure style="margin: 48px 0 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;">
+        <div style="border: 1px solid rgba(201,168,76,.18); border-radius: 14px; padding: 22px; background: linear-gradient(160deg, #0c1020, #080b16);">
+          <div style="height: 84px; display: flex; align-items: center; justify-content: center;">
+            <svg viewBox="0 0 120 70" style="width: 100%; height: 70px;" aria-hidden="true">
+              <polygon points="10,8 110,26 110,44 10,62" fill="rgba(201,168,76,.06)" stroke="#c9a84c" stroke-width="1" />
+              <line x1="110" y1="35" x2="118" y2="35" stroke="rgba(232,230,223,.35)" stroke-width="1" />
+            </svg>
+          </div>
+          <div style="font-size: 10px; text-transform: uppercase; letter-spacing: .2em; color: #7d8290; margin-top: 14px;">Days to liquidate</div>
+        </div>
+        <div style="border: 1px solid rgba(201,168,76,.18); border-radius: 14px; padding: 22px; background: linear-gradient(160deg, #0c1020, #080b16);">
+          <div style="height: 84px; display: flex; align-items: center; justify-content: center;">
+            <svg viewBox="0 0 120 70" style="width: 100%; height: 70px;" aria-hidden="true">
+              <polyline points="4,40 26,39 48,41 70,40 92,40 116,39" fill="none" stroke="rgba(232,230,223,.35)" stroke-width="1" />
+              <polyline points="4,22 26,21 48,23 60,6 72,34 92,20 116,21" fill="none" stroke="#c9a84c" stroke-width="1" />
+            </svg>
+          </div>
+          <div style="font-size: 10px; text-transform: uppercase; letter-spacing: .2em; color: #7d8290; margin-top: 14px;">Amihud illiquidity</div>
+        </div>
+        <div style="border: 1px solid rgba(201,168,76,.18); border-radius: 14px; padding: 22px; background: linear-gradient(160deg, #0c1020, #080b16);">
+          <div style="height: 84px; display: flex; align-items: center; justify-content: center; gap: 34px;">
+            <div style="width: 26px; height: 1px; background: #c9a84c;"></div>
+            <div style="width: 26px; height: 1px; background: #c9a84c;"></div>
+          </div>
+          <div style="font-size: 10px; text-transform: uppercase; letter-spacing: .2em; color: #7d8290; margin-top: 14px;">Estimated spread</div>
+        </div>
+      </figure>
+
+      <section style="margin-top: 64px;">
+        <div style="font-size: 10px; text-transform: uppercase; letter-spacing: .3em; color: #c9a84c; font-weight: 500;">Reading the result</div>
+        <h3 style="font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 30px; margin: 14px 0 0;">What the score means.</h3>
+        <p style="font-size: 17px; line-height: 1.7; color: #c3c6cf; margin: 20px 0 0; text-wrap: pretty;">The three measurements are combined for every holding, weighted by how much of the fund that holding represents, and scaled to a number out of 100.</p>
+        <div style="margin-top: 28px;">
+          <div style="display: flex; height: 8px; border-radius: 2px; overflow: hidden;">
+            <div style="width: 20%; background: #4a9d7f;"></div>
+            <div style="width: 20%; background: #c9a84c;"></div>
+            <div style="width: 20%; background: #d98a4a;"></div>
+            <div style="width: 40%; background: #c9584a;"></div>
+          </div>
+          <div style="margin-top: 18px; display: grid; gap: 12px;">
+            <sc-for list="{{ bandTable }}" as="b" hint-placeholder-count="4">
+              <div style="display: grid; grid-template-columns: 90px 90px 1fr; gap: 14px; align-items: baseline; padding-bottom: 12px; border-bottom: 1px solid rgba(201,168,76,.1);">
+                <span style="font-size: 11px; text-transform: uppercase; letter-spacing: .2em; color: {{ b.color }};">{{ b.label }}</span>
+                <span style="font-size: 13px; color: #8a8f9e; font-variant-numeric: tabular-nums;">{{ b.range }}</span>
+                <span style="font-size: 14.5px; line-height: 1.6; color: #c3c6cf;">{{ b.meaning }}</span>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+        <p style="font-size: 17px; line-height: 1.7; color: #c3c6cf; margin: 26px 0 0; text-wrap: pretty;">The number on its own is less interesting than what sits behind it. The tool always shows you which specific holdings drive the score, because "this fund scores 47" is a fact, while "this fund scores 47 and two positions account for most of it" is something you can act on.</p>
+      </section>
+
+      <section style="margin-top: 64px;">
+        <div style="font-size: 10px; text-transform: uppercase; letter-spacing: .3em; color: #c9a84c; font-weight: 500;">Honesty</div>
+        <h3 style="font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 30px; margin: 14px 0 0;">What this cannot tell you.</h3>
+        <p style="font-size: 17px; line-height: 1.7; color: #c3c6cf; margin: 20px 0 0; text-wrap: pretty;">Any tool that only ever flatters itself should be distrusted. Four limits worth stating up front:</p>
+        <div style="display: grid; gap: 16px; margin-top: 22px;">
+          <div style="border: 1px solid rgba(201,168,76,.18); border-radius: 10px; padding: 22px;">
+            <p style="margin: 0; font-size: 17px; line-height: 1.7; color: #c3c6cf;"><span style="color: #e8e6df;">The holdings data is a snapshot, not a live feed.</span> Funds file their holdings quarterly, so you are looking at the most recent filing, not this morning's portfolio. The filing date is displayed alongside every score.</p>
+          </div>
+          <div style="border: 1px solid rgba(201,168,76,.18); border-radius: 10px; padding: 22px;">
+            <p style="margin: 0; font-size: 17px; line-height: 1.7; color: #c3c6cf;"><span style="color: #e8e6df;">Some holdings cannot be measured at all.</span> A fund may hold securities with no reliable public trading data, typically thinly traded foreign listings and most bonds. Those get excluded from the calculation. This matters enormously, because the holdings that are hardest to find data on are almost by definition the hardest to sell. Every score here is therefore a floor on the true risk, never a ceiling. The dashboard always shows you how many holdings it could and could not price.</p>
+          </div>
+          <div style="border: 1px solid rgba(201,168,76,.18); border-radius: 10px; padding: 22px;">
+            <p style="margin: 0; font-size: 17px; line-height: 1.7; color: #c3c6cf;"><span style="color: #e8e6df;">The weighting is a judgement.</span> The three measurements are blended in a deliberate proportion, and reasonable analysts would choose differently. Rather than hide that, the Analyze tab lets you move the weights yourself and watch the score respond.</p>
+          </div>
+          <div style="border: 1px solid rgba(201,168,76,.18); border-radius: 10px; padding: 22px;">
+            <p style="margin: 0; font-size: 17px; line-height: 1.7; color: #c3c6cf;"><span style="color: #e8e6df;">This is not investment advice.</span> It is a research and demonstration tool. A high score is not a sell signal, and a low one is not an endorsement. It measures one specific risk, under one specific set of assumptions, using free public data.</p>
+          </div>
+        </div>
+      </section>
+
+      <section style="margin-top: 64px;">
+        <div style="font-size: 10px; text-transform: uppercase; letter-spacing: .3em; color: #c9a84c; font-weight: 500;">Sources</div>
+        <h3 style="font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 30px; margin: 14px 0 0;">Where the numbers come from.</h3>
+        <p style="font-size: 17px; line-height: 1.7; color: #c3c6cf; margin: 20px 0 0; text-wrap: pretty;">Everything here is built on free, public data. There is no paid terminal behind it.</p>
+        <ul style="margin: 18px 0 0; padding-left: 22px; display: grid; gap: 12px;">
+          <li style="font-size: 17px; line-height: 1.7; color: #c3c6cf;">SEC EDGAR (Form N-PORT) for what each fund actually holds.</li>
+          <li style="font-size: 17px; line-height: 1.7; color: #c3c6cf;">Yahoo Finance for daily trading history of every holding.</li>
+          <li style="font-size: 17px; line-height: 1.7; color: #c3c6cf;">NASDAQ Trader for the list of every ETF listed in the United States, which is how the market-wide scan gets its universe.</li>
+        </ul>
+        <p style="font-size: 17px; line-height: 1.7; color: #c3c6cf; margin: 22px 0 0; text-wrap: pretty;">The estimated spread uses the <span title="A method for inferring the bid-ask spread from daily high and low prices." style="border-bottom: 1px dotted rgba(201,168,76,.65); cursor: help;">Corwin-Schultz</span> method, an academic technique for inferring trading costs from daily high and low prices when you do not have access to expensive tick-by-tick data.</p>
+      </section>
+
+      <section style="margin: 64px 0 0; border: 1px solid rgba(201,168,76,.4); border-radius: 14px; padding: 40px; background: linear-gradient(160deg, #0c1020, #080b16);">
+        <h3 style="font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 34px; margin: 0;">See it for yourself.</h3>
+        <p style="font-size: 17px; line-height: 1.7; color: #c3c6cf; margin: 18px 0 0; text-wrap: pretty;">Start with SPY, a fund holding the five hundred largest American companies, and watch it score near the floor. Then look at JNK, which holds high-yield corporate bonds, and see what happens when the contents of the basket stop being easy to sell.</p>
+        <div onClick="{{ goAnalyze }}" style="display: inline-block; margin-top: 28px; padding: 16px 34px; border: 1px solid #c9a84c; color: #c9a84c; font-size: 12px; text-transform: uppercase; letter-spacing: .24em; cursor: pointer; transition: background 240ms;" style-hover="background: rgba(201,168,76,.06);">Analyze a fund →</div>
+      </section>
+
+    </article>
+    </sc-if>
+
+    <sc-if value="{{ isScan }}" hint-placeholder-val="{{ false }}">
+    <div>
+      <sc-if value="{{ scanLoading }}" hint-placeholder-val="{{ false }}">
+        <div style="margin-top: 28px; display: grid; gap: 24px;">
+          <div style="font-size: 10px; text-transform: uppercase; letter-spacing: .3em; color: #c9a84c;">Loading the last completed scan</div>
+          <div style="height: 120px; border: 1px solid rgba(201,168,76,.18); border-radius: 14px; background: linear-gradient(90deg, #0c1020 8%, #131832 18%, #0c1020 33%); background-size: 840px 100%; animation: shimmer 1.6s linear infinite;"></div>
+          <div style="height: 420px; border: 1px solid rgba(201,168,76,.18); border-radius: 14px; background: linear-gradient(90deg, #0c1020 8%, #131832 18%, #0c1020 33%); background-size: 840px 100%; animation: shimmer 1.6s linear infinite;"></div>
+          <div style="height: 260px; border: 1px solid rgba(201,168,76,.18); border-radius: 14px; background: linear-gradient(90deg, #0c1020 8%, #131832 18%, #0c1020 33%); background-size: 840px 100%; animation: shimmer 1.6s linear infinite;"></div>
+        </div>
+      </sc-if>
+      <sc-if value="{{ scanReady }}" hint-placeholder-val="{{ false }}">
+      <div>
+      <div style="display: flex; flex-wrap: wrap; gap: 32px; align-items: baseline; justify-content: space-between; margin-top: 28px; padding-bottom: 20px; border-bottom: 1px solid rgba(201,168,76,.18);">
+        <p style="margin: 0; max-width: 62ch; font-size: 15px; line-height: 1.65; color: #9aa0ae;">This screens ETFs on how they themselves trade. It refreshes daily because prices update daily, while N-PORT holdings update quarterly. It cannot see inside a fund; that is the look-through's job.</p>
+        <div style="display: flex; gap: 34px;">
+          <sc-for list="{{ scanMeta }}" as="m" hint-placeholder-count="3">
+            <div>
+              <div style="font-size: 9.5px; text-transform: uppercase; letter-spacing: .2em; color: #7d8290;">{{ m.label }}</div>
+              <div style="font-family: 'Cormorant Garamond', serif; font-size: 24px; margin-top: 6px; font-variant-numeric: tabular-nums;">{{ m.value }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+
+      <section style="margin-top: 32px; border: 1px solid rgba(201,168,76,.32); border-radius: 14px; padding: 34px; background: linear-gradient(160deg, #0c1020, #080b16);">
+        <div style="font-size: 10px; text-transform: uppercase; letter-spacing: .3em; color: #c9a84c; font-weight: 500;">The contrast</div>
+        <h2 style="font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 34px; margin: 12px 0 0;">What the surface says against what the holdings say</h2>
+        <p style="margin: 14px 0 0; max-width: 74ch; font-size: 15px; line-height: 1.7; color: #9aa0ae; text-wrap: pretty;">Surface risk runs along the bottom, look-through Mismatch Score up the side. A fund on the diagonal is telling you the same story from both directions. A fund below it looks liquid on the surface and is not underneath.</p>
+        <div style="display: grid; grid-template-columns: 1fr 300px; gap: 36px; margin-top: 30px; align-items: start;">
+          <div style="position: relative; height: 440px; margin-left: 44px; border-left: 1px solid rgba(201,168,76,.18); border-bottom: 1px solid rgba(201,168,76,.18);" role="img" aria-label="{{ contrastAria }}">
+            <svg viewBox="0 0 100 100" preserveAspectRatio="none" style="position: absolute; inset: 0; width: 100%; height: 100%;" aria-hidden="true">
+              <line x1="0" y1="100" x2="100" y2="0" stroke="rgba(232,230,223,.28)" stroke-width="1" vector-effect="non-scaling-stroke" />
+            </svg>
+            <div style="position: absolute; right: 10px; top: 10px; font-size: 10px; text-transform: uppercase; letter-spacing: .2em; color: #7d8290;">Same story both ways →</div>
+            <sc-for list="{{ contrastPoints }}" as="p" hint-placeholder-count="1">
+              <div style="position: absolute; left: {{ p.left }}; bottom: {{ p.bottom }};">
+                <div style="width: 13px; height: 13px; margin: -6.5px 0 0 -6.5px; border-radius: 50%; background: {{ p.fill }}; border: 1px solid {{ p.stroke }};"></div>
+                <div style="position: absolute; left: 12px; top: -14px; white-space: nowrap; font-size: 11px; letter-spacing: .14em; color: #e8e6df;">{{ p.ticker }}</div>
+                <div style="position: absolute; left: 12px; top: 1px; white-space: nowrap; font-size: 10px; color: #8a8f9e; font-variant-numeric: tabular-nums;">{{ p.detail }}</div>
+              </div>
+            </sc-for>
+            <sc-for list="{{ contrastTicks }}" as="t" hint-placeholder-count="5">
+              <div style="position: absolute; left: {{ t.left }}; bottom: -22px; transform: translateX(-50%); font-size: 10px; color: #7d8290; font-variant-numeric: tabular-nums;">{{ t.label }}</div>
+              <div style="position: absolute; left: -40px; bottom: {{ t.left }}; transform: translateY(50%); width: 32px; text-align: right; font-size: 10px; color: #7d8290; font-variant-numeric: tabular-nums;">{{ t.label }}</div>
+            </sc-for>
+            <div style="position: absolute; left: -34px; bottom: 50%; transform: rotate(-90deg) translateX(50%); transform-origin: left bottom; font-size: 10px; text-transform: uppercase; letter-spacing: .2em; color: #7d8290; white-space: nowrap;">Mismatch score</div>
+            <div style="position: absolute; left: 50%; bottom: -44px; transform: translateX(-50%); font-size: 10px; text-transform: uppercase; letter-spacing: .2em; color: #7d8290;">Surface risk</div>
+          </div>
+          <div>
+            <div style="font-size: 10px; text-transform: uppercase; letter-spacing: .2em; color: #c9584a;">Missing from this scan</div>
+            <p style="margin: 12px 0 0; font-size: 13.5px; line-height: 1.65; color: #9aa0ae;">{{ unmatchedNote }}</p>
+            <div style="margin-top: 18px; display: grid; gap: 10px;">
+              <sc-for list="{{ unmatchedFunds }}" as="u" hint-placeholder-count="4">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; padding-bottom: 9px; border-bottom: 1px solid rgba(201,168,76,.1);">
+                  <span style="font-size: 12.5px; letter-spacing: .14em;">{{ u.ticker }}</span>
+                  <span style="font-size: 12px; color: #8a8f9e; font-variant-numeric: tabular-nums;">{{ u.detail }}</span>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section style="margin-top: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+        <div style="border: 1px solid rgba(201,168,76,.18); border-radius: 14px; padding: 28px; background: linear-gradient(160deg, #0c1020, #080b16);">
+          <div style="font-size: 10px; text-transform: uppercase; letter-spacing: .3em; color: #c9a84c; font-weight: 500;">Fragility</div>
+          <div style="font-family: 'Cormorant Garamond', serif; font-size: 26px; margin-top: 8px;">15 most fragile on the surface</div>
+          <div style="margin-top: 22px;">
+            <sc-for list="{{ fragileBars }}" as="b" hint-placeholder-count="15">
+              <div onClick="{{ b.open }}" style="display: flex; align-items: center; gap: 12px; padding: 5px 6px; border-radius: 4px; cursor: {{ b.cursor }}; background: {{ b.rowBg }};">
+                <span style="width: 58px; flex: none; font-size: 12px; letter-spacing: .1em; color: {{ b.tickerColor }};">{{ b.ticker }}</span>
+                <div style="flex: 1; height: 15px; background: rgba(232,230,223,.04); border-radius: 2px; overflow: hidden;">
+                  <div style="height: 100%; width: {{ b.width }}; background: linear-gradient(90deg, #d98a4a, #c9584a);"></div>
+                </div>
+                <span style="width: 52px; flex: none; text-align: right; font-size: 12.5px; font-variant-numeric: tabular-nums;">{{ b.value }}</span>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+        <div style="border: 1px solid rgba(201,168,76,.18); border-radius: 14px; padding: 28px; background: linear-gradient(160deg, #0c1020, #080b16);">
+          <div style="font-size: 10px; text-transform: uppercase; letter-spacing: .3em; color: #c9a84c; font-weight: 500;">The tension in the table</div>
+          <div style="font-family: 'Cormorant Garamond', serif; font-size: 26px; margin-top: 8px;">What actually drives the score</div>
+          <p style="margin: 16px 0 0; font-size: 14.5px; line-height: 1.7; color: #9aa0ae; text-wrap: pretty;">{{ tensionCopy }}</p>
+          <div style="margin-top: 20px; display: grid; gap: 14px;">
+            <sc-for list="{{ tensionRows }}" as="t" hint-placeholder-count="3">
+              <div style="border: 1px solid rgba(201,168,76,.14); border-radius: 8px; padding: 16px;">
+                <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                  <span style="font-size: 13px; letter-spacing: .16em;">{{ t.ticker }}</span>
+                  <span style="font-size: 13px; font-variant-numeric: tabular-nums; color: #d98a4a;">{{ t.risk }}</span>
+                </div>
+                <div style="display: flex; gap: 3px; margin-top: 12px;">
+                  <sc-for list="{{ t.segs }}" as="s" hint-placeholder-count="3">
+                    <div title="{{ s.title }}" style="height: 5px; width: {{ s.width }}; background: {{ s.fill }};"></div>
+                  </sc-for>
+                </div>
+                <div style="font-size: 11.5px; color: #8a8f9e; margin-top: 10px; font-variant-numeric: tabular-nums;">{{ t.detail }}</div>
+              </div>
+            </sc-for>
+          </div>
+          <div style="display: flex; gap: 16px; margin-top: 18px;">
+            <sc-for list="{{ driverLegend }}" as="l" hint-placeholder-count="3">
+              <div style="display: flex; align-items: center; gap: 7px;">
+                <span style="width: 10px; height: 5px; background: {{ l.color }};"></span>
+                <span style="font-size: 10px; text-transform: uppercase; letter-spacing: .16em; color: #8a8f9e;">{{ l.label }}</span>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </section>
+
+      <section style="margin-top: 24px; border: 1px solid rgba(201,168,76,.18); border-radius: 14px; padding: 28px; background: linear-gradient(160deg, #0c1020, #080b16);">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+          <div>
+            <div style="font-size: 10px; text-transform: uppercase; letter-spacing: .3em; color: #c9a84c; font-weight: 500;">The universe</div>
+            <div style="font-family: 'Cormorant Garamond', serif; font-size: 26px; margin-top: 8px;">{{ scanTableCaption }}</div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+            <div>
+              <div style="font-size: 9.5px; text-transform: uppercase; letter-spacing: .2em; color: #7d8290;">Minimum dollar ADV {{ minAdvLabel }}</div>
+              <input type="range" min="0" max="9" step="1" value="{{ minAdvStep }}" onChange="{{ onMinAdv }}" style="width: 180px; margin-top: 10px;" />
+            </div>
+            <input value="{{ scanFilter }}" onChange="{{ onScanFilter }}" placeholder="Filter ticker" style="background: transparent; border: 0; border-bottom: 1px solid rgba(201,168,76,.18); outline: none; color: #e8e6df; font-family: Outfit, sans-serif; font-size: 13px; letter-spacing: .1em; padding: 6px 2px; width: 140px;" />
+            <div onClick="{{ exportScanCsv }}" style="padding: 9px 18px; border: 1px solid rgba(201,168,76,.4); font-size: 10px; text-transform: uppercase; letter-spacing: .2em; color: #c9a84c; cursor: pointer;" style-hover="background: rgba(201,168,76,.06);">Export CSV</div>
+          </div>
+        </div>
+        <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
+        <div style="margin-top: 22px;">
+          <table style="width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums;">
+            <thead>
+              <tr>
+                <sc-for list="{{ scanColumns }}" as="c" hint-placeholder-count="6">
+                  <th onClick="{{ c.sort }}" style="position: sticky; top: 0; background: #0a0e1c; text-align: {{ c.align }}; padding: 10px 12px; font-size: 9.5px; font-weight: 500; text-transform: uppercase; letter-spacing: .2em; color: #8a8f9e; border-bottom: 1px solid rgba(201,168,76,.18); cursor: pointer; white-space: nowrap;">{{ c.label }}<span style="color: #c9a84c; margin-left: 6px;">{{ c.caret }}</span></th>
+                </sc-for>
+              </tr>
+            </thead>
+            <tbody>
+              <sc-for list="{{ scanRows }}" as="r" hint-placeholder-count="20">
+                <tr onClick="{{ r.open }}" style="background: {{ r.bg }}; cursor: {{ r.cursor }};">
+                  <td style="padding: 9px 12px; font-size: 13px; letter-spacing: .1em; border-bottom: 1px solid rgba(201,168,76,.06); color: {{ r.tickerColor }};">{{ r.ticker }}</td>
+                  <td style="padding: 9px 12px; text-align: right; font-size: 13px; border-bottom: 1px solid rgba(201,168,76,.06);">{{ r.adv }}</td>
+                  <td style="padding: 9px 12px; text-align: right; font-size: 13px; border-bottom: 1px solid rgba(201,168,76,.06);">{{ r.amihud }}</td>
+                  <td style="padding: 9px 12px; text-align: right; font-size: 13px; border-bottom: 1px solid rgba(201,168,76,.06);">{{ r.spread }}</td>
+                  <td style="padding: 9px 12px; border-bottom: 1px solid rgba(201,168,76,.06);">
+                    <div style="display: flex; gap: 3px; justify-content: flex-end;">
+                      <sc-for list="{{ r.segs }}" as="s" hint-placeholder-count="3">
+                        <div title="{{ s.title }}" style="height: 5px; width: {{ s.width }}; background: {{ s.fill }};"></div>
+                      </sc-for>
+                    </div>
+                  </td>
+                  <td style="padding: 9px 12px; text-align: right; font-size: 13px; border-bottom: 1px solid rgba(201,168,76,.06); color: {{ r.riskColor }};">{{ r.risk }}</td>
+                </tr>
+              </sc-for>
+            </tbody>
+          </table>
+        </div>
+        </sc-if>
+        <sc-if value="{{ narrow }}" hint-placeholder-val="{{ false }}">
+          <div style="margin-top: 22px; display: grid; gap: 12px;">
+            <sc-for list="{{ scanRows }}" as="r" hint-placeholder-count="0">
+              <div onClick="{{ r.open }}" style="border: 1px solid rgba(201,168,76,.14); border-radius: 10px; padding: 16px; cursor: {{ r.cursor }};">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; padding-bottom: 10px; border-bottom: 1px solid rgba(201,168,76,.1);">
+                  <span style="font-size: 14px; letter-spacing: .16em; color: {{ r.tickerColor }};">{{ r.ticker }}</span>
+                  <div style="display: flex; gap: 3px;">
+                    <sc-for list="{{ r.segs }}" as="s" hint-placeholder-count="3">
+                      <div title="{{ s.title }}" style="height: 5px; width: {{ s.width }}; background: {{ s.fill }};"></div>
+                    </sc-for>
+                  </div>
+                </div>
+                <sc-for list="{{ r.pairs }}" as="p" hint-placeholder-count="4">
+                  <div style="display: flex; justify-content: space-between; gap: 16px; padding: 7px 0;">
+                    <span style="font-size: 12px; color: #8a8f9e;">{{ p.label }}</span>
+                    <span style="font-size: 13px; font-variant-numeric: tabular-nums; color: {{ p.color }};">{{ p.text }}</span>
+                  </div>
+                </sc-for>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+        <p style="margin: 16px 0 0; font-size: 11.5px; color: #7d8290; line-height: 1.6;">{{ scanTableNote }}</p>
+      </section>
+
+      <section style="margin-top: 24px; border: 1px solid rgba(201,168,76,.18); border-radius: 14px; padding: 28px; background: linear-gradient(160deg, #0c1020, #080b16);">
+        <div onClick="{{ toggleLiquid }}" style="display: flex; justify-content: space-between; align-items: baseline; cursor: pointer;">
+          <div>
+            <div style="font-size: 10px; text-transform: uppercase; letter-spacing: .3em; color: #c9a84c; font-weight: 500;">For scale</div>
+            <div style="font-family: 'Cormorant Garamond', serif; font-size: 26px; margin-top: 8px;">The 10 most liquid on the surface</div>
+          </div>
+          <span style="font-size: 11px; text-transform: uppercase; letter-spacing: .2em; color: #c9a84c;">{{ liquidToggleLabel }}</span>
+        </div>
+        <sc-if value="{{ liquidOpen }}" hint-placeholder-val="{{ false }}">
+          <div style="margin-top: 22px; display: grid; gap: 10px;">
+            <sc-for list="{{ liquidRows }}" as="r" hint-placeholder-count="10">
+              <div style="display: grid; grid-template-columns: 80px 1fr 130px 90px; gap: 16px; align-items: baseline; padding-bottom: 9px; border-bottom: 1px solid rgba(201,168,76,.08);">
+                <span style="font-size: 13px; letter-spacing: .14em;">{{ r.ticker }}</span>
+                <span style="font-size: 11.5px; color: #7d8290;">{{ r.note }}</span>
+                <span style="font-size: 12.5px; color: #8a8f9e; text-align: right; font-variant-numeric: tabular-nums;">{{ r.adv }}</span>
+                <span style="font-size: 13px; color: #4a9d7f; text-align: right; font-variant-numeric: tabular-nums;">{{ r.risk }}</span>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+      </section>
+      </div>
+      </sc-if>
+    </div>
+    </sc-if>
+
+    <sc-if value="{{ isMethod }}" hint-placeholder-val="{{ false }}">
+    <article style="max-width: 68ch; margin: 0 auto;">
+
+      <section style="margin-top: 56px;">
+        <div style="font-size: 10px; text-transform: uppercase; letter-spacing: .3em; color: #c9a84c; font-weight: 500;">Method</div>
+        <h2 style="font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 40px; line-height: 1.2; margin: 18px 0 0;">How every number on this site is made.</h2>
+        <p style="font-size: 17px; line-height: 1.7; color: #c3c6cf; margin: 22px 0 0; text-wrap: pretty;">Two pipelines run here, and they answer different questions. The look-through opens a single fund and measures what it holds. The surface scan measures how the funds themselves trade, across the whole listed universe. Neither substitutes for the other, and the gap between them is the point of the project.</p>
+      </section>
+
+      <section style="margin-top: 64px;">
+        <div style="font-size: 10px; text-transform: uppercase; letter-spacing: .3em; color: #c9a84c; font-weight: 500;">The metrics</div>
+        <h3 style="font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 30px; margin: 14px 0 0;">Six definitions, in full.</h3>
+        <div style="margin-top: 26px; display: grid; gap: 2px;">
+          <sc-for list="{{ methodMetrics }}" as="m" hint-placeholder-count="6">
+            <div style="padding: 22px 0; border-bottom: 1px solid rgba(201,168,76,.14);">
+              <div style="font-family: 'Cormorant Garamond', serif; font-size: 23px; color: #e8e6df;">{{ m.name }}</div>
+              <div style="margin-top: 12px; padding: 12px 16px; border-left: 2px solid rgba(201,168,76,.4); background: rgba(201,168,76,.04); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; line-height: 1.6; color: #c9a84c; overflow-x: auto; white-space: pre-line;">{{ m.formula }}</div>
+              <p style="margin: 14px 0 0; font-size: 16px; line-height: 1.7; color: #c3c6cf; text-wrap: pretty;">{{ m.reading }}</p>
+            </div>
+          </sc-for>
+        </div>
+      </section>
+
+      <section style="margin-top: 64px;">
+        <div style="font-size: 10px; text-transform: uppercase; letter-spacing: .3em; color: #c9a84c; font-weight: 500;">The pipeline</div>
+        <h3 style="font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 30px; margin: 14px 0 0;">From filing to score.</h3>
+        <ol style="margin: 20px 0 0; padding-left: 22px; display: grid; gap: 13px;">
+          <sc-for list="{{ methodSteps }}" as="s" hint-placeholder-count="8">
+            <li style="font-size: 16.5px; line-height: 1.7; color: #c3c6cf;">{{ s }}</li>
+          </sc-for>
+        </ol>
+        <p style="font-size: 16.5px; line-height: 1.7; color: #c3c6cf; margin: 22px 0 0; text-wrap: pretty;">The surface scan runs the same three measurements over every listed ETF, then inverts dollar volume so that thin trading raises the score rather than lowering it, and blends the three at 0.40, 0.35 and 0.25. It never opens a fund.</p>
+      </section>
+
+      <section style="margin-top: 64px;">
+        <div style="font-size: 10px; text-transform: uppercase; letter-spacing: .3em; color: #c9a84c; font-weight: 500;">Limitations</div>
+        <h3 style="font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 30px; margin: 14px 0 0;">Seven things this gets wrong, stated plainly.</h3>
+        <p style="font-size: 17px; line-height: 1.7; color: #c3c6cf; margin: 20px 0 0; text-wrap: pretty;">These are not caveats buried at the bottom of a page. Each one changes how the score should be read, and two of them have fixes that are not yet built.</p>
+        <div style="display: grid; gap: 18px; margin-top: 28px;">
+          <sc-for list="{{ methodLimits }}" as="l" hint-placeholder-count="7">
+            <div style="border: 1px solid {{ l.border }}; border-radius: 12px; padding: 26px; background: linear-gradient(160deg, #0c1020, #080b16);">
+              <div style="display: flex; gap: 14px; align-items: baseline;">
+                <span style="font-family: 'Cormorant Garamond', serif; font-size: 26px; color: {{ l.numColor }}; line-height: 1;">{{ l.num }}</span>
+                <div style="font-family: 'Cormorant Garamond', serif; font-size: 24px; color: #e8e6df; line-height: 1.25;">{{ l.title }}</div>
+              </div>
+              <p style="margin: 14px 0 0; font-size: 16px; line-height: 1.7; color: #c3c6cf; text-wrap: pretty;">{{ l.body }}</p>
+              <sc-if value="{{ l.hasFix }}" hint-placeholder-val="{{ false }}">
+                <div style="margin-top: 16px; padding-top: 14px; border-top: 1px solid rgba(201,168,76,.18); display: flex; gap: 12px; align-items: flex-start;">
+                  <span style="font-size: 9.5px; text-transform: uppercase; letter-spacing: .2em; color: #c9a84c; white-space: nowrap; padding-top: 4px;">The fix</span>
+                  <p style="margin: 0; font-size: 15px; line-height: 1.65; color: #9aa0ae;">{{ l.fix }}</p>
+                </div>
+              </sc-if>
+            </div>
+          </sc-for>
+        </div>
+      </section>
+
+      <section style="margin: 64px 0 0; border: 1px solid rgba(201,168,76,.4); border-radius: 14px; padding: 40px; background: linear-gradient(160deg, #0c1020, #080b16);">
+        <div style="font-size: 10px; text-transform: uppercase; letter-spacing: .3em; color: #c9a84c; font-weight: 500;">What would make this better</div>
+        <h3 style="font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 30px; margin: 14px 0 0;">Three things money would buy.</h3>
+        <ul style="margin: 20px 0 0; padding-left: 22px; display: grid; gap: 13px;">
+          <li style="font-size: 16.5px; line-height: 1.7; color: #c3c6cf;">Paid intraday TAQ data, so the spread is observed from the order book rather than inferred from daily bars.</li>
+          <li style="font-size: 16.5px; line-height: 1.7; color: #c3c6cf;">Bond-level TRACE prints, which would let the bond funds — the ones where mismatch risk is highest — be measured at all.</li>
+          <li style="font-size: 16.5px; line-height: 1.7; color: #c3c6cf;">Daily portfolio composition files from issuers, which would replace a quarterly filing with a current one.</li>
+        </ul>
+        <p style="margin: 22px 0 0; font-size: 16.5px; line-height: 1.7; color: #9aa0ae; text-wrap: pretty;">Everything on this site is built on free public data, which is both the constraint and the argument: if a gap this large is visible without a terminal, it is not hidden. It is unexamined.</p>
+      </section>
+
+    </article>
+    </sc-if>
+
+    <footer style="margin-top: 56px; padding-top: 20px; border-top: 1px solid rgba(201,168,76,.18); font-size: 11.5px; color: #7d8290; line-height: 1.7;">
+      Data: SEC EDGAR (N-PORT) · Yahoo Finance · NASDAQ Trader. For research and demonstration only, not investment advice.
+    </footer>
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1320,&quot;height&quot;:1400},&quot;defaultTab&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;About&quot;,&quot;Analyze&quot;,&quot;Market Scan&quot;,&quot;Method&quot;],&quot;default&quot;:&quot;About&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Behaviour&quot;},&quot;landingTicker&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;ARKK&quot;,&quot;SPY&quot;,&quot;QQQ&quot;,&quot;HYG&quot;,&quot;EMB&quot;],&quot;default&quot;:&quot;ARKK&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Behaviour&quot;},&quot;showStarfield&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Atmosphere&quot;},&quot;starfieldDensity&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;min&quot;:0,&quot;max&quot;:320,&quot;step&quot;:10,&quot;default&quot;:120,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Atmosphere&quot;}}">
+const GOLD = '#c9a84c';
+const BANDS = [
+  { max: 20, color: '#4a9d7f', label: 'Low' },
+  { max: 40, color: '#c9a84c', label: 'Moderate' },
+  { max: 60, color: '#d98a4a', label: 'Elevated' },
+  { max: 101, color: '#c9584a', label: 'Critical' },
+];
+const band = (v) => BANDS.find((b) => v < b.max) || BANDS[3];
+// Critical red is 4.48:1 as small text on the card gradient; this variant clears AA at 5.3:1.
+const txt = (c) => (c === '#c9584a' ? '#d4695b' : c);
+
+const NARRATIVE = {
+  ARKK: {
+    text: 'ARK Innovation is an actively managed thematic fund built around disruptive innovation, run by Cathie Wood. The book is concentrated — 63 positions in this filing — and weighted toward small and mid-cap names where the fund is a meaningful share of daily volume. The value of a look-through here is not the headline number but the naming of which positions would break first.',
+    caution: 'After the 2021 peak and the drawdown that followed, redemptions in a concentrated small and mid-cap book force selling into the least liquid names. Nineteen of 63 holdings could not be priced through standard data feeds at all, so the score below is computed on 42 holdings and is a floor.',
+  },
+  SPY: {
+    text: 'The liquidity benchmark. Every holding is a large-cap US name in which the fund position is small against daily traded volume. SPY exists in this tool to prove the scale means something.',
+    caution: 'Only the top holdings by value are priced in this run, so the coverage ratio is low against a 503-name book. Read the score alongside coverage, never on its own.',
+  },
+  QQQ: {
+    text: 'The Nasdaq-100 wrapper. Liquid, but materially more concentrated than SPY, which makes it useful for separating two different risks: concentration and illiquidity are not the same thing.',
+    caution: 'A concentrated book of liquid names can still score low here. Concentration shows up in the map below, not in the headline.',
+  },
+  HYG: {
+    text: 'iShares iBoxx High Yield Corporate Bond, the larger sibling of JNK. A daily-liquid wrapper around bonds that may not trade for days at a time. One argument holds that the ETF became the price-discovery mechanism for the underlying bonds during stress, which is either reassuring or alarming depending on your view.',
+    caution: 'March 2020: high-yield ETFs traded at material discounts to NAV while the underlying bond market seized. Bond holdings frequently lack a usable exchange ticker, which matters most precisely where mismatch risk is highest.',
+  },
+  EMB: {
+    text: 'iShares JP Morgan USD Emerging Markets Bond. Sovereign and quasi-sovereign EM debt, layering currency, jurisdiction and settlement friction on top of ordinary bond illiquidity.',
+    caution: 'The priced set is a small fraction of a 3,521-line book. Treat the score as directional, and read it with the filing date and coverage ratio attached.',
+  },
+};
+
+const num = (v, d) => Number(v).toFixed(d);
+const sci = (v) => {
+  if (!isFinite(v)) return '—';
+  const e = Number(v).toExponential(2).split('e');
+  return e[0] + '×10' + String(Number(e[1])).replace(/[-0-9]/g, (c) => (c === '-' ? '⁻' : '⁰¹²³⁴⁵⁶⁷⁸⁹'[+c]));
+};
+
+class Component extends DCLogic {
+  state = {
+    ticker: 'ARKK', query: 'ARKK', data: null, loading: true, notFound: false,
+    participation: 0.20, w: { dtl: 0.5, amihud: 0.3, spread: 0.2 },
+    sortKey: 'dtl', sortDir: 'desc', filter: '', hover: null,
+    unpricedOpen: false, pins: [], pinData: {}, t: 0, available: [], suggestOpen: false,
+    tab: null,
+    scan: null, scanSort: { key: 'surface_risk', dir: 'desc' }, scanFilter: '',
+    minAdvStep: 0, liquidOpen: false, lookAll: null,
+    narrow: false, errorKind: null, errorRow: null,
+  };
+
+  loadScan() {
+    if (!this.api || this.state.scan) return;
+    this.api.getSurfaceScan().then((scan) => this.setState({ scan }));
+    this.api.listLookthroughTickers().then((list) => Promise.all(list.map((t) => this.api.getLookthrough(t)))
+      .then((all) => {
+        const map = {};
+        all.forEach((f) => { if (f) map[f.ticker] = f; });
+        this.setState({ lookAll: map });
+      }));
+  }
+
+  csvScan(rows) {
+    const head = ['ticker', 'dollar_adv', 'amihud', 'est_spread', 'illiq_vol', 'illiq_amihud', 'illiq_spread', 'surface_risk'];
+    const body = rows.map((r) => head.map((k) => r[k]).join(','));
+    const blob = new Blob([head.join(',') + '\n' + body.join('\n')], { type: 'text/csv' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'surface_scan.csv';
+    a.click();
+    URL.revokeObjectURL(a.href);
+  }
+
+  componentDidMount() {
+    this.starRef = React.createRef();
+    const seed = (this.props.landingTicker || 'ARKK').toUpperCase();
+    this.setState({ tab: this.props.defaultTab || 'About', ticker: seed, query: seed });
+    import('./data/etf-data.js').then((mod) => {
+      this.api = mod;
+      mod.listLookthroughTickers().then((list) => this.setState({ available: list }));
+      this.load(seed);
+    }).catch(() => this.setState({ loading: false, notFound: true }));
+    this.reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!this.reduced && this.props.showStarfield !== false) requestAnimationFrame(() => this.stars());
+    this.onResize = () => {
+      const n = window.innerWidth < 640;
+      if (n !== this.state.narrow) this.setState({ narrow: n });
+    };
+    this.onResize();
+    window.addEventListener('resize', this.onResize);
+  }
+
+  componentWillUnmount() {
+    cancelAnimationFrame(this.raf);
+    cancelAnimationFrame(this.sraf);
+    if (this.onResize) window.removeEventListener('resize', this.onResize);
+  }
+
+  load(ticker) {
+    if (!this.api) return;
+    this.setState({ loading: true, notFound: false, errorKind: null, errorRow: null, ticker, query: ticker, suggestOpen: false });
+    this.api.getLookthrough(ticker).then((data) => {
+      if (!data) {
+        this.api.getSurfaceScan().then((scan) => {
+          const row = scan.rows.filter((r) => r.ticker === ticker)[0] || null;
+          this.setState({ loading: false, notFound: true, data: null, errorKind: row ? 'no-nport' : 'unknown', errorRow: row });
+        });
+        return;
+      }
+      this.setState({ data, loading: false, t: this.reduced ? 1 : 0 });
+      if (!this.reduced) this.animate();
+    });
+  }
+
+  animate() {
+    cancelAnimationFrame(this.raf);
+    const start = performance.now();
+    const step = (now) => {
+      const p = Math.min(1, (now - start) / 900);
+      this.setState({ t: 1 - Math.pow(1 - p, 3) });
+      if (p < 1) this.raf = requestAnimationFrame(step);
+    };
+    this.raf = requestAnimationFrame(step);
+  }
+
+  stars() {
+    const c = this.starRef && this.starRef.current;
+    if (!c) return;
+    const ctx = c.getContext('2d');
+    const dpr = window.devicePixelRatio || 1;
+    const resize = () => { c.width = c.clientWidth * dpr; c.height = c.clientHeight * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0); };
+    resize();
+    window.addEventListener('resize', resize);
+    const count = this.props.starfieldDensity == null ? 120 : Math.round(this.props.starfieldDensity);
+    const pts = Array.from({ length: count }, () => ({
+      x: Math.random(), y: Math.random(), ph: Math.random() * 6.28, sp: 0.15 + Math.random() * 0.5,
+    }));
+    const draw = (now) => {
+      const w = c.clientWidth, h = c.clientHeight;
+      ctx.clearRect(0, 0, w, h);
+      const drift = (now / 90000) % 1;
+      pts.forEach((p) => {
+        const o = 0.05 + 0.30 * (0.5 + 0.5 * Math.sin(now / 1000 * p.sp + p.ph));
+        ctx.fillStyle = 'rgba(232,230,223,' + o.toFixed(3) + ')';
+        ctx.fillRect(p.x * w, ((p.y + drift) % 1) * h, 1, 1);
+      });
+      this.sraf = requestAnimationFrame(draw);
+    };
+    this.sraf = requestAnimationFrame(draw);
+  }
+
+  // ---- derived ----
+  rows() {
+    const { data, participation, w } = this.state;
+    if (!data) return [];
+    const f = data.participation / participation;
+    const sum = data.holdings.reduce((a, h) => a + h.pct_value, 0);
+    return data.holdings.map((h) => {
+      const risk = w.dtl * h.dtl_s + w.amihud * h.amihud_s + w.spread * h.spread_s;
+      return Object.assign({}, h, { dtlAdj: h.dtl * f, risk, weight: h.pct_value / sum });
+    });
+  }
+
+  score(rows) {
+    const { data, w } = this.state;
+    const def = w.dtl === 0.5 && w.amihud === 0.3 && w.spread === 0.2;
+    if (def) return { value: data.mismatch_score, source: 'as filed' };
+    return { value: rows.reduce((a, r) => a + r.risk * r.weight, 0) * 100, source: 'recomputed' };
+  }
+
+  setW(key, pct) {
+    const v = Math.max(0, Math.min(1, pct / 100));
+    const others = ['dtl', 'amihud', 'spread'].filter((k) => k !== key);
+    const rest = 1 - v;
+    const cur = this.state.w;
+    const oSum = others.reduce((a, k) => a + cur[k], 0);
+    const w = { [key]: v };
+    others.forEach((k) => { w[k] = oSum > 0 ? rest * (cur[k] / oSum) : rest / 2; });
+    this.setState({ w: { dtl: +w.dtl.toFixed(4), amihud: +w.amihud.toFixed(4), spread: +w.spread.toFixed(4) } });
+  }
+
+  csv(rows) {
+    const head = ['ticker', 'pct_value', 'dtl_at_participation', 'dtl_as_filed', 'amihud', 'est_spread', 'dtl_s', 'amihud_s', 'spread_s', 'holding_risk'];
+    const body = rows.map((r) => [r.ticker, r.pct_value, r.dtlAdj, r.dtl, r.amihud, r.est_spread, r.dtl_s, r.amihud_s, r.spread_s, r.risk].join(','));
+    const blob = new Blob([head.join(',') + '\n' + body.join('\n')], { type: 'text/csv' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = this.state.ticker + '_lookthrough.csv';
+    a.click();
+    URL.revokeObjectURL(a.href);
+  }
+
+  scanVals() {
+    const S = this.state;
+    const scan = S.scan;
+    if (!scan) return { scanLoading: true, scanReady: false, scanMeta: [], contrastPoints: [], contrastTicks: [], unmatchedFunds: [], fragileBars: [], tensionRows: [], scanRows: [], scanColumns: [], liquidRows: [], driverLegend: [], scanTableCaption: 'Loading the latest completed scan…', scanTableNote: '', unmatchedNote: '', tensionCopy: '', minAdvLabel: '', minAdvStep: 0, scanFilter: '', liquidOpen: false, contrastAria: '', scanColumns: [], liquidToggleLabel: '' };
+
+    const money = (v) => '$' + Number(v).toLocaleString('en-US');
+    const ADV_STEPS = [0, 1e3, 1e4, 1e5, 1e6, 1e7, 1e8, 5e8, 1e9, 2e9];
+    const minAdv = ADV_STEPS[S.minAdvStep];
+    const DRIVERS = [
+      { key: 'illiq_vol', w: 0.40, color: '#c9a84c', label: 'Volume' },
+      { key: 'illiq_amihud', w: 0.35, color: '#d98a4a', label: 'Amihud' },
+      { key: 'illiq_spread', w: 0.25, color: '#c9584a', label: 'Spread' },
+    ];
+    const segs = (r) => DRIVERS.map((d) => ({
+      width: (r[d.key] * d.w * 62).toFixed(1) + 'px', fill: d.color,
+      title: d.label + ' contributes ' + (r[d.key] * d.w * 100).toFixed(1) + ' of ' + r.surface_risk.toFixed(2),
+    }));
+    const look = S.lookAll || {};
+    const byTicker = {};
+    scan.rows.forEach((r) => { byTicker[r.ticker] = r; });
+    const openFund = (t) => (look[t] ? () => { this.setState({ tab: 'Analyze' }); this.load(t); window.scrollTo(0, 0); } : null);
+
+    const matched = Object.keys(look).filter((t) => byTicker[t]);
+    const unmatched = Object.keys(look).filter((t) => !byTicker[t]);
+    const maxFragile = scan.rows[0] ? scan.rows[0].surface_risk : 100;
+
+    const filtered = scan.rows.filter((r) => r.dollar_adv >= minAdv && (!S.scanFilter || r.ticker.indexOf(S.scanFilter) === 0));
+    const sk = S.scanSort.key;
+    const sorted = filtered.slice().sort((a, b) => {
+      const A = a[sk], B = b[sk];
+      const cmp = typeof A === 'string' ? A.localeCompare(B) : A - B;
+      return S.scanSort.dir === 'asc' ? cmp : -cmp;
+    });
+    const shown = sorted.slice(0, 80);
+    const liquid = scan.rows.slice().sort((a, b) => a.surface_risk - b.surface_risk).slice(0, 10);
+    const bigLiquid = scan.rows.filter((r) => r.dollar_adv >= 1e6).slice(0, 3);
+
+    return {
+      scanLoading: false,
+      scanReady: true,
+      scanMeta: [
+        { label: 'Last refreshed', value: scan.generated_at.slice(0, 10) + ' ' + scan.generated_at.slice(11, 16) + ' UTC' },
+        { label: 'Universe scanned', value: String(scan.universe_scanned) },
+        { label: 'Usable', value: String(scan.universe_usable) },
+      ],
+      contrastAria: 'Surface risk against look-through Mismatch Score for ' + matched.length + (matched.length === 1 ? ' fund' : ' funds') + ', with a 45 degree reference line.',
+      contrastPoints: matched.map((t) => {
+        const r = byTicker[t], f = look[t], bb = band(f.mismatch_score);
+        return {
+          ticker: t, left: r.surface_risk.toFixed(2) + '%', bottom: f.mismatch_score.toFixed(2) + '%',
+          fill: bb.color, stroke: bb.color,
+          detail: 'surface ' + r.surface_risk.toFixed(2) + ' · mismatch ' + f.mismatch_score.toFixed(1),
+        };
+      }),
+      contrastTicks: [0, 25, 50, 75, 100].map((v) => ({ left: v + '%', label: String(v) })),
+      unmatchedNote: unmatched.length
+        ? 'This scan run covers ' + scan.universe_usable + ' of ' + scan.universe_scanned + ' tickers, and ' + unmatched.length + ' of the ' + Object.keys(look).length + ' funds with a look-through are not among them. No surface score exists for them in this data, so they are not plotted. Nothing is inferred in their place.'
+        : 'Every fund with a look-through analysis also carries a surface score in this run.',
+      unmatchedFunds: unmatched.map((t) => ({ ticker: t, detail: 'mismatch ' + look[t].mismatch_score.toFixed(1) + ' · no surface score' })),
+      fragileBars: scan.rows.slice(0, 15).map((r) => ({
+        ticker: r.ticker, value: r.surface_risk.toFixed(2),
+        width: ((r.surface_risk / maxFragile) * 100).toFixed(2) + '%',
+        rowBg: 'transparent', cursor: look[r.ticker] ? 'pointer' : 'default',
+        tickerColor: look[r.ticker] ? GOLD : '#e8e6df',
+        open: openFund(r.ticker) || (() => {}),
+      })),
+      tensionCopy: 'These three each turn over millions of dollars a day and still rank fragile. The segments show why, and the answer is uncomfortable: the inverted-volume term is close to its 40-point maximum for all three, because dollar volume is rescaled linearly against a $2.07bn-a-day ceiling. Against that, a $25m fund is indistinguishable from a dead one. Spread separates them at the margin; volume decides the level. Read this as the skew limitation, visible in the data.',
+      tensionRows: bigLiquid.map((r) => ({
+        ticker: r.ticker, risk: r.surface_risk.toFixed(2), segs: segs(r),
+        detail: money(r.dollar_adv) + ' daily · spread ' + (r.est_spread * 10000).toFixed(0) + ' bps · Amihud ' + r.amihud,
+      })),
+      driverLegend: DRIVERS.map((d) => ({ color: d.color, label: d.label })),
+      minAdvStep: S.minAdvStep,
+      minAdvLabel: minAdv === 0 ? '· none' : '· ' + money(minAdv),
+      onMinAdv: (e) => this.setState({ minAdvStep: +e.target.value }),
+      scanFilter: S.scanFilter,
+      onScanFilter: (e) => this.setState({ scanFilter: e.target.value.toUpperCase() }),
+      exportScanCsv: () => this.csvScan(sorted),
+      scanTableCaption: shown.length + ' shown of ' + sorted.length + ' matching',
+      scanTableNote: 'Fund names and issuers are not carried in this data source, so the issuer filter waits on the live API. Gold tickers have a look-through analysis; click the row to open it. Amihud and estimated spread are printed exactly as the scan recorded them.',
+      scanColumns: [
+        { key: 'ticker', label: 'Ticker', align: 'left' },
+        { key: 'dollar_adv', label: 'Dollar ADV', align: 'right' },
+        { key: 'amihud', label: 'Amihud', align: 'right' },
+        { key: 'est_spread', label: 'Spread bps', align: 'right' },
+        { key: 'surface_risk', label: 'Drivers', align: 'right' },
+        { key: 'surface_risk', label: 'Surface risk', align: 'right' },
+      ].map((c, i) => ({
+        label: c.label, align: c.align,
+        caret: S.scanSort.key === c.key && i !== 4 ? (S.scanSort.dir === 'asc' ? '▲' : '▼') : '',
+        sort: () => this.setState({ scanSort: { key: c.key, dir: S.scanSort.key === c.key && S.scanSort.dir === 'desc' ? 'asc' : 'desc' } }),
+      })),
+      scanRows: shown.map((r, i) => ({
+        ticker: r.ticker, adv: money(r.dollar_adv), amihud: String(r.amihud),
+        spread: (r.est_spread * 10000).toFixed(0), risk: r.surface_risk.toFixed(2),
+        riskColor: txt(band(r.surface_risk).color), segs: segs(r),
+        pairs: [
+          { label: 'Dollar ADV', text: money(r.dollar_adv), color: '#e8e6df' },
+          { label: 'Amihud', text: String(r.amihud), color: '#e8e6df' },
+          { label: 'Est. spread', text: (r.est_spread * 10000).toFixed(0) + ' bps', color: '#e8e6df' },
+          { label: 'Surface risk', text: r.surface_risk.toFixed(2) + ' · ' + band(r.surface_risk).label, color: txt(band(r.surface_risk).color) },
+        ],
+        bg: i % 2 ? 'rgba(255,255,255,.02)' : 'transparent',
+        cursor: look[r.ticker] ? 'pointer' : 'default',
+        tickerColor: look[r.ticker] ? GOLD : '#e8e6df',
+        open: openFund(r.ticker) || (() => {}),
+      })),
+      liquidOpen: S.liquidOpen,
+      liquidToggleLabel: S.liquidOpen ? 'Hide' : 'Show',
+      toggleLiquid: () => this.setState({ liquidOpen: !S.liquidOpen }),
+      liquidRows: liquid.map((r) => ({
+        ticker: r.ticker, adv: money(r.dollar_adv) + ' daily',
+        risk: r.surface_risk.toFixed(2),
+        note: 'spread ' + (r.est_spread * 10000).toFixed(0) + ' bps · Amihud ' + r.amihud,
+      })),
+    };
+  }
+
+  renderVals() {
+    const S = this.state;
+    const hover = (t) => ({ enter: () => this.setState({ hover: t }), leave: () => this.setState({ hover: null }) });
+    const seedList = S.available.length ? S.available : ['SPY', 'QQQ', 'ARKK', 'HYG', 'EMB'];
+
+    const tab = S.tab || this.props.defaultTab || 'About';
+    const TABS = ['About', 'Analyze', 'Market Scan', 'Method'];
+    const DIAG = [92, 34, 78, 12, 60, 8, 96, 22, 45, 6, 70, 15];
+    const PENDING = {
+      'Market Scan': 'The daily surface scan ranks the whole US ETF universe on its own trading characteristics. It is the next tab in the build, and reads from the same data module.',
+      Method: 'The long-form method note — formulas, limitations, and the relative-versus-absolute scaling toggle — comes with the Market Scan tab.',
+    };
+
+    const base = {
+      starRef: this.starRef,
+      tabs: TABS.map((t) => ({
+        label: t, pick: () => { this.setState({ tab: t }); if (t === 'Market Scan') this.loadScan(); },
+        color: t === tab ? GOLD : '#8a8f9e',
+        rule: t === tab ? GOLD : 'transparent',
+      })),
+      isAbout: tab === 'About',
+      isAnalyze: tab === 'Analyze',
+      isScan: tab === 'Market Scan',
+      isMethod: tab === 'Method',
+      methodMetrics: [
+        { name: 'Average Daily Volume', formula: 'adv_shares = mean(trailing 30 daily volumes)', reading: 'The baseline liquidity of a holding. Everything else is measured against it.' },
+        { name: 'Days to Liquidate', formula: 'dtl = shares held / (0.20 × adv_shares)', reading: 'Days to exit without crashing the price. The 20% cap is the industry assumption for the maximum share of a day\u2019s volume a fund can safely take. It is adjustable on the Analyze tab.' },
+        { name: 'Amihud illiquidity', formula: 'amihud = mean( |daily return| / daily dollar volume ) × 1e6', reading: 'Price impact per dollar traded. Higher is more fragile.' },
+        { name: 'Estimated bid-ask spread', formula: 'est_spread = EDGE / Corwin-Schultz estimator on daily Open, High, Low, Close', reading: 'The hidden transaction cost, inferred without paid intraday data.' },
+        { name: 'Liquidity Mismatch Score', formula: 'holding_risk = 0.50·dtl_s + 0.30·amihud_s + 0.20·spread_s\nLMS = Σ( holding_risk × pct_value weight ) × 100', reading: 'The single boardroom-ready headline. The subscript s means each input has been min-max rescaled to 0–1 across the analysed holdings first.' },
+        { name: 'Surface risk', formula: 'surface_risk = ( 0.40·inverted volume + 0.35·amihud + 0.25·spread ) × 100', reading: 'How hard the ETF itself is to trade. A different question, deliberately.' },
+      ],
+      methodSteps: [
+        'Pull the fund\u2019s latest NPORT-P filing from SEC EDGAR and read its investment data.',
+        'Sort holdings by value, take the top N, and fetch three months of daily OHLCV for each ticker.',
+        'Require at least 20 trading days per holding. Record every failure — the failure list is an output, not an error log.',
+        'Compute average daily volume, dollar volume, Amihud and estimated spread per priced holding.',
+        'Join balance and portfolio weight from the filing, then compute Days to Liquidate at the chosen participation cap.',
+        'Drop rows with infinite or missing metrics, and rows with no traded volume.',
+        'Collapse duplicate tickers: sum the weights, take the worst of each metric.',
+        'Min-max rescale each metric across the surviving holdings, blend by weight, and roll up to a score out of 100.',
+      ],
+      methodLimits: [
+        { num: '01', title: 'N-PORT is quarterly and lagged.', border: 'rgba(201,168,76,.32)', numColor: '#c9a84c', body: 'Holdings are as of the last filing, not live. The filing date is displayed next to every score on the Analyze tab, and the two funds analysed here carry dates months apart. A score without its date is meaningless.', hasFix: false },
+        { num: '02', title: 'Unpriceable holdings understate risk.', border: 'rgba(201,88,74,.45)', numColor: '#c9584a', body: 'The score is computed only on the holdings that could be priced. In ARKK\u2019s filing, 19 of 63 holdings could not be priced at all, and the priced set covers 67.41% of the book by weight. The gap is not random: the holdings hardest to get data on are almost by definition the hardest to sell. Every score here is a floor on the true risk, never a ceiling.', hasFix: false },
+        { num: '03', title: 'Scores are relative, not absolute.', border: 'rgba(201,88,74,.45)', numColor: '#c9584a', body: 'Min-max rescaling happens within the analysed set, so the worst holding in any fund always scores 1.0 and the best always scores 0.0. A fund of uniformly illiquid names and a fund of uniformly liquid names can produce similar composites. This is also why moving the participation cap does not move the score: scaling every holding by the same factor leaves the ranks untouched.', hasFix: true, fix: 'A toggle between in-fund relative scaling and cross-sectional absolute scaling, anchored to fixed percentile breakpoints derived from the scan universe. This is the single largest analytical upgrade available and is not yet built.' },
+        { num: '04', title: 'The inputs are badly skewed.', border: 'rgba(201,88,74,.45)', numColor: '#c9584a', body: 'Dollar volume is heavily right-skewed. In the current scan the largest ETF trades $2.07bn a day and the smallest $2,463, so linear rescaling compresses almost everything toward the illiquid end against a handful of mega-funds. On the Market Scan tab you can see the consequence directly: funds turning over tens of millions a day still sit near the maximum on the volume term.', hasFix: true, fix: 'Log-transform dollar volume and winsorise Amihud at the 1st and 99th percentiles before rescaling. The scan data shown here has not had this applied, and says so.' },
+        { num: '05', title: 'The surface scan cannot see inside funds.', border: 'rgba(201,168,76,.32)', numColor: '#c9a84c', body: 'It answers a different question from the look-through, on purpose. A fund can rank clean on the surface and be fragile underneath, which is the entire thesis. Reading a surface score as a verdict on a fund\u2019s holdings is the exact mistake this project exists to name.', hasFix: false },
+        { num: '06', title: 'The weights are a choice, not a truth.', border: 'rgba(201,168,76,.32)', numColor: '#c9a84c', body: 'Days to Liquidate carries the heaviest weight at 0.50 because position size against market depth is the mechanism that physically breaks in a redemption event. Reasonable analysts would weight differently. Rather than hide that, the Analyze tab lets you move the weights and watch the score respond, and flags any non-default setting so a tuned number is never mistaken for the canonical one.', hasFix: false },
+        { num: '07', title: 'Free data has limits.', border: 'rgba(201,88,74,.45)', numColor: '#c9584a', body: 'The spread is estimated from daily bars rather than observed from the order book. Bond holdings frequently lack a usable exchange ticker at all, which matters most precisely for the funds where mismatch risk is highest — the high-yield and emerging-market debt wrappers this tool was built to examine.', hasFix: false },
+      ],
+      pendingLabel: tab,
+      pendingCopy: PENDING[tab] || '',
+      goAnalyze: () => {
+        this.setState({ tab: 'Analyze' });
+        this.load((this.props.landingTicker || 'ARKK').toUpperCase());
+        window.scrollTo(0, 0);
+      },
+      diagramBars: DIAG.map((w) => ({ bar: w + '%', arrow: (2 + (w / 100) * 14).toFixed(1) + 'px' })),
+      bandTable: [
+        { label: 'Low', range: 'Under 20', color: '#4a9d7f', meaning: 'The fund could unwind its book without much difficulty' },
+        { label: 'Moderate', range: '20 to 40', color: '#c9a84c', meaning: 'Some positions would take real time to exit' },
+        { label: 'Elevated', range: '40 to 60', color: '#d98a4a', meaning: 'Meaningful concentration in holdings that are hard to sell' },
+        { label: 'Critical', range: '60 and above', color: '#c9584a', meaning: "The fund's surface liquidity substantially overstates how easily it could actually be unwound" },
+      ],
+    };
+
+    if (tab === 'Market Scan') Object.assign(base, this.scanVals());
+    Object.assign(base, {
+      query: S.query,
+      loading: S.loading,
+      ready: !!S.data && !S.loading,
+      notFound: S.notFound,
+      narrow: S.narrow,
+      wide: !S.narrow,
+      errorTitle: S.errorKind === 'no-nport' ? 'No N-PORT filing analysed' : 'Ticker not in this dataset',
+      errorMsg: S.errorKind === 'no-nport'
+        ? S.ticker + ' is in the surface scan universe, so it trades and it is measured on how it trades — but no N-PORT look-through has been run against it in this data source. That is a different pipeline: it needs the filing fetched, every holding priced, and the composite rebuilt. A live backend would queue that job and stream its progress here.'
+        : S.ticker + ' does not appear in either data source: no look-through analysis and no row in the latest surface scan of ' + seedList.length + ' analysed funds and the scanned ETF universe. Check the symbol, or start from one of the seeded funds below.',
+      errorDetail: S.errorRow
+        ? 'From the scan: surface risk ' + S.errorRow.surface_risk.toFixed(2) + ' · dollar ADV $' + Number(S.errorRow.dollar_adv).toLocaleString('en-US') + ' · est. spread ' + (S.errorRow.est_spread * 10000).toFixed(0) + ' bps'
+        : '',
+      hasErrorDetail: !!S.errorRow,
+      errorAction: S.errorKind === 'no-nport' ? 'Open the Market Scan →' : 'Read what this measures →',
+      onErrorAction: () => this.setState({ tab: S.errorKind === 'no-nport' ? 'Market Scan' : 'About' }, () => { if (S.errorKind === 'no-nport') this.loadScan(); }),
+      sourceLabel: 'N-PORT look-through',
+      onQuery: (e) => this.setState({ query: e.target.value.toUpperCase(), suggestOpen: true }),
+      onQueryKey: (e) => { if (e.key === 'Enter') this.load(S.query.trim().toUpperCase()); },
+      showSuggest: S.suggestOpen && !!S.query && S.query !== S.ticker,
+      suggestions: seedList.filter((t) => t.startsWith(S.query.trim().toUpperCase())).map((t) => ({
+        ticker: t, tag: 'Look-through', tagColor: GOLD, pick: () => this.load(t),
+      })),
+      seeds: seedList.map((t) => ({
+        ticker: t, pick: () => this.load(t),
+        border: t === S.ticker ? 'rgba(201,168,76,.55)' : 'rgba(201,168,76,.18)',
+        color: t === S.ticker ? GOLD : '#8a8f9e',
+        bg: t === S.ticker ? 'rgba(201,168,76,.06)' : 'transparent',
+      })),
+    });
+    if (!S.data || S.loading) return base;
+
+    const d = S.data;
+    const rows = this.rows();
+    const sc = this.score(rows);
+    const b = band(sc.value);
+    const shown = sc.value * S.t;
+    const dash = (471.24 * (shown / 100)).toFixed(2) + ' 471.24';
+    const nar = NARRATIVE[d.ticker] || { text: '', caution: '' };
+    const wsum = rows.reduce((a, r) => a + r.pct_value, 0);
+    const wmean = (fn) => rows.reduce((a, r) => a + fn(r) * r.pct_value, 0) / wsum;
+    const coverage = d.holdings_priced / d.holdings_total;
+
+    const maxDtl = Math.max.apply(null, rows.map((r) => r.dtlAdj));
+    const minDtl = Math.max(1e-4, Math.min.apply(null, rows.map((r) => r.dtlAdj)));
+    const lo = Math.log10(minDtl), hi = Math.log10(maxDtl), span = Math.max(0.5, hi - lo);
+    const maxW = Math.max.apply(null, rows.map((r) => r.pct_value));
+    const meanW = wsum / rows.length;
+    const px = (v) => ((Math.log10(Math.max(v, minDtl)) - lo) / span) * 92 + 3;
+    const py = (v) => (v / (maxW * 1.12)) * 92 + 3;
+
+    const contrib = rows.map((r) => ({ t: r.ticker, v: r.risk * r.weight })).sort((a, c) => c.v - a.v);
+    const ctot = contrib.reduce((a, c) => a + c.v, 0);
+    const top10 = contrib.slice(0, 10);
+    const restV = ctot - top10.reduce((a, c) => a + c.v, 0);
+    const wfPalette = ['#c9584a', '#cf6a4a', '#d98a4a', '#d5a04c', '#c9a84c', '#b3a45c', '#9c9f6a', '#84997a', '#6a9679', '#4a9d7f'];
+
+    const cols = [
+      { key: 'ticker', label: 'Ticker', align: 'left' },
+      { key: 'pct_value', label: 'Weight %', align: 'right' },
+      { key: 'dtl', label: 'Days to liq.', align: 'right' },
+      { key: 'amihud', label: 'Amihud', align: 'right' },
+      { key: 'est_spread', label: 'Spread bps', align: 'right' },
+      { key: 'risk', label: 'Holding risk', align: 'right' },
+    ];
+    const val = (r, k) => (k === 'dtl' ? r.dtlAdj : k === 'ticker' ? r.ticker : r[k]);
+    const ranges = {};
+    ['pct_value', 'dtl', 'amihud', 'est_spread', 'risk'].forEach((k) => {
+      const vs = rows.map((r) => val(r, k));
+      ranges[k] = [Math.min.apply(null, vs), Math.max.apply(null, vs)];
+    });
+    const frac = (k, v) => {
+      const [a, z] = ranges[k];
+      return z === a ? 0 : (v - a) / (z - a);
+    };
+    const sorted = rows.filter((r) => !S.filter || r.ticker.includes(S.filter.toUpperCase()))
+      .sort((a, c) => {
+        const A = val(a, S.sortKey), C = val(c, S.sortKey);
+        const cmp = typeof A === 'string' ? A.localeCompare(C) : A - C;
+        return S.sortDir === 'asc' ? cmp : -cmp;
+      });
+
+    const topBars = rows.slice().sort((a, c) => c.dtlAdj - a.dtlAdj).slice(0, 12);
+    const barMax = topBars.length ? topBars[0].dtlAdj : 1;
+
+    return Object.assign(base, {
+      fund: d.ticker,
+      narrative: nar.text,
+      caution: nar.caution,
+      profileRows: [
+        { label: 'N-PORT as of', value: d.nport_as_of },
+        { label: 'Holdings in filing', value: String(d.holdings_total) },
+        { label: 'Holdings priced', value: String(d.holdings_priced) },
+        { label: 'Weight of priced book', value: num(wsum, 2) + '%' },
+        { label: 'Participation cap', value: (S.participation * 100).toFixed(0) + '%' },
+      ],
+      modified: S.participation !== 0.20 || S.w.dtl !== 0.5 || S.w.amihud !== 0.3 || S.w.spread !== 0.2,
+      bandColor: b.color,
+      bandLabel: b.label,
+      scoreDisplay: shown.toFixed(1),
+      gaugeDash: dash,
+      gaugeAria: 'Liquidity Mismatch Score ' + sc.value.toFixed(1) + ' of 100, band ' + b.label,
+      gaugeTicks: [20, 40, 60].map((v) => {
+        const a = Math.PI * (1 - v / 100);
+        const cx = 170, cy = 170;
+        return {
+          x1: (cx + Math.cos(a) * 143).toFixed(1), y1: (cy - Math.sin(a) * 143).toFixed(1),
+          x2: (cx + Math.cos(a) * 157).toFixed(1), y2: (cy - Math.sin(a) * 157).toFixed(1),
+          lx: (cx + Math.cos(a) * 172).toFixed(1), ly: (cy - Math.sin(a) * 172 + 4).toFixed(1),
+          label: String(v),
+        };
+      }),
+      scoreProvenance: 'N-PORT ' + d.nport_as_of + ' · ' + d.holdings_priced + ' of ' + d.holdings_total + ' holdings priced · ' + sc.source,
+      statTiles: [
+        { label: 'Weighted mean days to liquidate', value: num(wmean((r) => r.dtlAdj), 2), unit: 'days' },
+        { label: 'Weighted mean Amihud', value: sci(wmean((r) => r.amihud)), unit: '×10⁶ impact' },
+        { label: 'Weighted mean est. spread', value: num(wmean((r) => r.est_spread) * 10000, 1), unit: 'basis points' },
+      ],
+      coverageDash: (251.3 * coverage).toFixed(1) + ' 251.3',
+      coverageAria: d.holdings_priced + ' of ' + d.holdings_total + ' holdings priced',
+      coverageHeadline: d.holdings_priced + ' of ' + d.holdings_total,
+      coveragePctLabel: (coverage * 100).toFixed(1) + '%',
+      hasUnpriced: d.unpriced_tickers.length > 0,
+      unpricedOpen: S.unpricedOpen,
+      unpricedTickers: d.unpriced_tickers,
+      unpricedToggleLabel: (S.unpricedOpen ? 'Hide' : 'Show') + ' the ' + d.unpriced_tickers.length + ' unpriceable tickers',
+      toggleUnpriced: () => this.setState({ unpricedOpen: !S.unpricedOpen }),
+
+      participationPct: Math.round(S.participation * 100),
+      participationLabel: (S.participation * 100).toFixed(0) + '%',
+      onParticipation: (e) => this.setState({ participation: +e.target.value / 100 }),
+      presets: [{ label: 'Normal 20%', v: 0.20 }, { label: 'Stressed 10%', v: 0.10 }, { label: 'Crisis 5%', v: 0.05 }].map((p) => ({
+        label: p.label, pick: () => this.setState({ participation: p.v }),
+        border: S.participation === p.v ? 'rgba(201,168,76,.55)' : 'rgba(201,168,76,.18)',
+        color: S.participation === p.v ? GOLD : '#8a8f9e',
+        bg: S.participation === p.v ? 'rgba(201,168,76,.06)' : 'transparent',
+      })),
+      weightRows: [
+        { key: 'dtl', label: 'Days to liquidate' },
+        { key: 'amihud', label: 'Amihud illiquidity' },
+        { key: 'spread', label: 'Estimated spread' },
+      ].map((r) => ({
+        label: r.label, value: S.w[r.key].toFixed(2), pct: Math.round(S.w[r.key] * 100),
+        onChange: (e) => this.setW(r.key, +e.target.value),
+      })),
+      weightSumLabel: 'Current sum ' + (S.w.dtl + S.w.amihud + S.w.spread).toFixed(2) + '.',
+      resetAll: () => this.setState({ participation: 0.20, w: { dtl: 0.5, amihud: 0.3, spread: 0.2 } }),
+
+      bubbles: rows.map((r) => {
+        const size = 8 + Math.sqrt(r.pct_value / maxW) * 26;
+        const bb = band(r.risk * 100);
+        return Object.assign({
+          left: px(r.dtlAdj).toFixed(2) + '%', bottom: py(r.pct_value).toFixed(2) + '%',
+          size: size.toFixed(1) + 'px', off: (-size / 2).toFixed(1) + 'px',
+          fill: S.hover === r.ticker ? bb.color : bb.color + '55',
+          stroke: bb.color, title: r.ticker + ' · weight ' + num(r.pct_value, 3) + '% · DTL ' + num(r.dtlAdj, 2) + ' days · Amihud ' + r.amihud + ' · spread ' + num(r.est_spread * 10000, 1) + ' bps · holding risk ' + num(r.risk, 3),
+        }, hover(r.ticker));
+      }),
+      dangerLeft: px(10).toFixed(2) + '%',
+      dangerHeight: (100 - py(meanW)).toFixed(2) + '%',
+      xTicks: [0.01, 0.1, 1, 10, 100].filter((v) => v >= minDtl * 0.9 && v <= maxDtl * 1.1)
+        .map((v) => ({ left: px(v).toFixed(2) + '%', label: v < 1 ? String(v) : String(v) })),
+      yTicks: [0, 0.25, 0.5, 0.75, 1].map((f) => ({ bottom: py(f * maxW).toFixed(2) + '%', label: num(f * maxW, 2) + '%' })),
+      bandLegend: BANDS.map((x) => ({ color: x.color, label: x.label })),
+      scatterAria: 'Scatter of ' + rows.length + ' priced holdings, days to liquidate against fund weight.',
+      hoverNote: S.hover ? 'Highlighted: ' + S.hover + '.' : 'Shaded region: weight above the ' + num(meanW, 2) + '% average and ten days or more to exit.',
+
+      topBars: topBars.map((r, i) => Object.assign({
+        ticker: r.ticker, value: num(r.dtlAdj, 2),
+        width: (Math.min(1, Math.max(0, S.t * 1.4 - i * 0.02)) * (r.dtlAdj / barMax) * 100).toFixed(2) + '%',
+        fill: 'linear-gradient(90deg, ' + GOLD + ', ' + band(r.risk * 100).color + ')',
+        rowBg: S.hover === r.ticker ? 'rgba(201,168,76,.06)' : 'transparent',
+      }, hover(r.ticker))),
+
+      waterfall: top10.map((c, i) => Object.assign({
+        ticker: c.t, share: ((c.v / ctot) * 100).toFixed(1) + '%',
+        width: ((c.v / ctot) * 100 * S.t).toFixed(2) + '%',
+        fill: wfPalette[i], title: c.t + ' contributes ' + ((c.v / ctot) * 100).toFixed(2) + '% of the score',
+      }, hover(c.t))).concat([{
+        ticker: 'Remaining ' + (contrib.length - 10), share: ((restV / ctot) * 100).toFixed(1) + '%',
+        width: ((restV / ctot) * 100 * S.t).toFixed(2) + '%', fill: 'rgba(232,230,223,.14)',
+        title: 'All other priced holdings', enter: () => {}, leave: () => {},
+      }]),
+      waterfallNote: 'Top contributor: ' + top10[0].t + ' at ' + ((top10[0].v / ctot) * 100).toFixed(1) + '% of the total.',
+
+      tableCaption: sorted.length + ' of ' + rows.length + ' priced holdings',
+      filter: S.filter,
+      onFilter: (e) => this.setState({ filter: e.target.value.toUpperCase() }),
+      exportCsv: () => this.csv(rows),
+      columns: cols.map((c) => ({
+        label: c.label, align: c.align,
+        caret: S.sortKey === c.key ? (S.sortDir === 'asc' ? '▲' : '▼') : '',
+        sort: () => this.setState({ sortKey: c.key, sortDir: S.sortKey === c.key && S.sortDir === 'desc' ? 'asc' : 'desc' }),
+      })),
+      tableRows: sorted.map((r, i) => Object.assign({
+        ticker: r.ticker,
+        bg: S.hover === r.ticker ? 'rgba(201,168,76,.06)' : (i % 2 ? 'rgba(255,255,255,.02)' : 'transparent'),
+        cells: [
+          { text: num(r.pct_value, 3), k: 'pct_value', v: r.pct_value },
+          { text: num(r.dtlAdj, 2), k: 'dtl', v: r.dtlAdj },
+          { text: sci(r.amihud), k: 'amihud', v: r.amihud },
+          { text: num(r.est_spread * 10000, 1), k: 'est_spread', v: r.est_spread },
+          { text: num(r.risk, 3), k: 'risk', v: r.risk },
+        ].map((c) => ({
+          text: c.text,
+          bar: (frac(c.k, c.v) * 100).toFixed(1) + '%',
+          barFill: c.k === 'risk' ? band(r.risk * 100).color + '33' : 'rgba(201,168,76,.13)',
+          color: c.k === 'risk' ? txt(band(r.risk * 100).color) : '#e8e6df',
+        })),
+        pairs: [
+          { label: 'Fund weight', text: num(r.pct_value, 3) + '%', color: '#e8e6df' },
+          { label: 'Days to liquidate', text: num(r.dtlAdj, 2), color: '#e8e6df' },
+          { label: 'Amihud', text: sci(r.amihud), color: '#e8e6df' },
+          { label: 'Est. spread', text: num(r.est_spread * 10000, 1) + ' bps', color: '#e8e6df' },
+          { label: 'Holding risk', text: num(r.risk, 3) + ' · ' + band(r.risk * 100).label, color: txt(band(r.risk * 100).color) },
+        ],
+      }, hover(r.ticker))),
+
+      pinnable: seedList.map((t) => ({
+        label: (S.pins.indexOf(t) >= 0 ? '− ' : '+ ') + t,
+        toggle: () => {
+          const has = S.pins.indexOf(t) >= 0;
+          const pins = has ? S.pins.filter((x) => x !== t) : S.pins.concat([t]).slice(-3);
+          this.setState({ pins });
+          if (!has && !S.pinData[t]) {
+            this.api.getLookthrough(t).then((pd) => this.setState((st) => ({ pinData: Object.assign({}, st.pinData, { [t]: pd }) })));
+          }
+        },
+        border: S.pins.indexOf(t) >= 0 ? 'rgba(201,168,76,.55)' : 'rgba(201,168,76,.18)',
+        color: S.pins.indexOf(t) >= 0 ? GOLD : '#8a8f9e',
+        bg: S.pins.indexOf(t) >= 0 ? 'rgba(201,168,76,.06)' : 'transparent',
+      })),
+      hasPins: S.pins.length > 0,
+      pinCards: S.pins.map((t) => S.pinData[t]).filter(Boolean).map((pd) => {
+        const pb = band(pd.mismatch_score);
+        return {
+          ticker: pd.ticker, score: pd.mismatch_score.toFixed(1), band: pb.label, bandColor: pb.color,
+          barWidth: pd.mismatch_score.toFixed(1) + '%',
+          coverage: pd.holdings_priced + ' of ' + pd.holdings_total + ' priced',
+          asOf: pd.nport_as_of,
+          top: pd.holdings.slice().sort((a, c) => c.dtl - a.dtl).slice(0, 3).map((h) => ({ ticker: h.ticker, dtl: num(h.dtl, 2) + ' d' })),
+        };
+      }),
+    });
+  }
+}
+
+</script>
+</body>
+</html>

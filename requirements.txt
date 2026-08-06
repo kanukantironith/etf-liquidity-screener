@@ -1,0 +1,5 @@
+edgartools
+yfinance
+bidask
+pandas
+pyarrow
